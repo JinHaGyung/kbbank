@@ -6,3 +6,5 @@ const { title } = require('process');
 router.get('/', (req, res)=>{ /* 메인페이지 */
   res.render('puzzle');
 });
+
+module.exports = router;
