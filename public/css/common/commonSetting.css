@@ -3,6 +3,10 @@
   margin: 0 auto;
 }
 
+.main_title{
+  padding-top: 110px;
+  padding-bottom: 50px;
+}
 
 h2{
   font-size: 30px;
@@ -42,6 +46,19 @@ p{
 
 input{
   padding-left: 20px;
-
 }
 
+
+/*** 800px ***/
+@media(max-width: 800px){
+  .w1200{
+    width: 100%;
+    margin: 0 15px;
+  }
+
+  .main_title{
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+/*** 800px ***/
