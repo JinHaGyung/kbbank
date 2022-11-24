@@ -4,7 +4,7 @@ const path = require('path');
 const { title } = require('process');
 
 router.get('/', (req, res)=>{ /* 메인페이지 */
-  res.render('puzzle');
+  res.render('mainPage');
 });
 
 module.exports = router;
