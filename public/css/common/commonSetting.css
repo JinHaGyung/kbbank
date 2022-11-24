@@ -1,0 +1,47 @@
+.w1200{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+h2{
+  font-size: 30px;
+}
+
+h3{
+  font-size: 20px;
+}
+
+p{
+  font-size: 16px;
+}
+
+.f_bold{
+  font-weight: bold;
+}
+
+.f_medium{
+  font-weight: 500;
+}
+
+.f_regular{
+  font-weight: 400;
+}
+
+.f_gray1{
+  color: #333;
+}
+
+.f_gray2{
+  color: #7f7f7f;
+}
+
+.f_gray3{
+  color: #ddd;
+}
+
+input{
+  padding-left: 20px;
+
+}
+
