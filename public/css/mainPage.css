@@ -15,20 +15,25 @@
   position: relative;
 }
 
-.mainSlide_inner1{
-  /* height: 100%; */
+.mainSlide_wrap .mainSlide_inner{
+  height: 70%;
   width: 100%;
-  background-image: url(../img/1.mainSlide/background1.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
 }
 
-.mainSlide_inner2{
-  height: 100%;
-  width: 100%;
+#mainSlide_inner1{
+  background-image: url(../img/1.mainSlide/background1.jpg);
+}
+
+#mainSlide_inner2{
   background-image: url(../img/1.mainSlide/background2.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
+}
+
+.mainSlide_conWrap{
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .swiper-pagination1{
