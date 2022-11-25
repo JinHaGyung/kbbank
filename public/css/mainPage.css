@@ -8,7 +8,26 @@
   margin: 0 auto;
 }
 
-.mainSlide>img{
-  display: block;
+
+/*** 정지헌 ***/
+/* 슬라이드 */
+.mainSlide{
   width: 100%;
+  /* height: 100%; */
+  padding-top: 41.6666%;
+  box-sizing: border-box;
+  background-image: url(../img/1.mainSlide/background1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
+
+
+
+/* 슬라이드 */
+
+
+/* kb info */
+
+/* kb info */
+/*** 정지헌 ***/
