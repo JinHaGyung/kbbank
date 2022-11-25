@@ -1,52 +1,53 @@
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-
 .swiper {
-  width: 70%;
-  height: 1000px;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 70%;
-  height: 70%;
-  object-fit: cover;
+  height: 100vh;
 }
 
 .swiper-wrapper>section{
-  width: 50%;
-  height: 100%;
-  margin: 0 auto;
+  /* width: 100%; */
+  /* height: 100%; */
+  /* margin: 0 auto; */
 }
+
+
+/*** 정지헌 ***/
+/* 슬라이드 */
+.mainSlide{
+  position: relative;
+}
+
+.mainSlide_wrap .mainSlide_inner{
+  height: 70%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#mainSlide_inner1{
+  background-image: url(../img/1.mainSlide/background1.jpg);
+}
+
+#mainSlide_inner2{
+  background-image: url(../img/1.mainSlide/background2.jpg);
+}
+
+.mainSlide_conWrap{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.swiper-pagination1{
+  position: absolute;
+  left: 50%; top: 50%;
+  /* width: 500px;
+  height: 100px; */
+  z-index: 999;
+}
+
+/* 슬라이드 */
+
+
+/* kb info */
+
+/* kb info */
+/*** 정지헌 ***/
