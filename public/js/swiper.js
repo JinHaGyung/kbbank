@@ -16,7 +16,6 @@ var swiper = new Swiper(".mySwiper1", {
   pagination: {
     el: ".swiper-pagination1",
     clickable: true,
-    // type : 'bullets',
     renderBullet: function (index, className) {
       return '<span class="' + className + '">' + (index + 1) + "</span>";
     },
