@@ -1,0 +1,54 @@
+.swiper {
+  height: 100vh;
+}
+
+.swiper-wrapper>section{
+  /* width: 100%; */
+  /* height: 100%; */
+  /* margin: 0 auto; */
+}
+
+
+/*** 정지헌 ***/
+/* 슬라이드 */
+.mainSlide{
+  position: relative;
+}
+
+.mainSlide_wrap .mainSlide_inner{
+  height: 70%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#mainSlide_inner1{
+  background-image: url(../img/1.mainSlide/background1.jpg);
+}
+
+#mainSlide_inner2{
+  background-image: url(../img/1.mainSlide/background2.jpg);
+}
+
+.mainSlide_conWrap{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.swiper-pagination1{
+  position: absolute;
+  left: 50%; top: 50%;
+  /* width: 500px;
+  height: 100px; */
+  z-index: 999;
+}
+
+/* 슬라이드 */
+
+
+/* kb info */
+
+/* kb info */
+/*** 정지헌 ***/
+
