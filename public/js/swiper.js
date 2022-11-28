@@ -3,7 +3,7 @@ var swiper = new Swiper(".mySwiper", {
   direction: "vertical",
   slidesPerView: 1,
   spaceBetween: 0,
-  speed: 1200,
+  speed: 800,
   mousewheel: true,
   allowTouchMove : false,
   pagination: {
