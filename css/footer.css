@@ -7,7 +7,12 @@ footer{
 .footer_wrap{
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   padding: 45px 0 70px;
+}
+.footer_wrap_top{
+  display: flex;
+  justify-content: space-between;
 }
 /* footer_right */
 .footer_right{
