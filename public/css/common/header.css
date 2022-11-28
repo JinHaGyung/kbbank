@@ -4,14 +4,8 @@ header {
     z-index: 9;
     height: 20vh;
 }
-<<<<<<< HEAD:public/css/header.css
 /* ## topArea ## */
 .topArea{
-=======
-
-/* topArea */
-.topArea {
->>>>>>> 5c778e872f68fc17ea5e6b1d2489fa7afe9f90f8:public/css/common/header.css
     background-color: #755F48;
 }
 
@@ -34,33 +28,18 @@ header {
     display: block;
     content: '';
     position: absolute;
-<<<<<<< HEAD:public/css/header.css
     top: 6px; left: 57px;
     width: 1px; height: 15px;
     background-color: #E5E5E155;
-=======
-    top: 3px;
-    left: 58px;
-    width: 1px;
-    height: 15px;
-    background-color: #E5E5E1;
->>>>>>> 5c778e872f68fc17ea5e6b1d2489fa7afe9f90f8:public/css/common/header.css
 }
 
 .topArea_right>ul>li:last-child::after {
     display: block;
     content: '';
     position: absolute;
-<<<<<<< HEAD:public/css/header.css
      left: 34px;
     width: 1px; height: 15px;
     background-color: #E5E5E155;
-=======
-    left: 34px;
-    width: 1px;
-    height: 15px;
-    background-color: #E5E5E1;
->>>>>>> 5c778e872f68fc17ea5e6b1d2489fa7afe9f90f8:public/css/common/header.css
 }
 
 .topArea_right>ul>li>a {
@@ -72,15 +51,8 @@ header {
 header .utilSearch {
     margin: 7px 0 0 6px;
 }
-<<<<<<< HEAD:public/css/header.css
 header .utilSearch input{
     width: 82px; height: 23px;
-=======
-
-header .utilSearch input {
-    width: 100px;
-    height: 25px;
->>>>>>> 5c778e872f68fc17ea5e6b1d2489fa7afe9f90f8:public/css/common/header.css
     line-height: 25px;
     padding: 0 8px;
     margin-left: 5px;
@@ -102,7 +74,6 @@ header .utilSearch input {
     cursor: pointer;
 }
 
-<<<<<<< HEAD:public/css/header.css
 /* ## gnbArea ## */
 .gnbArea{
     width: 100%; height: 60px;
@@ -251,6 +222,3 @@ header .utilSearch input {
 .lnb a:hover{
     font-weight: 300;
 }
-=======
-/* gnbArea */
->>>>>>> 5c778e872f68fc17ea5e6b1d2489fa7afe9f90f8:public/css/common/header.css
