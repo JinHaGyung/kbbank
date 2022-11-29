@@ -7,6 +7,7 @@ header{
 /* ## topArea ## */
 .topArea{
     background-color: #755F48;
+    height: 35px;
 }
 .topArea_right{
     display: flex;
@@ -14,11 +15,12 @@ header{
 }
 .topArea_right>ul{
     display: flex;
-    margin: 7px 0 5px;
+    margin: 6px 0 6px;
 }
 .topArea_right>ul>li{
     margin: 0 10px;
     position: relative;
+    line-height: 24px;
 }
 .topArea_right>ul>li::after{
     display: block;
@@ -42,7 +44,7 @@ header{
     font-size: 13px;
 }
 header .utilSearch{
-    margin: 7px 0 0 6px;
+    margin: 4px 0 0 6px;
 }
 header .utilSearch input{
     width: 82px; height: 23px;
@@ -64,6 +66,7 @@ header .utilSearch input{
     border: none;
     color: #E5E5E1;
     cursor: pointer;
+    line-height: 24px;
 }
 
 /* ## gnbArea ## */
