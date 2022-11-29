@@ -1,28 +1,29 @@
 .solution{
-  background-color: #F5F5F5 ;
+  background-color: #F5F3E9 ;
 }
 .main_solution{
   width: 100%;
-  height: 520px;
-  background-color: darkblue;
 }
 .solution_wrap{
   display: grid;
-  grid-template-columns: 150px 150px 150px;
-	grid-template-rows: 150px 150px;
+  grid-template-columns: 50% 50%;
+	grid-template-rows: 250px 250px  170px;
+  gap: 20px;
 }
-#red{
+.solution_shopping{
+  grid-row-start: 1;
+  grid-row-end: 3;
   background-color: red;
 }
-#orange{
+.solution_kiwibank{
   background-color: orange;
 }
-#purple{
+.solution_retire{
   background-color: purple;
 }
-#navy{
+.solution_event{
   background-color: navy;
 }
-#red{
+.solution_quick{
   background-color: blue;
 }
