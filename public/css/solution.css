@@ -1,0 +1,28 @@
+.solution{
+  background-color: #F5F5F5 ;
+}
+.main_solution{
+  width: 100%;
+  height: 520px;
+  background-color: darkblue;
+}
+.solution_wrap{
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+	grid-template-rows: 150px 150px;
+}
+#red{
+  background-color: red;
+}
+#orange{
+  background-color: orange;
+}
+#purple{
+  background-color: purple;
+}
+#navy{
+  background-color: navy;
+}
+#red{
+  background-color: blue;
+}

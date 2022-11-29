@@ -90,10 +90,22 @@ footer{
 .footer_icon_ytub{
   background-image: url(../../img/footer/yt_icon.png);
 }
-#KB_selectBox{
+select{
   margin-left: 20px;
-  padding-left: 10px;
+  padding: 0 25px 0 20px ;
   border-radius: 4px;
   border: 1px solid #DDDDDD;
+  background-color: #F5F5F5;
+  color: #333333;
+  appearance: none;
+  background: url(../../img/footer/footer_arrow_1.png) no-repeat 95% 50%;  /* 화살표 모양의 이미지 */
+}
+select::-ms-expand {
+  display: none;
+}
+select:focus {outline: none;} 
+select option{
+  border: 1px solid #DDDDDD;
+  background-color: rgba(245, 245, 245, 0.3);
   color: #333333;
 }
