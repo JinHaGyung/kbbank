@@ -13,7 +13,7 @@
 .solution_shopping{
   grid-row-start: 1;
   grid-row-end: 3;
-  background-color: red;
+  background-image: url(../img/2.solution/solution_shopping.jpg);
 }
 .solution_kiwibank{
   background-color: orange;
