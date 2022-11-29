@@ -24,9 +24,9 @@ var swiper = new Swiper(".mySwiper", {
         return `<span class=${className}> 0${index + 1} </span>`
       },
     },
-    autoplay: {
-      delay: 5000,
-      // disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 5000,
+    //   // disableOnInteraction: false,
+    // },
     allowTouchMove : false,
   });

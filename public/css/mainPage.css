@@ -39,8 +39,8 @@
 .mainSlide_conWrap{
   width: 100%;
   height: 900px;
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
   position: relative;
 }
 
@@ -56,12 +56,10 @@
 
 .mainSlide_title>h2{
   font-size: 50px;
-  font-weight: bold;
 }
 
 .mainSlide_title>h3{
   font-size: 30px;
-  font-weight: bold;
 }
 
 .mainSlide_title span{
@@ -70,6 +68,64 @@
 
 .mainSlide_title>p{
   font-size: 20px;
+}
+
+.mainSlide_directMenu{
+  width: 285px;
+  height: 441px;
+  /* background-color: #755F48; */
+  background-color: rgba(117, 95, 72, 0.8);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 10px 10px 0 0;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.mainSlide_directMenu>.topBtn{
+  width: 100%;
+  height: 84px;
+  background-color: #FFCF00;
+  border-radius: 10px 10px 0 0;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.mainSlide_directMenu .Btn_inner{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.mainSlide_directMenu .Btn_inner>li{
+  width: 50%;
+  text-align: center;
+}
+
+.mainSlide_directMenu .Btn_inner>li>a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+
+.mainSlide_directMenu .Btn_inner .loginBtn{
+  padding-left: 35px;
+  background-image: url(../img/1.mainSlide/log_in\ 1.png);
+  background-position: left center;
+  background-repeat: no-repeat;
+  position: relative;
+  /* background-size: 16px 16px; */
+}
+
+.mainSlide_directMenu .Btn_inner>li::after{
+  display: block;
+  content: '';
+  width: 1px;
+  height: 50px;
+  background-color: #fff;
+  position: absolute;
+  top: 20%; right: 50%;
 }
 
 .mainSlide_newsWrap{
@@ -95,13 +151,12 @@
 
 .swiper>.swiper-wrapper>.mainSlide .swiper-pagination1{
   position: absolute;
-  left: 0; top: 25%;
+  left: 0; top: 30%;
   width: auto;
-  height: auto;
+  height: 0;
   z-index: 999;
   color: #000;
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 16px;
 }
 
 .swiper>.swiper-wrapper>.mainSlide #mainSlide_inner1 .swiper-pagination1{
@@ -114,12 +169,12 @@
   background-color: inherit;
 }
 
-
 .swiper>.swiper-wrapper>.mainSlide .swiper-pagination1 .swiper-pagination-bullet::after{
   display: inline;
   content: '/';
   color: #000;
-  opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
+  opacity: var(--swiper-pagination-bullet-opacity, initial);
+  position: relative;
 }
 
 /* 슬라이드 */
