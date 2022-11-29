@@ -95,6 +95,7 @@
   width: 100%;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -107,6 +108,7 @@
   text-decoration: none;
   color: #fff;
   font-size: 20px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .mainSlide_directMenu .Btn_inner .loginBtn{
@@ -118,7 +120,7 @@
   /* background-size: 16px 16px; */
 }
 
-.mainSlide_directMenu .Btn_inner>li::after{
+.mainSlide_directMenu .topBtn .Btn_inner>li::after{
   display: block;
   content: '';
   width: 1px;
@@ -128,9 +130,43 @@
   top: 20%; right: 50%;
 }
 
+.mainSlide_directMenu .bottomBtn .Btn_inner>li>a{
+  display: block;
+  font-size: 12px;
+  padding-top: 80px;
+  margin-top: 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+}
+
+.mainSlide_directMenu .bottomBtn .Btn_inner>li>.calculator{
+  background-image: url(../img/1.mainSlide/keys.png);
+}
+
+.mainSlide_directMenu .bottomBtn .Btn_inner>li>.accountCheck{
+  background-image: url(../img/1.mainSlide/account_w.png);
+}
+
+.mainSlide_directMenu .bottomBtn .Btn_inner>li>.transfer{
+  background-image: url(../img/1.mainSlide/transfer.png);
+}
+
+.mainSlide_directMenu .bottomBtn .Btn_inner>li>.newDeposit{
+  background-image: url(../img/1.mainSlide/upload_w.png);
+}
+
+.mainSlide_directMenu .bottomBtn .Btn_inner>li>.registration{
+  background-image: url(../img/1.mainSlide/document_w.png);
+}
+
+.mainSlide_directMenu .bottomBtn .Btn_inner>li>.quickInquiry{
+  background-image: url(../img/1.mainSlide/search_w.png);
+}
+
 .mainSlide_newsWrap{
   width: 100%;
-  height: 230px;
+  height: 210px;
   background-color: #FFCF00;
 }
 
