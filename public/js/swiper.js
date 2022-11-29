@@ -12,13 +12,21 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-// 첫번째 섹션의 swiper
-var swiper = new Swiper(".mySwiper1", {
-  pagination: {
-    el: ".swiper-pagination1",
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
+  // 첫번째 섹션의 swiper
+  var swiper = new Swiper(".mySwiper1", {
+    // spaceBetween: 30,
+    effect: "fade",
+    pagination: {
+      el: ".swiper-pagination1",
+      clickable: true,
+      renderBullet: function (index, className) {
+        // return '<span class="' +  className + '">' + (index + 1) + "</span>";
+        return `<span class=${className}> 0${index + 1} </span>`
+      },
     },
-  },
-});
+    // autoplay: {
+    //   delay: 5000,
+    //   // disableOnInteraction: false,
+    // },
+    allowTouchMove : false,
+  });
