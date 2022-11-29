@@ -74,7 +74,7 @@
 
 .mainSlide_newsWrap{
   width: 100%;
-  height: 245px;
+  height: 230px;
   background-color: #FFCF00;
 }
 
@@ -112,6 +112,14 @@
   width: auto;
   height: auto;
   background-color: inherit;
+}
+
+
+.swiper>.swiper-wrapper>.mainSlide .swiper-pagination1 .swiper-pagination-bullet::after{
+  display: inline;
+  content: '/';
+  color: #000;
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
 }
 
 /* 슬라이드 */
