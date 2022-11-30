@@ -50,13 +50,17 @@ input{
 }
 
 
-/*** 800px ***/
-@media(max-width: 800px){
+/*** 1200px ***/
+@media(max-width: 1200px){
   .w1200{
     width: 100%;
     margin: 0 15px;
   }
+}
+/*** 1200px ***/
 
+/*** 800px ***/
+@media(max-width: 800px){
   .main_title{
     padding-top: 45px;
     padding-bottom: 45px;
