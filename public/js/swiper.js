@@ -30,3 +30,6 @@ var swiper = new Swiper(".mySwiper", {
     // },
     allowTouchMove : false,
   });
+
+
+  // 두번째 섹션의 swiper
