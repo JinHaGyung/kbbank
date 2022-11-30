@@ -49,7 +49,7 @@
   transform: translateY(-50%);
 }
 
-.mainSlide_title1{
+.mainSlide_title2{
   color: #fff;
 }
 
@@ -90,6 +90,7 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+
 .mainSlide_directMenu .Btn_inner{
   width: 100%;
   height: 100%;
@@ -108,15 +109,26 @@
   color: #fff;
   font-size: 20px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: all .2s;
+}
+
+.mainSlide_directMenu .Btn_inner>li>a:hover{
+  color: #000;
 }
 
 .mainSlide_directMenu .Btn_inner .loginBtn{
   padding-left: 35px;
+  margin-right: 10px;
   background-image: url(../img/1.mainSlide/log_in\ 1.png);
   background-position: left center;
   background-repeat: no-repeat;
   position: relative;
   /* background-size: 16px 16px; */
+  
+}
+
+.mainSlide_directMenu .Btn_inner .loginBtn:hover{
+  background-image: url(../img/1.mainSlide/log_in\ _hover.png);
 }
 
 .mainSlide_directMenu .topBtn .Btn_inner>li::after{
@@ -169,6 +181,12 @@
   background-color: #FFCF00;
 }
 
+.mainSlide_productWrap{
+  width: 100%;
+  height: 155px;
+  background-color: #FFCF00;
+}
+
 .mainSlide_news_con{
   height: 100%;
   display: flex;
@@ -176,13 +194,95 @@
   justify-content: center;
 }
 
+.mainSlide_news_con>h3{
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.mainSlide_news_con>h3::after{
+  display: block;
+  content: '';
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/1.mainSlide/next.png);
+  position: absolute;
+  top: 6px;
+  left: 130px;
+  cursor: pointer;
+}
+
+.mainSlide_product_con{
+  height: 100%;
+}
+
 .mainSlide_news>a{
   display: flex;
   justify-content: space-between;
   text-decoration: none;
   color: #000;
+  transition: all .2s;
 }
 
+.mainSlide_news>a:hover{
+  text-decoration: underline;
+  color: #fff;
+}
+
+.mainSlide_productInner{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.mainSlide_productInner>li{
+  flex: 1;
+  position: relative;
+}
+
+.mainSlide_productInner>li::after{
+  display: block;
+  content: '';
+  width: 1px;
+  height: 100px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.mainSlide_productInner>li:last-child:after{
+  display: none;
+}
+
+.mainSlide_productInner>li>a{
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+}
+
+.mainSlide_productInner>li>a>h4{
+  color: #fff;
+  font-size: 20px;
+}
+
+.mainSlide_productInner>li>a>p{
+  font-size: 12px;
+}
+
+.mainSlide_productInner strong{
+  font-size: 20px;
+  color: #000;
+}
+
+.product_title{
+  margin-right: 10px;
+}
+
+.loanLimit>span, .loanRate>span{
+  font-size: 12px;
+  color: #666;
+}
 
 .swiper>.swiper-wrapper>.mainSlide .swiper-pagination1{
   position: absolute;
