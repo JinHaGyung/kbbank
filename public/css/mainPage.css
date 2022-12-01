@@ -22,7 +22,7 @@
   width: 100%;
   height: calc(100vh - 95px - 155px);
   background-repeat: no-repeat;
-  background-size: 100% calc(100vh - 95px - 155px);
+  background-size: cover;
 
 }
 
@@ -34,6 +34,11 @@
 #mainSlide_inner2{
   background-image: url(../img/1.mainSlide/background2.jpg);
 }
+
+#mainSlide_inner3{
+  background-image: url(../img/1.mainSlide/background3.jpg);
+}
+
 
 .mainSlide_conWrap{
   width: 100%;
@@ -49,7 +54,7 @@
   transform: translateY(-50%);
 }
 
-.mainSlide_title2{
+.mainSlide_title1, .mainSlide_title2{
   color: #fff;
 }
 
@@ -60,6 +65,7 @@
 .mainSlide_title>h3{
   font-size: 30px;
 }
+
 
 .mainSlide_title span{
   color: #FFCF00;
@@ -281,7 +287,7 @@
 
 .loanLimit>span, .loanRate>span{
   font-size: 12px;
-  color: #666;
+  color: #7F7F7F;
 }
 
 .swiper>.swiper-wrapper>.mainSlide .swiper-pagination1{
@@ -295,6 +301,10 @@
 }
 
 .swiper>.swiper-wrapper>.mainSlide #mainSlide_inner1 .swiper-pagination1{
+  color: #fff;
+}
+
+.swiper>.swiper-wrapper>.mainSlide #mainSlide_inner2 .swiper-pagination1{
   color: #fff;
 }
 
