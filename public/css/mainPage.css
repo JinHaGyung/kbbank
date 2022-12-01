@@ -330,3 +330,115 @@
 /* kb info */
 /*** 정지헌 ***/
 
+
+
+/* mainNotice */
+.mainNotice{
+  background-image: url(../img/4.mainNotice/공지사항_bg_t.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+}
+/* 공지사항 리스트 */
+.mainNoti_list_wrap{
+  background-color: #ffffff66;
+  opacity: 6;
+  margin-bottom: 20px;
+  padding: 25px 20px;
+  box-sizing: border-box;
+}
+/* .mainNoti_list{
+  background-color: #ffffff66;
+  opacity: 6;
+  margin-bottom: 40px;
+  padding: 25px 20px;
+  box-sizing: border-box;
+} */
+.mainNoti_list>li{
+  border-bottom: 1px solid #dddddd;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+.mainNoti_list>li>a{
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+}
+.mainNoti_list .num{
+  width: 75px; 
+  padding: 5px 0;
+  margin-right: 80px;
+  border: 1px solid #7F7F7F;
+  border-radius: 4px;
+  text-align: center;
+}
+.mainNoti_list .content{
+  width: 80%;
+  text-align: left;
+  line-height: 36px;
+}
+.mainNoti_list .date{
+  padding-right: 80px;
+  position: relative;
+  line-height: 36px;
+}
+.mainNoti_list .date::after{
+  display: block;
+  content: '';
+  width: 50px; height: 50px;
+  background-image: url(../img/4.mainNotice/Group\ 26.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: -20%; right: 0;
+}
+
+/* 전체보기 버튼 */
+.mainList_btn{
+  display: block;
+  margin: 0 auto;
+  width: 9%;
+  padding: 10px 0;
+  margin-top: 25px;
+  box-sizing: border-box;
+  border: 1px solid #7F7F7F;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+}
+
+
+
+
+
+
+/* 회사 안내 */
+.mainNoti_info_wrap{
+  padding-bottom: 52px;
+}
+.mainNoti_info{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.mainNoti_info>li{
+  width: calc(25% - 20px);
+  box-sizing: border-box;
+  height: 250px;
+  background-color: #fff;
+  box-shadow: 2px 2px 4px rgb(220 220 220);
+  padding: 40px 25px 0;
+} 
+.mainNoti_info>li>a{
+  text-decoration: none;
+  color: #000;
+}
+.mainNoti_info>li>a p{
+  margin-top: 12px;
+}
+/* mainNotice */
+/*** 정다은 ***/
