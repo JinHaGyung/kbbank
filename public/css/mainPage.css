@@ -432,7 +432,23 @@
   background-color: #fff;
   box-shadow: 2px 2px 4px rgb(220 220 220);
   padding: 40px 25px 0;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  background-position: right 25px bottom 25px;
+  bac
 } 
+.mainNoti_info>li:first-child{
+  background-image: url(../img/4.mainNotice/info_icon.png);
+}
+.mainNoti_info>li:nth-child(2){
+  background-image: url(../img/4.mainNotice/소식_icon.png);
+}
+.mainNoti_info>li:nth-child(3){
+  background-image: url(../img/4.mainNotice/입찰&채용_icon.png);
+}
+.mainNoti_info>li:last-child{
+  background-image: url(../img/4.mainNotice/Q&A_icon.png);
+}
 .mainNoti_info>li>a{
   text-decoration: none;
   color: #000;
