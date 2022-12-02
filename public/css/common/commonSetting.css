@@ -54,7 +54,8 @@ input{
 @media(max-width: 1200px){
   .w1200{
     width: 100%;
-    margin: 0 15px;
+    padding: 0 15px;
+    box-sizing: border-box;
   }
 }
 /*** 1200px ***/

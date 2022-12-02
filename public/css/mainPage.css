@@ -715,7 +715,6 @@
   background-repeat: no-repeat;
   background-size: 50px 50px;
   background-position: right 25px bottom 25px;
-  bac
 }
 
 .mainNoti_info>li:first-child {
@@ -745,3 +744,14 @@
 
 /* mainNotice */
 /*** 정다은 ***/
+
+/*** 1200px ***/
+@media (max-width: 1200px){
+  .swiper>.swiper-wrapper>.mainSlide .swiper-pagination1 {
+    left: 15px;
+  }
+  .mainSlide_directMenu{
+    right: 15px;
+  }
+}
+/*** 1200px ***/
