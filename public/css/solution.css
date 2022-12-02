@@ -64,8 +64,59 @@
   background-color: navy;
 }
 .solution_quick{
-  background-color: blue;
+  background-color: #fff;
+  display: flex;
+  /* justify-content: space-between; */
 }
-.test{
-  
+.solution_quick>div{
+  position: relative;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.solution_quick_barWrap{
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.solution_quick_barWrap:nth-child(2)::after{
+  display: block;
+  content: '';
+  width: 1px;
+  height: 100%;
+  background-color: #333333;
+}
+.solution_quick_barWrap:first-child::after{
+  display: block;
+  content: '';
+  width: 1px;
+  height: 100%;
+  background-color: #333333;
+  position: absolute;
+  right: 0;
+}
+.solution_quick>div span{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.solution_quick_img{
+  display: block;
+  width: 50px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: 50px auto;
+}
+.solution_recom{
+  background-image: url(../img/2.solution/icon_set2.png);
+}
+.solution_advice{
+  background-image: url(../img/2.solution/icon_1.png);
+}
+.solution_loan{
+  background-image: url(../img/2.solution/rent.png);
 }
