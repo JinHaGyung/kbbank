@@ -91,6 +91,9 @@ footer{
   background-image: url(../../img/footer/yt_icon.png);
 }
 select{
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
   margin-left: 20px;
   padding: 0 25px 0 20px ;
   border-radius: 4px;
@@ -103,9 +106,15 @@ select{
 select::-ms-expand {
   display: none;
 }
-select:focus {outline: none;} 
-select option{
-  border: 1px solid #DDDDDD;
-  background-color: rgba(245, 245, 245, 0.3);
+section:focus{
+  outline: none;
+}
+select option {
+  background: #EEEEEE;
   color: #333333;
+  border: none;
+}
+
+select option:checked{
+  outline: :none;
 }
