@@ -2,11 +2,11 @@
   height: calc(100vh - 95px);
 }
 
-.swiper.mySwiper{
+.swiper.mySwiper {
   padding-top: 95px;
 }
 
-.swiper-pagination{
+.swiper-pagination {
   width: 0;
   left: 30px;
 }
@@ -14,11 +14,11 @@
 
 /*** 정지헌 ***/
 /* 슬라이드 */
-.mainSlide{
+.mainSlide {
   position: relative;
 }
 
-.mainSlide_wrap .mainSlide_inner{
+.mainSlide_wrap .mainSlide_inner {
   width: 100%;
   height: calc(100vh - 95px - 155px);
   background-repeat: no-repeat;
@@ -27,20 +27,20 @@
 }
 
 
-#mainSlide_inner1{
+#mainSlide_inner1 {
   background-image: url(../img/1.mainSlide/background1.jpg);
 }
 
-#mainSlide_inner2{
+#mainSlide_inner2 {
   background-image: url(../img/1.mainSlide/background2.jpg);
 }
 
-#mainSlide_inner3{
+#mainSlide_inner3 {
   background-image: url(../img/1.mainSlide/background3.jpg);
 }
 
 
-.mainSlide_conWrap{
+.mainSlide_conWrap {
   width: 100%;
   height: calc(100vh - 95px - 155px);
   /* display: flex;
@@ -48,34 +48,35 @@
   position: relative;
 }
 
-.mainSlide_title{
+.mainSlide_title {
   position: absolute;
   top: 40%;
   transform: translateY(-50%);
 }
 
-.mainSlide_title1, .mainSlide_title2{
+.mainSlide_title1,
+.mainSlide_title2 {
   color: #fff;
 }
 
-.mainSlide_title>h2{
+.mainSlide_title>h2 {
   font-size: 50px;
 }
 
-.mainSlide_title>h3{
+.mainSlide_title>h3 {
   font-size: 30px;
 }
 
 
-.mainSlide_title span{
+.mainSlide_title span {
   color: #FFCF00;
 }
 
-.mainSlide_title>p{
+.mainSlide_title>p {
   font-size: 20px;
 }
 
-.mainSlide_directMenu{
+.mainSlide_directMenu {
   width: 285px;
   height: 441px;
   /* background-color: #755F48; */
@@ -88,7 +89,7 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.mainSlide_directMenu>.topBtn{
+.mainSlide_directMenu>.topBtn {
   width: 100%;
   height: 84px;
   background-color: #FFCF00;
@@ -97,7 +98,7 @@
 }
 
 
-.mainSlide_directMenu .Btn_inner{
+.mainSlide_directMenu .Btn_inner {
   width: 100%;
   height: 100%;
   display: flex;
@@ -105,12 +106,12 @@
   align-items: center;
 }
 
-.mainSlide_directMenu .Btn_inner>li{
+.mainSlide_directMenu .Btn_inner>li {
   width: 50%;
   text-align: center;
 }
 
-.mainSlide_directMenu .Btn_inner>li>a{
+.mainSlide_directMenu .Btn_inner>li>a {
   text-decoration: none;
   color: #fff;
   font-size: 20px;
@@ -118,11 +119,11 @@
   transition: all .2s;
 }
 
-.mainSlide_directMenu .Btn_inner>li>a:hover{
+.mainSlide_directMenu .Btn_inner>li>a:hover {
   color: #000;
 }
 
-.mainSlide_directMenu .Btn_inner .loginBtn{
+.mainSlide_directMenu .Btn_inner .loginBtn {
   padding-left: 35px;
   margin-right: 10px;
   background-image: url(../img/1.mainSlide/log_in\ 1.png);
@@ -130,24 +131,25 @@
   background-repeat: no-repeat;
   position: relative;
   /* background-size: 16px 16px; */
-  
+
 }
 
-.mainSlide_directMenu .Btn_inner .loginBtn:hover{
+.mainSlide_directMenu .Btn_inner .loginBtn:hover {
   background-image: url(../img/1.mainSlide/log_in\ _hover.png);
 }
 
-.mainSlide_directMenu .topBtn .Btn_inner>li::after{
+.mainSlide_directMenu .topBtn .Btn_inner>li::after {
   display: block;
   content: '';
   width: 1px;
   height: 50px;
   background-color: #fff;
   position: absolute;
-  top: 20%; right: 50%;
+  top: 20%;
+  right: 50%;
 }
 
-.mainSlide_directMenu .bottomBtn .Btn_inner>li>a{
+.mainSlide_directMenu .bottomBtn .Btn_inner>li>a {
   display: block;
   font-size: 12px;
   padding-top: 80px;
@@ -157,55 +159,55 @@
   background-size: 50px 50px;
 }
 
-.mainSlide_directMenu .bottomBtn .Btn_inner>li>.calculator{
+.mainSlide_directMenu .bottomBtn .Btn_inner>li>.calculator {
   background-image: url(../img/1.mainSlide/keys.png);
 }
 
-.mainSlide_directMenu .bottomBtn .Btn_inner>li>.accountCheck{
+.mainSlide_directMenu .bottomBtn .Btn_inner>li>.accountCheck {
   background-image: url(../img/1.mainSlide/account_w.png);
 }
 
-.mainSlide_directMenu .bottomBtn .Btn_inner>li>.transfer{
+.mainSlide_directMenu .bottomBtn .Btn_inner>li>.transfer {
   background-image: url(../img/1.mainSlide/transfer.png);
 }
 
-.mainSlide_directMenu .bottomBtn .Btn_inner>li>.newDeposit{
+.mainSlide_directMenu .bottomBtn .Btn_inner>li>.newDeposit {
   background-image: url(../img/1.mainSlide/upload_w.png);
 }
 
-.mainSlide_directMenu .bottomBtn .Btn_inner>li>.registration{
+.mainSlide_directMenu .bottomBtn .Btn_inner>li>.registration {
   background-image: url(../img/1.mainSlide/document_w.png);
 }
 
-.mainSlide_directMenu .bottomBtn .Btn_inner>li>.quickInquiry{
+.mainSlide_directMenu .bottomBtn .Btn_inner>li>.quickInquiry {
   background-image: url(../img/1.mainSlide/search_w.png);
 }
 
-.mainSlide_newsWrap{
+.mainSlide_newsWrap {
   width: 100%;
   height: 155px;
   background-color: #FFCF00;
 }
 
-.mainSlide_productWrap{
+.mainSlide_productWrap {
   width: 100%;
   height: 155px;
   background-color: #FFCF00;
 }
 
-.mainSlide_news_con{
+.mainSlide_news_con {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.mainSlide_news_con>h3{
+.mainSlide_news_con>h3 {
   position: relative;
   padding-bottom: 20px;
 }
 
-.mainSlide_news_con>h3::after{
+.mainSlide_news_con>h3::after {
   display: block;
   content: '';
   width: 16px;
@@ -217,11 +219,11 @@
   cursor: pointer;
 }
 
-.mainSlide_product_con{
+.mainSlide_product_con {
   height: 100%;
 }
 
-.mainSlide_news>a{
+.mainSlide_news>a {
   display: flex;
   justify-content: space-between;
   text-decoration: none;
@@ -229,23 +231,23 @@
   transition: all .2s;
 }
 
-.mainSlide_news>a:hover{
+.mainSlide_news>a:hover {
   text-decoration: underline;
   color: #fff;
 }
 
-.mainSlide_productInner{
+.mainSlide_productInner {
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-.mainSlide_productInner>li{
+.mainSlide_productInner>li {
   flex: 1;
   position: relative;
 }
 
-.mainSlide_productInner>li::after{
+.mainSlide_productInner>li::after {
   display: block;
   content: '';
   width: 1px;
@@ -257,42 +259,43 @@
   transform: translateY(-50%);
 }
 
-.mainSlide_productInner>li:last-child:after{
+.mainSlide_productInner>li:last-child:after {
   display: none;
 }
 
-.mainSlide_productInner>li>a{
+.mainSlide_productInner>li>a {
   color: #000;
   text-decoration: none;
   text-align: center;
 }
 
-.mainSlide_productInner>li>a>h4{
+.mainSlide_productInner>li>a>h4 {
   color: #fff;
   font-size: 20px;
 }
 
-.mainSlide_productInner>li>a>p{
+.mainSlide_productInner>li>a>p {
   font-size: 12px;
 }
 
-.mainSlide_productInner strong{
+.mainSlide_productInner strong {
   font-size: 20px;
   color: #000;
 }
 
-.product_title{
+.product_title {
   margin-right: 10px;
 }
 
-.loanLimit>span, .loanRate>span{
+.loanLimit>span,
+.loanRate>span {
   font-size: 12px;
-  color: #7F7F7F;
 }
 
-.swiper>.swiper-wrapper>.mainSlide .swiper-pagination1{
+.swiper>.swiper-wrapper>.mainSlide .swiper-pagination1 {
   position: absolute;
-  left: 0; top: 25%;
+  left: 0;
+  top: 25%;
   width: auto;
   height: 0;
   z-index: 999;
@@ -300,21 +303,21 @@
   font-size: 16px;
 }
 
-.swiper>.swiper-wrapper>.mainSlide #mainSlide_inner1 .swiper-pagination1{
+.swiper>.swiper-wrapper>.mainSlide #mainSlide_inner1 .swiper-pagination1 {
   color: #fff;
 }
 
-.swiper>.swiper-wrapper>.mainSlide #mainSlide_inner2 .swiper-pagination1{
+.swiper>.swiper-wrapper>.mainSlide #mainSlide_inner2 .swiper-pagination1 {
   color: #fff;
 }
 
-.swiper>.swiper-wrapper>.mainSlide .swiper-pagination1 .swiper-pagination-bullet{
+.swiper>.swiper-wrapper>.mainSlide .swiper-pagination1 .swiper-pagination-bullet {
   width: auto;
   height: auto;
   background-color: inherit;
 }
 
-.swiper>.swiper-wrapper>.mainSlide .swiper-pagination1 .swiper-pagination-bullet::after{
+.swiper>.swiper-wrapper>.mainSlide .swiper-pagination1 .swiper-pagination-bullet::after {
   display: inline;
   content: '/';
   color: #000;
@@ -326,38 +329,39 @@
 
 
 /* kb info */
-.kbinfo{
+.kbinfo {
   background-color: #EFECEC;
 }
 
-.kbinfo_innerContainer{
+.kbinfo_innerContainer {
   position: relative;
   height: 100%;
   max-width: 1256px;
   margin: 0 auto;
 }
 
-.kbinfo_topWrap{
+
+.kbinfo_topWrap {
   width: 100%;
   height: 50%;
   position: relative;
 }
 
-#kbinfo_conWrap1{
+#kbinfo_conWrap1 {
   padding-bottom: 40px;
 }
 
-.kbinfo_inner{
+.kbinfo_inner {
   width: 100%;
   height: 100%;
 }
 
-.kbinfo_topWrap>ul{
+.kbinfo_topWrap>ul {
   display: flex;
   justify-content: space-between;
 }
 
-.kbinfo_topWrap>ul>li{
+.kbinfo_topWrap>ul>li {
   width: 50%;
   height: 250px;
   display: flex;
@@ -366,16 +370,61 @@
   overflow: hidden;
 }
 
-.info_img{
+.info_img {
   flex: 1;
   height: 100%;
-  background-image: url(../img/3.kbinfo/infoimg1.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  position: relative;
 }
 
-.info_text{
+.mySwiper2 .info_img::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 30px solid transparent;
+  border-top: 30px solid transparent;
+  border-left: 20px solid transparent;
+  border-right: 20px solid #755F48;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+.mySwiper3 .info_img::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 30px solid transparent;
+  border-top: 30px solid transparent;
+  border-left: 20px solid #755F48;
+  border-right: 20px solid transparent;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.info_img1 {
+  background-image: url(../img/3.kbinfo/infoimg1.jpg);
+}
+
+.info_img2 {
+  background-image: url(../img/3.kbinfo/infoimg2.jpg);
+}
+
+.info_img5 {
+  background-image: url(../img/3.kbinfo/infoimg5.jpg);
+}
+
+.info_img6 {
+  background-image: url(../img/3.kbinfo/infoimg6.jpg);
+}
+
+.info_text {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -384,7 +433,7 @@
   color: #fff;
 }
 
-.info_text p{
+.info_text p {
   font-size: 12px;
   padding-bottom: 80px;
   background-image: url(../img/3.kbinfo/money.png);
@@ -393,7 +442,7 @@
   background-repeat: no-repeat;
 }
 
-.kbinfoTopArrow{
+.kbinfoTopArrow {
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -403,56 +452,89 @@
   transform: translateY(-50%);
   z-index: 999;
   cursor: pointer;
-  background-size: 30%;
+  background-size: 20px 20px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
 }
 
-#kbinfo1_rightArrow{
-  top: calc(25% - 10px); right: 0;
+#kbinfo1_rightArrow {
+  top: calc(25% - 10px);
+  right: 0;
   background-image: url(../img/3.kbinfo/next.png);
 }
 
-#kbinfo1_leftArrow{
-  top: calc(25% - 10px); left: 0;
+#kbinfo1_leftArrow {
+  top: calc(25% - 10px);
+  left: 0;
   background-image: url(../img/3.kbinfo/left.png);
 }
 
-#kbinfo2_rightArrow{
-  top: calc(75% + 10px); right: 0;
+#kbinfo2_rightArrow {
+  top: calc(75% + 10px);
+  right: 0;
   background-image: url(../img/3.kbinfo/next.png);
 }
 
-#kbinfo2_leftArrow{
-  top: calc(75% + 10px); left: 0;
+#kbinfo2_leftArrow {
+  top: calc(75% + 10px);
+  left: 0;
   background-image: url(../img/3.kbinfo/left.png);
 }
 
-.kbinfo_bankingWrap{
+.kbinfo_innerContainer .swiper-button-disabled {
+  opacity: 0.3;
+  background-color: #fff;
+  cursor: default;
+}
+
+.kbinfo_bankingWrap {
   margin-top: 40px;
   width: 100%;
   height: 115px;
   background-color: #FFCF00;
+  border-radius: 10px;
   position: relative;
 }
 
-.kbinfo_bottomWrap{
+
+.kbinfo_bottomWrap {
   width: 80%;
   height: 100%;
   position: relative;
 }
 
-.kbinfo_thirdcon{
+.kbinfo_bottomWrap>.whiteLine {
+  width: 1px;
+  height: 30px;
+  background-color: #fff;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.kbinfo_bottomWrap>.whiteLine1 {
+  left: 25%;
+}
+
+.kbinfo_bottomWrap>.whiteLine2 {
+  left: 50%;
+}
+
+.kbinfo_bottomWrap>.whiteLine3 {
+  right: 25%;
+}
+
+.kbinfo_thirdcon {
   width: 100%;
 }
 
-.kbinfo_thirdcon>li{
+.kbinfo_thirdcon>li {
   width: 25%;
   text-align: center;
   line-height: 115px;
 }
 
-.kbinfo_thirdcon>li>a{
+.kbinfo_thirdcon>li>a {
   color: #000;
   text-decoration: none;
   padding-left: 50px;
@@ -461,11 +543,31 @@
   background-repeat: no-repeat;
 }
 
-.kbinfo_thirdcon .quickSearch{
+.kbinfo_thirdcon .quickSearch {
   background-image: url(../img/3.kbinfo/search.png);
 }
 
-.kbinfoBotArrow{
+.kbinfo_thirdcon .accountSearch {
+  background-image: url(../img/3.kbinfo/account.png);
+}
+
+.kbinfo_thirdcon .accountTransfer {
+  background-image: url(../img/3.kbinfo/data-transfer.png);
+}
+
+.kbinfo_thirdcon .newDeposit {
+  background-image: url(../img/3.kbinfo/upload.png);
+}
+
+.kbinfo_thirdcon .securedLoan {
+  background-image: url(../img/3.kbinfo/donation.png);
+}
+
+.kbinfo_thirdcon .registration {
+  background-image: url(../img/3.kbinfo/document.png);
+}
+
+.kbinfoBotArrow {
   width: 30px;
   height: 30px;
   position: absolute;
@@ -477,14 +579,21 @@
   background-position: center;
 }
 
-#kbinfo3_rightArrow{
-  top: 50%; right: 50px;
+#kbinfo3_rightArrow {
+  top: 50%;
+  right: 50px;
   background-image: url(../img/3.kbinfo/next.png);
 }
 
-#kbinfo3_leftArrow{
-  top: 50%; left: 50px;
+#kbinfo3_leftArrow {
+  top: 50%;
+  left: 50px;
   background-image: url(../img/3.kbinfo/left.png);
+}
+
+.kbinfo_bankingWrap .swiper-button-disabled {
+  opacity: 0.3;
+  cursor: default;
 }
 
 /* kb info */
@@ -493,21 +602,23 @@
 
 
 /* mainNotice */
-.mainNotice{
+.mainNotice {
   background-image: url(../img/4.mainNotice/공지사항_bg_t.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 
 }
+
 /* 공지사항 리스트 */
-.mainNoti_list_wrap{
+.mainNoti_list_wrap {
   background-color: #ffffff66;
   opacity: 6;
   margin-bottom: 20px;
   padding: 25px 20px;
   box-sizing: border-box;
 }
+
 /* .mainNoti_list{
   background-color: #ffffff66;
   opacity: 6;
@@ -515,12 +626,13 @@
   padding: 25px 20px;
   box-sizing: border-box;
 } */
-.mainNoti_list>li{
+.mainNoti_list>li {
   border-bottom: 1px solid #dddddd;
   padding: 20px 0;
   box-sizing: border-box;
 }
-.mainNoti_list>li>a{
+
+.mainNoti_list>li>a {
   display: block;
   display: flex;
   justify-content: space-between;
@@ -528,37 +640,43 @@
   color: #000;
   text-align: center;
 }
-.mainNoti_list .num{
-  width: 75px; 
+
+.mainNoti_list .num {
+  width: 75px;
   padding: 5px 0;
   margin-right: 80px;
   border: 1px solid #7F7F7F;
   border-radius: 4px;
   text-align: center;
 }
-.mainNoti_list .content{
+
+.mainNoti_list .content {
   width: 80%;
   text-align: left;
   line-height: 36px;
 }
-.mainNoti_list .date{
+
+.mainNoti_list .date {
   padding-right: 80px;
   position: relative;
   line-height: 36px;
 }
-.mainNoti_list .date::after{
+
+.mainNoti_list .date::after {
   display: block;
   content: '';
-  width: 50px; height: 50px;
+  width: 50px;
+  height: 50px;
   background-image: url(../img/4.mainNotice/Group\ 26.png);
   background-repeat: no-repeat;
   background-position: center center;
   position: absolute;
-  top: -20%; right: 0;
+  top: -20%;
+  right: 0;
 }
 
 /* 전체보기 버튼 */
-.mainList_btn{
+.mainList_btn {
   display: block;
   margin: 0 auto;
   width: 9%;
@@ -577,15 +695,17 @@
 
 
 /* 회사 안내 */
-.mainNoti_info_wrap{
+.mainNoti_info_wrap {
   padding-bottom: 52px;
 }
-.mainNoti_info{
+
+.mainNoti_info {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.mainNoti_info>li{
+
+.mainNoti_info>li {
   width: calc(25% - 20px);
   box-sizing: border-box;
   height: 250px;
@@ -595,26 +715,43 @@
   background-repeat: no-repeat;
   background-size: 50px 50px;
   background-position: right 25px bottom 25px;
-  bac
-} 
-.mainNoti_info>li:first-child{
+}
+
+.mainNoti_info>li:first-child {
   background-image: url(../img/4.mainNotice/info_icon.png);
 }
-.mainNoti_info>li:nth-child(2){
+
+.mainNoti_info>li:nth-child(2) {
   background-image: url(../img/4.mainNotice/소식_icon.png);
 }
-.mainNoti_info>li:nth-child(3){
+
+.mainNoti_info>li:nth-child(3) {
   background-image: url(../img/4.mainNotice/입찰&채용_icon.png);
 }
-.mainNoti_info>li:last-child{
+
+.mainNoti_info>li:last-child {
   background-image: url(../img/4.mainNotice/Q&A_icon.png);
 }
-.mainNoti_info>li>a{
+
+.mainNoti_info>li>a {
   text-decoration: none;
   color: #000;
 }
-.mainNoti_info>li>a p{
+
+.mainNoti_info>li>a p {
   margin-top: 12px;
 }
+
 /* mainNotice */
 /*** 정다은 ***/
+
+/*** 1200px ***/
+@media (max-width: 1200px){
+  .swiper>.swiper-wrapper>.mainSlide .swiper-pagination1 {
+    left: 15px;
+  }
+  .mainSlide_directMenu{
+    right: 15px;
+  }
+}
+/*** 1200px ***/
