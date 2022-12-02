@@ -12,8 +12,8 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-// 첫번째 섹션의 swiper
-var swiper = new Swiper(".mySwiper1", {
+// 첫번째 섹션(mainSlide)의 swiper
+var swiper1 = new Swiper(".mySwiper1", {
   // spaceBetween: 30,
   effect: "fade",
   pagination: {
@@ -31,5 +31,29 @@ var swiper = new Swiper(".mySwiper1", {
   allowTouchMove: false,
 });
 
+// 세번째 섹션(kbinfo)의 swiper
+var swiper = new Swiper(".mySwiper2", {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  slidesPerGroup: 1,
+  loop: false,
+  loopAdditionalSlides: 1,
+  loopFillGroupWithBlank: true,
+  allowTouchMove: false,
 
-// 두번째 섹션의 swiper
+  navigation: {
+    nextEl: ".kbinfo1_rightArrow",
+    prevEl: ".kbinfo1_leftArrow",
+  },
+});
+
+// var swiper = new Swiper(".mySwiper3", {
+//   slidesPerView: 2,
+//   slidesPerGroup: 1,
+//   loop: false,
+//   loopFillGroupWithBlank: true,
+//   navigation: {
+//     nextEl: ".kbinfo2_leftArrow",
+//     prevEl: ".kbinfo2_rightArrow",
+//   },
+// });

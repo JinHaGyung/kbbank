@@ -326,6 +326,53 @@
 
 
 /* kb info */
+.kbinfo{
+  background-color: #EFECEC;
+}
+
+.kbinfo_conWrap{
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+
+.kbinfo_inner{
+  width: 100%;
+  height: 100%;
+}
+
+.kbinfo_conWrap>ul{
+  display: flex;
+  justify-content: space-between;
+}
+
+.kbinfo_conWrap>ul>li{
+  width: 50%;
+  height: 250px;
+  display: flex;
+  background-color: #755F48;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.info_img{
+  flex: 1;
+  height: 100%;
+  background-image: url(../img/3.kbinfo/infoimg1.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.info_text{
+  flex: 1;
+}
+
+.kbinfo1_rightArrow{
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+}
 
 /* kb info */
 /*** 정지헌 ***/
