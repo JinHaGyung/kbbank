@@ -42,18 +42,37 @@ var swiper = new Swiper(".mySwiper2", {
   allowTouchMove: false,
 
   navigation: {
-    nextEl: ".kbinfo1_rightArrow",
-    prevEl: ".kbinfo1_leftArrow",
+    nextEl: "#kbinfo1_rightArrow",
+    prevEl: "#kbinfo1_leftArrow",
   },
 });
 
-// var swiper = new Swiper(".mySwiper3", {
-//   slidesPerView: 2,
-//   slidesPerGroup: 1,
-//   loop: false,
-//   loopFillGroupWithBlank: true,
-//   navigation: {
-//     nextEl: ".kbinfo2_leftArrow",
-//     prevEl: ".kbinfo2_rightArrow",
-//   },
-// });
+var swiper = new Swiper(".mySwiper3", {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  slidesPerGroup: 1,
+  loop: false,
+  loopAdditionalSlides: 1,
+  loopFillGroupWithBlank: true,
+  allowTouchMove: false,
+
+  navigation: {
+    nextEl: "#kbinfo2_rightArrow",
+    prevEl: "#kbinfo2_leftArrow",
+  },
+});
+
+var swiper = new Swiper(".mySwiper4", {
+  slidesPerView: 4,
+  spaceBetween: 0,
+  // slidesPerGroup: 1,
+  loop: false,
+  loopAdditionalSlides: 1,
+  loopFillGroupWithBlank: true,
+  allowTouchMove: false,
+
+  navigation: {
+    nextEl: "#kbinfo3_rightArrow",
+    prevEl: "#kbinfo3_leftArrow",
+  },
+});
