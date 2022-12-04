@@ -10,7 +10,12 @@ var swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
     clickable: true,
     renderBullet: function (index, className) {
-      return `<span class="${className}" id="${className}${index}"></span>`
+      return `
+      <div class="${className}" id="${className}${index}">
+        <span class="navBtn"></span>
+        <span class="navTxt"></span>
+      </div>
+      `;
     },
   },
 });
