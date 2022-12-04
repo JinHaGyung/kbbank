@@ -9,8 +9,12 @@ var swiper = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+    renderBullet: function (index, className) {
+      return `<span class="${className}" id="${className}${index}"></span>`
+    },
   },
 });
+
 
 // 첫번째 섹션(mainSlide)의 swiper
 var swiper1 = new Swiper(".mySwiper1", {
@@ -20,7 +24,6 @@ var swiper1 = new Swiper(".mySwiper1", {
     el: ".swiper-pagination1",
     clickable: true,
     renderBullet: function (index, className) {
-      // return '<span class="' +  className + '">' + (index + 1) + "</span>";
       return `<span class=${className}> 0${index + 1} </span>`
     },
   },
