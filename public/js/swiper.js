@@ -47,7 +47,7 @@ var swiper = new Swiper(".mySwiper2", {
   loop: false,
   loopAdditionalSlides: 1,
   loopFillGroupWithBlank: true,
-  allowTouchMove: false,
+  allowTouchMove: true,
 
   navigation: {
     nextEl: "#kbinfo1_rightArrow",
@@ -62,7 +62,7 @@ var swiper = new Swiper(".mySwiper3", {
   loop: false,
   loopAdditionalSlides: 1,
   loopFillGroupWithBlank: true,
-  allowTouchMove: false,
+  allowTouchMove: true,
 
   navigation: {
     nextEl: "#kbinfo2_rightArrow",
@@ -77,7 +77,7 @@ var swiper = new Swiper(".mySwiper4", {
   loop: false,
   loopAdditionalSlides: 1,
   loopFillGroupWithBlank: true,
-  allowTouchMove: false,
+  allowTouchMove: true,
 
   navigation: {
     nextEl: "#kbinfo3_rightArrow",
