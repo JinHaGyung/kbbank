@@ -124,7 +124,7 @@ header .utilSearch input{
     box-sizing: border-box;
 }
 .nav_right{
-    width: 10%; height: auto;
+    width: 20%; height: auto;
 }
 .nav_right>ul{
     display: flex;
@@ -225,3 +225,19 @@ header .utilSearch input{
     background-image: url(../../img/header/menu_hover.png);
     transition:all 0.2s ease-in-out;
 }
+
+/*** 1130px ***/
+@media(max-width: 1130px){
+    .topArea{
+        display: none;
+    }
+    .nav_left>.menu{
+        display: none;
+    }
+    .gnbBtn_Login::after{
+        display: none;
+    }
+
+
+}
+/*** 1130px ***/
