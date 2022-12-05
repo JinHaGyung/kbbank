@@ -134,6 +134,7 @@ header .utilSearch input{
 .gnbBtn_Login{
     width: 34px; height: 34px;
     position: relative;
+    overflow: hidden;
 }
 .gnbBtn_Login::after{
     display: block;
@@ -143,24 +144,54 @@ header .utilSearch input{
     position: absolute;
     top: 17%; left: 39px;
 }
-.gnbBtn_Login>a{
+.gnbBtn_Login_b{
     display: block;
     width: 100%; height: 100%;
     background-image: url(../../img/header/log_in\ 1.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 34px auto;
+    position: absolute;
+    top: 0; left: 0;
+    transition-duration: 0.3s;
+}
+.gnbBtn_Login_y{
+    display: block;
+    width: 100%; height: 100%;
+    background-image: url(../../img/header/log_in\ _hover.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 34px auto;
+    position: absolute;
+    top: 34px; left: 0;
+    transition-duration: 0.3s;
 }
 .gnbBtn_Sitemap{
     width: 34px; height: 34px;
+    overflow: hidden;
+    position: relative;
 }
-.gnbBtn_Sitemap>a{
+.gnbBtn_Sitemap_b{
     display: block;
     width: 100%; height: 100%;
     background-image: url(../../img/header/menu\ 1.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 34px auto;
+    position: absolute;
+    top: 0; left: 0;
+    transition-duration: 0.3s;
+}
+.gnbBtn_Sitemap_y{
+    display: block;
+    width: 100%; height: 100%;
+    background-image: url(../../img/header/menu_hover.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 34px auto;
+    position: absolute;
+    top: 34px; left: 0;
+    transition-duration: 0.3s;
 }
 
 
@@ -216,10 +247,6 @@ header .utilSearch input{
 } */
 .lnb a:hover{
     font-weight: 300;
-}
-.gnbBtn_Login>a:hover{
-    background-image: url(../../img/header/log_in\ _hover.png);
-    transition-duration: 0.2s;
 }
 .gnbBtn_Sitemap>a:hover{
     background-image: url(../../img/header/menu_hover.png);
