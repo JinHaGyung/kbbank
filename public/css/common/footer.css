@@ -106,15 +106,64 @@ select{
 select::-ms-expand {
   display: none;
 }
-section:focus{
+select:focus{
   outline: none;
 }
 select option {
   background: #EEEEEE;
   color: #333333;
-  border: none;
 }
-
 select option:checked{
   outline: :none;
+}
+@media (max-width:1130px) {
+  .footer_wrap {
+    padding: 45px 25px 70px;
+  }
+.footer_wrap_top{
+  flex-direction: column;
+  }
+  .footer_left {
+    padding-top: 15px;
+    width: 100%;
+}
+.footer_call_wrap{
+  justify-content: left;
+}
+.footer_bar{
+ margin: 0 20px;
+}
+.footer_right {
+  width: 100%;
+}
+}
+
+@media (max-width:800px) {
+  .footer_wrap {
+    padding: 30px 15px 30px;
+  }
+  .footer_icon {
+    height: 48px;
+  }
+  .footer_m_wrap{
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer_right_top{
+    padding-top: 25px;
+  }
+  .footer_right_top>ul {
+    justify-content: center;
+ }
+ .footer_wrap_bottom {
+  padding-top: 55px;
+}
+.footer_right_bottom>p {
+  display: flex;
+  justify-content: center;
+ }
+ .footer_right_top>ul {
+  width: 65%;
+  margin: 0 auto;
+}
 }
