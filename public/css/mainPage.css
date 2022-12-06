@@ -495,7 +495,7 @@
 }
 
 #kbinfo_conWrap1 {
-  padding-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .kbinfo_inner {
@@ -639,9 +639,12 @@
   margin-top: 40px;
   width: 100%;
   height: 115px;
+  position: relative;
+}
+
+.kbinfo_bankingWrap>div{
   background-color: #FFCF00;
   border-radius: 10px;
-  position: relative;
 }
 
 
@@ -901,12 +904,14 @@
 
 /*** 반응형 1200px ***/
 @media (max-width: 1200px) {
+
   /* swiper 관련된 부분(건들면 고장남) */
-  main>.swiper>.swiper-wrapper{
+  main>.swiper>.swiper-wrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
   }
+
   .swiper {
     height: auto;
   }
@@ -918,16 +923,21 @@
   .mainSlide_directMenu {
     right: 15px;
   }
-  .swiper .swiper-pagination::after{
+
+  .swiper .swiper-pagination::after {
     display: none;
   }
+
   /* swiper 관련된 부분(건들면 고장남) */
 
+
+
+
   /* 첫번째 섹션 */
-  .mainSlide_wrap .mainSlide_inner{
+  .mainSlide_wrap .mainSlide_inner {
     height: 100%;
   }
-  
+
   /* 첫번째 섹션 */
 
 
@@ -936,7 +946,24 @@
 
 
 
+  /* 세번째 섹션 */
+  .kbinfo_topWrap {
+    padding: 0 15px;
+  }
 
+  .kbinfo_bankingWrap{
+    padding: 0;
+  }
+
+  .kbinfo_bankingWrap>div{
+    background-color: #FFCF00;
+    margin: 0 15px;
+    box-sizing: border-box;
+  }
+
+
+
+  /* 세번째 섹션 */
 
 
 }
@@ -950,11 +977,12 @@
     padding-top: 60px;
   }
 }
+
 /*** 반응형 1130px ***/
 
 
 /*** 반응형 800px ***/
-@media(max-width: 800px){
+@media(max-width: 800px) {
 
 
 
@@ -965,30 +993,36 @@
 
 
 
-    
+
   /* mainNotice */
-  .mainNotice{
-      background-image: url(../img/4.mainNotice/공지사항_bg_m.png);
+  .mainNotice {
+    background-image: url(../img/4.mainNotice/공지사항_bg_m.png);
   }
+
   /* 공지사항 리스트 */
-  .mainNoti_list>li>a{
-      flex-direction: column;
+  .mainNoti_list>li>a {
+    flex-direction: column;
   }
-  .mainNoti_list .date{
-      text-align: start;
+
+  .mainNoti_list .date {
+    text-align: start;
   }
-  .mainNoti_list .date::after{
-      display: none;
+
+  .mainNoti_list .date::after {
+    display: none;
   }
-  .mainList_btn{
-      width: 100%;
+
+  .mainList_btn {
+    width: 100%;
   }
-  .mainNoti_info>li{
-      width: calc(50% - 10px);
-      
+
+  .mainNoti_info>li {
+    width: calc(50% - 10px);
+
   }
-  .mainNoti_info>li:first-child{
-      margin-bottom: 20px;
+
+  .mainNoti_info>li:first-child {
+    margin-bottom: 20px;
   }
 
   /* mainNotice */
