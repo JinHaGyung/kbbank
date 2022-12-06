@@ -20,13 +20,13 @@
     background-size: 26px auto;
 }
 .pageUtil>li:first-child{
-    background-image: url(../img/fax\ 1.png);
+    background-image: url(../img/titleArea/fax\ 1.png);
 }
 .pageUtil>li:nth-child(2){
-    background-image: url(../img/plus.png);
+    background-image: url(../img/titleArea/plus.png);
 }
 .pageUtil>li:last-child{
-    background-image: url(../img/minus.png);
+    background-image: url(../img/titleArea/minus.png);
 }
 .titleArea>div>h2{
     padding: 60px 0 40px;
