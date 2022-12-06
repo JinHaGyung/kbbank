@@ -1,3 +1,4 @@
+/* 메인페이지 스크롤 스와이퍼 */
 var nowWidth = window.innerWidth;
 var swiper0 = undefined;
 
@@ -34,7 +35,7 @@ function initSwiper() {
     swiperBtn1.innerText = 'KB저축은행 솔루션';
     swiperBtn2.innerText = 'KB  Info';
     swiperBtn3.innerText = '저축은행 공지사항';
-    
+
   } else if (nowWidth < 1200 && swiper0 != undefined) {
     swiper0.destroy();
     swiper0 = undefined;
@@ -56,9 +57,8 @@ window.addEventListener('resize', function () {
   nowWidth = window.innerWidth;
   initSwiper();
   // swiper0 = undefined;
-
 });
-
+/* 메인페이지 스크롤 스와이퍼 */
 
 
 

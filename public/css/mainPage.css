@@ -8,7 +8,7 @@
 
 
 .swiper .swiper-pagination {
-  width: 200px;
+  width: 130px;
   left: 3%;
   top: 30%;
 }
@@ -961,7 +961,22 @@
     box-sizing: border-box;
   }
 
+  .kbinfoTopArrow{
+    background-color: inherit;
+    filter: none;
+  }
 
+  #kbinfo1_leftArrow,#kbinfo2_leftArrow{
+    background-image: url(../img/3.kbinfo/left_w.png);
+  }
+
+  #kbinfo1_rightArrow,#kbinfo2_rightArrow{
+    background-image: url(../img/3.kbinfo/next_w.png);
+  }
+
+  .kbinfo_innerContainer .swiper-button-disabled{
+    background-color: inherit;
+  }
 
   /* 세번째 섹션 */
 
