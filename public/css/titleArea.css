@@ -35,10 +35,19 @@
 
 
 
+/*** 1200px ***/
+@media(max-width: 1200px){
+    .pageUtil{
+     right: 15px;
+    }
+
+}
+/*** 1200px ***/
+
 /*** 1130px ***/
 @media(max-width: 1130px){
     .pageUtil{
-        top: 55px; right: 15px;
+        top: 55px;
     }
     .titleArea>div>h2{
         padding: 120px 0 40px;
