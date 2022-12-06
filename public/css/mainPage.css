@@ -1,6 +1,5 @@
 .swiper {
   height: calc(100vh - 95px);
-  /* transition: all 0.3s; */
 }
 
 .swiper.mySwiper {
@@ -243,10 +242,6 @@
   transition: all .1s ease-in-out;
 }
 
-.mainSlide_directMenu .Btn_inner>li>a:hover::after {
-  width: 35%;
-}
-
 .mainSlide_directMenu .Btn_inner>li>.loginBtn:hover::after {
   width: 57%;
 }
@@ -255,7 +250,7 @@
   left: 69%;
 }
 
-.mainSlide_directMenu .Btn_inner>li>.faq:hover::after {
+.mainSlide_directMenu .Btn_inner>li>.faqBtn:hover::after {
   width: 100%;
 }
 
@@ -269,6 +264,10 @@
 
 .mainSlide_directMenu .Btn_inner>li>.registration:hover::after {
   width: 60%;
+}
+
+.mainSlide_directMenu .Btn_inner>li>a:hover::after {
+  width: 35%;
 }
 
 .mainSlide_directMenu .Btn_inner .loginBtn {
@@ -898,12 +897,24 @@
 
 /*** 반응형 1200px ***/
 @media (max-width: 1200px) {
+  main>.swiper>.swiper-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .swiper {
+    height: auto;
+  }
+
   .swiper>.swiper-wrapper>.mainSlide .swiper-pagination1 {
     left: 15px;
   }
 
   .mainSlide_directMenu {
     right: 15px;
+  }
+  .swiper .swiper-pagination::after{
+    display: none;
   }
 }
 

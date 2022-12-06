@@ -116,5 +116,5 @@ select option {
 }
 
 select option:checked{
-  outline: :none;
+  outline: none;
 }
