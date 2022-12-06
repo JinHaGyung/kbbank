@@ -1,4 +1,4 @@
-/* 메인페이지 스크롤 스와이퍼 */
+/**************** 메인페이지 스크롤 스와이퍼 ****************/
 var nowWidth = window.innerWidth;
 var swiper0 = undefined;
 
@@ -58,7 +58,10 @@ window.addEventListener('resize', function () {
   initSwiper();
   // swiper0 = undefined;
 });
-/* 메인페이지 스크롤 스와이퍼 */
+/**************** 메인페이지 스크롤 스와이퍼 ****************/
+
+
+
 
 
 
@@ -82,7 +85,11 @@ var swiper1 = new Swiper(".mySwiper1", {
 
 // 세번째 섹션(kbinfo)의 swiper
 var swiper2 = new Swiper(".mySwiper2", {
-  slidesPerView: 2,
+  breakpoints: {
+    799: {
+      slidesPerView: 2
+    }
+  },
   spaceBetween: 30,
   slidesPerGroup: 1,
   loop: false,
@@ -97,7 +104,11 @@ var swiper2 = new Swiper(".mySwiper2", {
 });
 
 var swiper3 = new Swiper(".mySwiper3", {
-  slidesPerView: 2,
+  breakpoints: {
+    799: {
+      slidesPerView: 2
+    }
+  },
   spaceBetween: 30,
   slidesPerGroup: 1,
   loop: false,
@@ -112,7 +123,11 @@ var swiper3 = new Swiper(".mySwiper3", {
 });
 
 var swiper4 = new Swiper(".mySwiper4", {
-  slidesPerView: 4,
+  breakpoints: {
+    599: {slidesPerView: 2},
+    699: {slidesPerView: 3},
+    819: {slidesPerView: 4},
+  },
   spaceBetween: 0,
   // slidesPerGroup: 1,
   loop: false,
