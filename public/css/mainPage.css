@@ -833,7 +833,7 @@
 .mainList_btn {
   display: block;
   margin: 0 auto;
-  width: 9%;
+  width: 100px;
   padding: 10px 0;
   margin-top: 25px;
   box-sizing: border-box;
