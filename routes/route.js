@@ -10,4 +10,8 @@ router.get('/footer', (req, res)=>{ /* 픗터확인용 */
   res.render('footer');
 });
 
+router.get('/login', (req, res)=>{ /* 로그인페이지 확인용 */
+  res.render('loginPage');
+});
+
 module.exports = router;
