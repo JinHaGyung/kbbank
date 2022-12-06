@@ -2,7 +2,12 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-
+.mobile{
+  display: none;
+}
+.desk{
+  display: block;
+}
 .main_title{
   padding-top: 12px;
   padding-bottom: 50px;
@@ -60,11 +65,18 @@ input{
 }
 /*** 1200px ***/
 
+
 /*** 800px ***/
 @media(max-width: 800px){
   .main_title{
     padding-top: 45px;
     padding-bottom: 45px;
+  }
+  .mobile{
+    display: block;
+  }
+  .desk{
+    display: none;
   }
 }
 /*** 800px ***/
