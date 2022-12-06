@@ -195,6 +195,7 @@ select option:checked{
   }
   .footer_icon {
     height: 48px;
+    padding-top: 15px;
   }
   .footer_m_wrap{
     display: flex;
@@ -212,9 +213,41 @@ select option:checked{
 .footer_right_bottom>p {
   display: flex;
   justify-content: center;
+  text-align: center;
  }
  .footer_right_top>ul {
   width: 65%;
   margin: 0 auto;
+}
+}
+
+@media (max-width:740px) {
+  .footer_icon_blog {
+    display: none;
+  }
+  .footer_icon_facebook{
+    display: none;
+  }
+  .footer_icon_ytub{
+    display: none;
+  }
+  .footer_right_bottom>p {
+    display: none;
+  }
+  .footer_m_wrap {
+    flex-direction: column-reverse;
+  }
+ .footer_call_wrap {
+    display: flex;
+    justify-content: center;
+  }
+  .footer_left>p {
+  text-align: center;
+  }
+  .footer_logo{
+    margin: 0 auto;
+  }
+  select {
+    width: 100%;
 }
 }
