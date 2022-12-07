@@ -27,14 +27,3 @@ leftNav.addEventListener('click',()=>{
   footer.style.top = 0;
 })
 
-
-// 왼쪽 내비 관련 스크립트
-let swiperBtn0 = document.querySelector('#swiper-pagination-bullet0>.navTxt');
-let swiperBtn1 = document.querySelector('#swiper-pagination-bullet1>.navTxt');
-let swiperBtn2 = document.querySelector('#swiper-pagination-bullet2>.navTxt');
-let swiperBtn3 = document.querySelector('#swiper-pagination-bullet3>.navTxt');
-
-swiperBtn0.innerText = 'With KB';
-swiperBtn1.innerText = 'KB저축은행 솔루션';
-swiperBtn2.innerText = 'KB  Info';
-swiperBtn3.innerText = '저축은행 공지사항';
