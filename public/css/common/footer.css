@@ -90,7 +90,7 @@ footer{
 .footer_icon_ytub{
   background-image: url(../../img/footer/yt_icon.png);
 }
-select{
+#KB_selectBox{
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -103,17 +103,17 @@ select{
   appearance: none;
   background: url(../../img/footer/footer_arrow_1.png) no-repeat 95% 50%;  /* 화살표 모양의 이미지 */
 }
-select::-ms-expand {
+#KB_selectBoxt::-ms-expand {
   display: none;
 }
-select:focus{
+#KB_selectBox:focus{
   outline: none;
 }
-select option {
+#KB_selectBox > option {
   background: #EEEEEE;
   color: #333333;
 }
-select option:checked{
+##KB_selectBox option:checked{
   outline: none;
 }
 @media (max-width:1130px) {
@@ -247,7 +247,7 @@ select option:checked{
   .footer_logo{
     margin: 0 auto;
   }
-  select {
+  ##KB_selectBox {
     width: 100%;
 }
 }
