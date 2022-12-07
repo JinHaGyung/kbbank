@@ -2,11 +2,6 @@
   height: calc(100vh - 95px);
 }
 
-.swiper.mySwiper {
-  padding-top: 95px;
-}
-
-
 .swiper .swiper-pagination {
   width: 130px;
   left: 3%;
@@ -24,7 +19,7 @@
   background-position: center;
   position: absolute;
   bottom: -70px;
-  left: -5.5%;
+  left: -9.3%;
 
 }
 
@@ -1203,14 +1198,7 @@
 /*** 반응형 1200px ***/
 
 
-/*** 반응형 1130px ***/
-@media (max-width: 1130px) {
-  .swiper.mySwiper {
-    padding-top: 60px;
-  }
-}
 
-/*** 반응형 1130px ***/
 
 
 
