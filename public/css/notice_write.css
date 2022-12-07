@@ -1,0 +1,28 @@
+table{
+  width: 100%;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+.write_cell{
+  height: 48px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #DDDDDD;
+}
+.write_title{
+  width: 23%;
+  background-color: #F3F2EE;
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+.write_title>span{
+  padding: 0 5px 0 26px
+}
+.write_select{
+  width: 77%;
+  margin-left: 30px;
+}
+.write_select>input{
+  border-radius: 4px;
+}

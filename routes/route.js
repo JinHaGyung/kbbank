@@ -19,4 +19,16 @@ router.get('/login', (req, res)=>{ /* 로그인페이지 확인용 */
   res.render('loginPage');
 });
 
+
+router.get('/notice_write', (req, res)=>{ /* 공지사항 작성 */
+  res.render('notice_write');
+});
+
+
+router.get('/notice_correct', (req, res)=>{ /* 공지사항 수정 */
+  res.render('notice_correct');
+});
+
+
+
 module.exports = router;
