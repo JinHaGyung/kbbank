@@ -10,7 +10,7 @@
     justify-content: space-between;
     margin-top: 20px;
     position: absolute;
-    top: 90px; right: 0;
+    top: 20px; right: 0;
 }
 .pageUtil>li{
     width: 33px; height: 33px;
@@ -29,7 +29,7 @@
     background-image: url(../img/titleArea/minus.png);
 }
 .titleArea>div>h2{
-    padding: 155px 0 40px;
+    padding: 60px 0 40px;
     box-sizing: border-box;
 }
 
@@ -47,10 +47,10 @@
 /*** 1130px ***/
 @media(max-width: 1130px){
     .pageUtil{
-        top: 55px;
+        top: -15px;
     }
     .titleArea>div>h2{
-        padding: 120px 0 40px;
+        padding: 25px 0 40px;
     }
 
 }
