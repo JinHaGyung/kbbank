@@ -1,3 +1,6 @@
+
+<!-- class명에 list 꼭 넣기! -->
+
 <div class="titleArea">
     <div class="w1200">
         <ul class="pageUtil">
@@ -6,5 +9,28 @@
             <li><a href=""></a></li>
         </ul>
         <h2 class="f_bold">공지사항</h2>
+        <div class="list_searchBox">
+            <div>
+            <select name="list_searchCategory" id="list_searchCategory" class="list_ST list_col">
+                <option value="ZZ">전체</option>
+                <option value="01">안내</option>
+                <option value="02">신상품</option>
+                <option value="03">입찰공고</option>
+                <option value="04">약관개정</option>
+                <option value="05">채용</option>
+            </select>
+            <select name="list_searchCondition" id="list_searchCondition" class="list_ST list_col">
+                <option value="ZZ">전체</option>
+                <option value="con_TTL">제목</option>
+                <option value="enr_DT">작성일</option>
+                <option value="txt_INF">내용</option>
+            </select>
+            <div>
+                <input id="list_searchKeyword" class="list_searchKeyword list_col" type="text" placeholder="검색어 입력" title="검색어 입력">
+            </div>
+            <button type="button" id="list_btn">검색</button>
+            </div>
+        </div>
   </div>
 </div>
+
