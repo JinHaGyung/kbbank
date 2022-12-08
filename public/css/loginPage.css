@@ -2,6 +2,95 @@
   background-color: #F5F5F5;
 }
 
+.login_wrap>.main_title{
+  padding-top: 78px;
+  padding-bottom: 78px;
+}
+
 .login_inner{
+}
+
+.login_topCon{
+  padding: 54px 110px;
+  box-sizing: border-box;
+  margin-bottom: 80px;
   background-color: #fff;
+}
+
+.login_bottomCon{
+  padding: 110px 84px;
+  box-sizing: border-box;
+  background-color: #fff;
+  display: flex;
+}
+
+.login_left{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end;
+  border-right: 1px solid;
+  padding: 75px 85px 75px 0;
+  box-sizing: border-box;
+}
+
+.leftLogin{
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.certificateLogin1{
+  background-color: #ffcf00;
+}
+
+.certificateLogin2{
+  background-color: #755F48;
+  color: #fff;
+}
+
+.login_right{
+  width: 100%;
+  padding: 75px 0 63px 85px;
+  box-sizing: border-box;
+}
+
+.login_innerTop{
+  display: flex;
+  align-items: center;
+  gap: 20px
+  ;
+}
+
+.login_inputWrap{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login_inputWrap>input{
+  width: 300px;
+  height: 45px;
+  border-radius: 10px;
+  border: 2px solid #000;
+  color: #7f7f7f;
+}
+
+.login_btn{
+  width: 100px; height: 100px;
+  border-radius: 10px;
+  padding: 0;
+  background-color: #E0E0E0;
+  border: 0;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.login_innerBot{
+  display: flex;
 }
