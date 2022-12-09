@@ -29,7 +29,9 @@ h3{
 p{
   font-size: 16px;
 }
-
+h4{
+  font-size: 12px;
+}
 .f_bold{
   font-weight: bold;
 }
@@ -57,7 +59,10 @@ p{
 input{
   padding-left: 20px;
   box-sizing: border-box;
+<<<<<<< HEAD
+=======
   font-family: 'Noto Sans KR', sans-serif;
+>>>>>>> abf0f4909433cbee1003775cc66dae921694a9dc
 }
 
 
