@@ -1,0 +1,69 @@
+<div class="move">
+  <div class="panel">
+      <div class="panel-heading" id="label">
+          <h4> <i class="ion-ios-information"></i> {{xe_trans($config->get('label'))}} 입주 날짜 선택</h4>
+      </div>
+      <div class="panel-body">
+          <div class="panel-body">
+              <div class="row">
+                  <div class="form-check">
+                      <div class="xe-form-group xe-dynamicField">
+                          <label class="xe-label">
+                              <input type="radio" class="__xe_radiobox" name="radio" value="a"/>
+                              <span class="xe-input-helper"></span>
+                              <span class="xe-label-text">즉시 입주</span>
+                          </label>
+
+                          <label class="xe-label">
+                              <input type="radio" class="__xe_radiobox" name="radio" value="b"/>
+                              <span class="xe-input-helper"></span>
+                              <span class="xe-label-text">날짜 협의</span>
+                          </label>
+
+                          <label class="xe-label">
+                              <input type="radio" class="__xe_radiobox" name="radio" value="c" checked/>
+                              <span class="xe-input-helper"></span>
+                              <span class="xe-label-text"> {{ xe_trans($config->get('label')) }} 선택</span>
+                          </label>
+                          <div class="xu-form-group__box"  @if($config->get('date_type') != 'single') style="float:left; width:50%; padding-right:10px;" @endif>
+                              <input type="text" id="{{ $key['start'] }}_start" name="{{ $key['start'] }}" class="xe-form-control amuz-date-picker" placeholder="{{ $config->get('date_type') == 'single' ? '날짜선택' : '시작일' }}">
+                          </div>
+                          <div class="xu-form-group__box" style="float:right; width:50%; padding-left:10px; @if($config->get('date_type') == 'single') display:none @endif ">
+                              <input type="text" id="{{ $key['end'] }}_end" name="{{ $key['end'] }}" class="xe-form-control amuz-date-picker" placeholder="종료일">
+                          </div>
+                          <div class="clearfix" style="clear:both"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+      $(".amuz-date-picker").datepicker({
+          dateFormat: "yy-mm-dd",
+          prevText: '이전 달',nextText: '다음 달',
+          monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+          monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+          dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+          dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+          dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+          showMonthAfterYear: true, yearSuffix: '년'
+      });
+
+      //라디오 버튼 클릭시 이벤트 발생
+      $("input:radio[name=radio]").click(function(){
+          if($("input[name=radio]:checked").val() == "a"){
+              $(".amuz-date-picker").attr("disabled",true);
+          }else if($("input[name=radio]:checked").val() == "b"){
+              $(".amuz-date-picker").attr("disabled",true);
+          }else if($("input[name=radio]:checked").val() == "c"){
+              $(".amuz-date-picker").attr("disabled",false);
+          }
+      });
+  });
+</script>

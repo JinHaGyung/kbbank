@@ -48,7 +48,7 @@ input.write_radio{
   display: flex;
   align-items: flex-start;
 }
-textarea {
+textarea#write_cont {
   width: 80%;
   height: 48vh;
   margin-top: 8px;
@@ -73,4 +73,10 @@ textarea:focus{
 .write_cancle{
   background-color: #E0E0E0;
   margin-right: 20px;
+}
+/* 업로드 input */
+#upload_date{
+  width: 20%;
+  padding-left: 10px;
+  margin-left: 10px;
 }
