@@ -19,6 +19,10 @@ router.get('/sub_noticeList', (req, res)=>{ /* 공지사항 리스트 */
 res.render('sub_noticeList');
 });
 
+router.get('/notiConPage', (req, res)=>{ /* 공지사항 뷰어페이지 */
+res.render('notiConPage');
+});
+
 router.get('/notice_write', (req, res)=>{ /* 공지사항 작성 */
   res.render('notice_write');
 });
