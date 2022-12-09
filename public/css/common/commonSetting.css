@@ -59,10 +59,14 @@ h4{
 input{
   padding-left: 20px;
   box-sizing: border-box;
+<<<<<<< HEAD
+=======
+  font-family: 'Noto Sans KR', sans-serif;
+>>>>>>> abf0f4909433cbee1003775cc66dae921694a9dc
 }
 
 
-/*** 1200px ***/
+/*** 반응형 1200px ***/
 @media(max-width: 1200px){
   .w1200{
     width: 100%;
@@ -73,19 +77,19 @@ input{
     padding-top: 65px;
   }
 }
-/*** 1200px ***/
+/*** 반응형 1200px ***/
 
 
 /*** 반응형 1130px ***/
 @media (max-width: 1130px) {
-  .main {
+  #main {
     padding-top: 60px;
   }
 }
 
 /*** 반응형 1130px ***/
 
-/*** 800px ***/
+/*** 반응형 800px ***/
 @media(max-width: 800px){
   .main_title{
     padding-top: 45px;
@@ -98,4 +102,4 @@ input{
     display: none;
   }
 }
-/*** 800px ***/
+/*** 반응형 800px ***/
