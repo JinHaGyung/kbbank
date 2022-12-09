@@ -50,7 +50,7 @@ select.list_ST{
 }
 
 
-/* listTop */
+/* 리스트 정보확인 박스 */
 .listTop{
     display: flex;
     justify-content: space-between;
@@ -108,7 +108,7 @@ select.list_ST{
     color: #fff;
 }
 
-/* listTable */
+/* 리스트 */
 .listTable{
     width: 100%;
 }
@@ -132,7 +132,7 @@ table.listTable td{
     color: #000;
 }
 
-/* paging */
+/* 페이지 버튼 */
 .list_paging{
     margin-top: 30px;
     text-align: center;
