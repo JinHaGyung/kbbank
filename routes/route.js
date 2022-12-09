@@ -32,6 +32,9 @@ router.get('/notice_correct', (req, res)=>{ /* 공지사항 수정 */
   res.render('notice_correct');
 });
 
+router.get('/faqPage', (req, res)=>{ /* FAQ페이지 수정 */
+  res.render('faqPage');
+});
 
 
 module.exports = router;

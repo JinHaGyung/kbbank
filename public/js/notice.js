@@ -20,22 +20,21 @@ function notice_ck(){
     return false;
   }
 } 
-// radio 필수 선택
-<Box onClick={() => {
-	window.location.href = 'https://www.naver.com';
-	}}
->
-const writeUrl
+// 예약업로드 선택시 date 활성화
+// const uploadBtn = document.querySelectorAll('input[name="upload_radio"]');
 
-window.open()
-function radioBtn(){
-  var writeRadio = document.querySelector(".write_radio");
-  var chk = document.getElementsByName("r_chkall");
-  if(frm.chk.checked){
-    frm.agree[0].checked;
-    frm.agree2[0].checked;
+// for(let i = 0; i<uploadBtn.length;i++){
+//   if(uploadBtn[i].checked == 'pload_reserv'){
+//     console.log("123")
+//   }
+// }
+
+var uploadBtn = document.getElementsByName('upload_radio');
+
+for (let i = 0; i< uploadBtn.length; i++){
+  if(uploadBtn[i].checked){
+    console.log(uploadBtn.values);
   }
 }
-// 예약업로드 선택시 date 활성화
 
 // 예약 업로드 선택시 예약된 시간에 업로드되기
