@@ -4,6 +4,7 @@
 
 .join1_inner{
   background-color: #fff;
+  padding-bottom: 140px;
 }
 
 .join1_inner>.main_title{
@@ -73,4 +74,65 @@ input[id="privacyCheck"]:checked + label{
 
 input[id="marketCheck"]:checked + label{
   background-image: url('../img/join1Page/check-mark_after.png');
+}
+
+.join1_bot{
+  margin-top: 50px;
+}
+
+.join1_bot>h4{
+  font-size: 16px;
+}
+
+.join1_bot>p{
+  font-size: 12px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.join1_bot .certi_box{
+  display: flex;
+}
+
+.join1_bot .certi_box>li{
+  flex: 1;
+  border: 1px solid #7f7f7f;
+  padding: 28px 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.join1_bot .certi_box>li>a{
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  padding-top: 70px;
+  background-position: top center;
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+}
+
+.join1_bot .certi_box>li:first-child>a{
+  background-image: url(../img/join1Page/smartphone-call.png);
+}
+
+.join1_bot .certi_box>li:last-child>a{
+  background-image: url(../img/join1Page/security.png);
+}
+
+.mgtop_50{
+  margin-top: 50px;
+}
+
+.mgtop_115{
+  margin-top: 115px;
+}
+
+
+@media (max-width: 640px){
+  .join1_innerCon{
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
 }
