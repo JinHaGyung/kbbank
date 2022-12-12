@@ -34,7 +34,8 @@ var today = new Date(uploadNow-timeOff).toISOString().split("T")[0];
 document.getElementById("Date").setAttribute("min", today);
 
 let uploadDate = document.querySelector('#upload_date');
-uploadDate.setAttribute("max",)
+uploadDate.setAttribute("max",today)
+
 
 
 let uploadBtn = document.getElementsByName('upload_radio');
