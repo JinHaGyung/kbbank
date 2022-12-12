@@ -15,6 +15,10 @@ router.get('/join1', (req, res)=>{ /* 회원가입페이지1 */
 res.render('join1Page');
 });
 
+router.get('/join2', (req, res)=>{ /* 회원가입페이지2 */
+res.render('join2Page');
+});
+
 router.get('/sub_noticeList', (req, res)=>{ /* 공지사항 리스트 */
 res.render('sub_noticeList');
 });
