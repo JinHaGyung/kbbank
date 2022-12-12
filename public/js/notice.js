@@ -47,13 +47,5 @@ uploadDate.setAttribute("min", `${year}-`+`${month}-`+`${date+1}`);
 uploadDate.setAttribute("max", `${year}-`+`${month}-`+`${date+3}`);
 
 
-// var uploadNow = Date.now() 
-// var timeOff = new Date().getTimezoneOffset()*60000; 
-// var today = new Date(uploadNow-timeOff).toISOString().split("T")[0];
-// document.getElementById("Date").setAttribute("min", today);
-
-
-// uploadDate.setAttribute("max",today)
-
 
 

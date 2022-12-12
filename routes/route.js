@@ -43,5 +43,11 @@ router.get('/faqPage', (req, res)=>{ /* FAQ페이지 수정 */
 router.get('/calculator', (req, res)=>{ /* 계산기페이지 */
   res.render('calculatorPage');
 })
+router.get('/productEplus', (req, res)=>{ /* KB e-plus정기예금 */
+  res.render('productEplus');
+})
+router.get('/productKiwi', (req, res)=>{ /* kiwi신용대출 */
+  res.render('productKiwi');
+})
 
 module.exports = router;
