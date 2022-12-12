@@ -1,69 +1,79 @@
-<div class="move">
-  <div class="panel">
-      <div class="panel-heading" id="label">
-          <h4> <i class="ion-ios-information"></i> {{xe_trans($config->get('label'))}} 입주 날짜 선택</h4>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="titleArea">
+        <div class="w1200">
+            <ul class="pageUtil">
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+            <h2 class="f_bold">예적금</h2>
+            <div class="faq_searchBox">
+                <div>
+                <select name="fqa_searchCondition" id="faq_searchCondition" class="faq_ST faq_col">
+                    <option value>전체</option>
+                    <option value="">은행업무</option>
+                    <option value="">전자금융업무</option>
+                    <option value="">퇴직연금업무</option>
+                </select>
+                <div>
+                    <input id="faq_searchKeyword" class="faq_searchKeyword faq_col" type="text" placeholder="검색어 입력" title="검색어 입력">
+                </div>
+                <button type="button" id="faq_btn" class="f_regular">검색</button>
+                </div>
+            </div>
+            <section>
+                <ul class="faq_tabList">
+                    <li class="faq_tablink f_gray2">전체</li>
+                    <li class="faq_tablink f_gray2">은행업무</li>
+                    <li class="faq_tablink f_gray2">전자금융업무</li>
+                    <li class="faq_tablink f_gray2">퇴직연금업무</li>
+                </ul>
+                <div class="faqTop">
+                    <div class="faq_totalP">
+                        <p class="f_gray2">총 557건, <strong class="f_bold">1</strong>/56페이지</p>
+                    </div>
+                    <div class="faq_order">
+                        <ul>
+                            <li><a href="">최신순</a></li>
+                            <li><a href="" class="f_gray2">과거순</a></li>
+                        </ul>
+                        <select name="faq_viewPage" id="faq_viewPage" class="faq_ST faq_col">
+                            <option value="10">10 개씩 보기</option>
+                            <option value="20">20 개씩 보기</option>
+                            <option value="30">30 개씩 보기</option>
+                            <option value="50">50 개씩 보기</option>
+                        </select>
+                        <button type="button" class="faq_viewPageBtn f_regular">확인</button>
+                    </div>
+                </div>
+                <div id="faq_tab1" class="faq_tabcont">faq_tab1</div>
+                <div id="faq_tab2" class="faq_tabcont">faq_tab2</div>
+                <div id="faq_tab3" class="faq_tabcont">faq_tab3</div>
+                <div id="faq_tab4" class="faq_tabcont">faq_tab4</div>
+            </section>
+            <section></section>
       </div>
-      <div class="panel-body">
-          <div class="panel-body">
-              <div class="row">
-                  <div class="form-check">
-                      <div class="xe-form-group xe-dynamicField">
-                          <label class="xe-label">
-                              <input type="radio" class="__xe_radiobox" name="radio" value="a"/>
-                              <span class="xe-input-helper"></span>
-                              <span class="xe-label-text">즉시 입주</span>
-                          </label>
+    </div>
+    
+    
+    <!-- <script src="js/faqPage.js"></script> -->
+    
+</body>
+<script>
+    let tabContent = document.querySelectorAll('.faq_tabcont');
 
-                          <label class="xe-label">
-                              <input type="radio" class="__xe_radiobox" name="radio" value="b"/>
-                              <span class="xe-input-helper"></span>
-                              <span class="xe-label-text">날짜 협의</span>
-                          </label>
-
-                          <label class="xe-label">
-                              <input type="radio" class="__xe_radiobox" name="radio" value="c" checked/>
-                              <span class="xe-input-helper"></span>
-                              <span class="xe-label-text"> {{ xe_trans($config->get('label')) }} 선택</span>
-                          </label>
-                          <div class="xu-form-group__box"  @if($config->get('date_type') != 'single') style="float:left; width:50%; padding-right:10px;" @endif>
-                              <input type="text" id="{{ $key['start'] }}_start" name="{{ $key['start'] }}" class="xe-form-control amuz-date-picker" placeholder="{{ $config->get('date_type') == 'single' ? '날짜선택' : '시작일' }}">
-                          </div>
-                          <div class="xu-form-group__box" style="float:right; width:50%; padding-left:10px; @if($config->get('date_type') == 'single') display:none @endif ">
-                              <input type="text" id="{{ $key['end'] }}_end" name="{{ $key['end'] }}" class="xe-form-control amuz-date-picker" placeholder="종료일">
-                          </div>
-                          <div class="clearfix" style="clear:both"></div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-
-
-
-<script type="text/javascript">
-  $(document).ready(function() {
-      $(".amuz-date-picker").datepicker({
-          dateFormat: "yy-mm-dd",
-          prevText: '이전 달',nextText: '다음 달',
-          monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-          monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
-          dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-          dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-          dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
-          showMonthAfterYear: true, yearSuffix: '년'
-      });
-
-      //라디오 버튼 클릭시 이벤트 발생
-      $("input:radio[name=radio]").click(function(){
-          if($("input[name=radio]:checked").val() == "a"){
-              $(".amuz-date-picker").attr("disabled",true);
-          }else if($("input[name=radio]:checked").val() == "b"){
-              $(".amuz-date-picker").attr("disabled",true);
-          }else if($("input[name=radio]:checked").val() == "c"){
-              $(".amuz-date-picker").attr("disabled",false);
-          }
-      });
-  });
+for(let i = 0; i<tabContent.length; i++) {
+    tabContent[i].addEventListener("click",()=>{
+        console.log(i)
+    })
+};
 </script>
+</html>

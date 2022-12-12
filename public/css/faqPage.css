@@ -213,3 +213,47 @@ select.faq_ST{
 .faq_paging{
     padding-bottom: 60px !important;
 }
+
+/* 하단 도움말 */
+.faq_bottomHelp{
+    width: 100%;
+    background-color: #fbfbfb;
+    padding-bottom: 47px;
+}
+.faq_bottomHelp h3{
+    padding: 30px 0;
+    text-align: center;
+}
+.faq_bottomHelp ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.faq_bottomHelp ul>li{
+    width: 33.33%;
+    background-repeat: no-repeat;
+    background-position: 20% 4px;
+    padding-left: 150px;
+    box-sizing: border-box;
+}
+.faq_bottomHelp ul>li:first-child{
+    background-image: url(../img/faqPage/전화상담예약.png);
+}
+.faq_bottomHelp ul>li:nth-child(2){
+    background-image: url(../img/faqPage/온라인상담.png);
+}
+.faq_bottomHelp ul>li:last-child{
+    background-image: url(../img/faqPage/화면공유상담.png);
+}
+.faq_bottomHelp a{
+    display: block;
+    text-decoration: none;
+    color: #755F48;
+    width: 47px; height: 18px;
+    border-bottom: 1px solid #755F48;
+}
+.faq_bottomHelp li>h4{
+    margin: 20px 0;
+}
