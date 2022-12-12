@@ -280,7 +280,7 @@ select.faq_ST{
     font-size: 16px;
     line-height: 50px;
     position: fixed;
-    bottom: 10px; right: 280px;
+    bottom: 10px; right: 2%;
     padding-top: 5px;
     box-sizing: border-box;
     background-image: url(../img/faqPage/btn_go_top.png);
@@ -296,7 +296,15 @@ select.faq_ST{
 }
 
 
+/*** 반응형 1200px ***/
 
+@media (max-width: 1200px) {
+    #topBtn.topActive{
+        display: none;
+    }
+}
+  
+  /*** 반응형 1200px ***/
 
 
 /*** 반응형 800px ***/
@@ -361,3 +369,4 @@ select.faq_ST{
 }
   
   /*** 반응형 700px ***/
+
