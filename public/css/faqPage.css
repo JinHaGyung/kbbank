@@ -257,3 +257,20 @@ select.faq_ST{
 .faq_bottomHelp li>h4{
     margin: 20px 0;
 }
+
+#topBtn{
+    width: 50px; height: 50px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fbfbfb;
+    text-align: center;
+    font-size: 16px;
+    line-height: 50px;
+    position: fixed;
+    bottom: 10px; right: 280px;
+    padding-top: 5px;
+    box-sizing: border-box;
+    background-image: url(../img/faqPage/btn_go_top.png);
+    background-repeat: no-repeat;
+    background-position: 50% 9px;
+}
