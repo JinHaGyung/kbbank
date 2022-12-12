@@ -76,6 +76,14 @@ input[id="marketCheck"]:checked + label{
   background-image: url('../img/join1Page/check-mark_after.png');
 }
 
+.joinTextarea{
+  resize: none;
+  font-size: 8px;
+	font-family: 'Noto Sans KR', sans-serif;
+  /* word-wrap: break-word; */
+}
+
+
 .join1_bot{
   margin-top: 50px;
 }
