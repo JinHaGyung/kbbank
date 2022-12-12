@@ -67,7 +67,7 @@ textarea:focus{
   padding: 10px 21px;
   box-sizing: border-box;
   border: 0px;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #FFCF00;
 }
 .write_cancle{

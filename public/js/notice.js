@@ -22,32 +22,38 @@ function notice_ck(){
 } 
 
 // 예약업로드 선택시 date 활성화
-//예약업로드 일자 제어하기
-// let today = new Date();
-// let year = today.getFullYear(); 
-// let month = today.getMonth() + 1
-// let date = today.getDate();
-
-var uploadNow = Date.now() 
-var timeOff = new Date().getTimezoneOffset()*60000; 
-var today = new Date(uploadNow-timeOff).toISOString().split("T")[0];
-document.getElementById("Date").setAttribute("min", today);
-
-let uploadDate = document.querySelector('#upload_date');
-uploadDate.setAttribute("max",today)
-
-
-
 let uploadBtn = document.getElementsByName('upload_radio');
+let uploadDate = document.getElementById('upload_date');
 
 for(let i = 0; i<uploadBtn.length; i++){
   uploadBtn[i].addEventListener('click', ()=>{
     if(uploadBtn[i].value == "upload_reserv") {
-
+      uploadDate.disabled = false;
     } 
+    else{
+      uploadDate.disabled = true;
+    }
   });
 }
 
+//예약업로드 일자 제어하기
 
-// 예약 업로드 선택시 예약된 시간에 업로드되기
+let today = new Date();
+let year = today.getFullYear(); 
+let month = today.getMonth() + 1
+let date = today.getDate();
+
+uploadDate.setAttribute("min", `${year}-`+`${month}-`+`${date+1}`);
+uploadDate.setAttribute("max", `${year}-`+`${month}-`+`${date+3}`);
+
+
+// var uploadNow = Date.now() 
+// var timeOff = new Date().getTimezoneOffset()*60000; 
+// var today = new Date(uploadNow-timeOff).toISOString().split("T")[0];
+// document.getElementById("Date").setAttribute("min", today);
+
+
+// uploadDate.setAttribute("max",today)
+
+
 
