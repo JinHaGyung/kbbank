@@ -58,6 +58,10 @@ select.list_ST{
 }
 .list_totalP{
     line-height: 40px;
+    padding-left: 35px;
+    background-image: url(../img/sub_noticeList/ico_totalList.png);
+    background-repeat: no-repeat;
+    background-position: 0 center;
 }
 .listTop strong{
     color: #000;
@@ -130,6 +134,9 @@ table.listTable td{
 .listTable_title>a{
     text-decoration: none;
     color: #000;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 /* 페이지 버튼 */
@@ -153,18 +160,22 @@ table.listTable td{
 .list_paging>.page_first{
     background-image: url(../img/sub_noticeList/btn_page.png);
     background-position: 0 0;
+    cursor: pointer;
 }
 .list_paging>.page_prev{
     background-image: url(../img/sub_noticeList/btn_page.png);
     background-position: -33px 0;
+    cursor: pointer;
 }
 .list_paging>.page_next{
     background-image: url(../img/sub_noticeList/btn_page.png);
     background-position: -65px 0;
+    cursor: pointer;
 }
 .list_paging>.page_last{
     background-image: url(../img/sub_noticeList/btn_page.png);
     background-position: right 0;
+    cursor: pointer;
 }
 .list_paging>ol{
     display: inline-block;
