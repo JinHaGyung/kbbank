@@ -40,5 +40,8 @@ router.get('/faqPage', (req, res)=>{ /* FAQ페이지 수정 */
   res.render('faqPage');
 });
 
+router.get('/calculator', (req, res)=>{ /* 계산기페이지 */
+  res.render('calculatorPage');
+})
 
 module.exports = router;
