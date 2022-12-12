@@ -20,21 +20,33 @@ function notice_ck(){
     return false;
   }
 } 
+
 // 예약업로드 선택시 date 활성화
-// const uploadBtn = document.querySelectorAll('input[name="upload_radio"]');
+//예약업로드 일자 제어하기
+// let today = new Date();
+// let year = today.getFullYear(); 
+// let month = today.getMonth() + 1
+// let date = today.getDate();
 
-// for(let i = 0; i<uploadBtn.length;i++){
-//   if(uploadBtn[i].checked == 'pload_reserv'){
-//     console.log("123")
-//   }
-// }
+var uploadNow = Date.now() 
+var timeOff = new Date().getTimezoneOffset()*60000; 
+var today = new Date(uploadNow-timeOff).toISOString().split("T")[0];
+document.getElementById("Date").setAttribute("min", today);
 
-var uploadBtn = document.getElementsByName('upload_radio');
+let uploadDate = document.querySelector('#upload_date');
+uploadDate.setAttribute("max",)
 
-for (let i = 0; i< uploadBtn.length; i++){
-  if(uploadBtn[i].checked){
-    console.log(uploadBtn.values);
-  }
+
+let uploadBtn = document.getElementsByName('upload_radio');
+
+for(let i = 0; i<uploadBtn.length; i++){
+  uploadBtn[i].addEventListener('click', ()=>{
+    if(uploadBtn[i].value == "upload_reserv") {
+
+    } 
+  });
 }
 
+
 // 예약 업로드 선택시 예약된 시간에 업로드되기
+
