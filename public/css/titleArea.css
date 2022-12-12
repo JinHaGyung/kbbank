@@ -48,10 +48,10 @@
 /*** 1130px ***/
 @media(max-width: 1130px){
     .pageUtil{
-        top: -15px;
+        top: 15px;
     }
     .titleArea>div>h2{
-        padding: 25px 0 40px;
+        padding: 45px 0 40px;
     }
 
 }

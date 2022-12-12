@@ -11,6 +11,11 @@
     display: flex;
     align-items: center;
     margin: 0 auto;
+    flex-wrap: wrap;
+}
+.faq_searchBox>div>div{
+    display: flex;
+    justify-content: space-between;
 }
 select.faq_ST{
     background-image: url(../img/sub_noticeList/btn_select.png);
@@ -51,15 +56,18 @@ select.faq_ST{
 
 /* tab 네비 */
 .faq_tabList{
-    width: 64%;
-    display: table;
+    width: 65%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     margin-top: 30px;
     border-top: 1px solid #ddd;
     border-right: 1px solid #ddd;
 }
 .faq_tablink{
-    display: table-cell;
-    width: 193px; height: 37px;
+    /* display: table-cell; */
+    width: calc(25% - 1px); height: 37px;
+    line-height: 37px;
     border-left: 1px solid #ddd;
     background-color: #fbfbfb;  
     text-align: center;
@@ -76,10 +84,12 @@ select.faq_ST{
     padding: 20px 0;
     box-sizing: border-box;
     border-top: 1px solid #ddd;
+    flex-wrap: wrap;
 }
 .faq_totalP{
     line-height: 40px;
     padding-left: 35px;
+    box-sizing: border-box;
     background-image: url(../img/sub_noticeList/ico_totalList.png);
     background-repeat: no-repeat;
     background-position: 0 center;
@@ -176,7 +186,7 @@ select.faq_ST{
     color: #7f7f7f;
 }
 .faqTab_tit{
-    display: inline-block;
+    display: block;
     padding: 25px 80px 25px 163px;
     background-image: url(../img/faqPage/icon_q.png);
     background-repeat: no-repeat;
@@ -187,6 +197,9 @@ select.faq_ST{
     vertical-align: middle;
     cursor: pointer;
     position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .faqTab_text{
     max-height: 0;
@@ -273,4 +286,78 @@ select.faq_ST{
     background-image: url(../img/faqPage/btn_go_top.png);
     background-repeat: no-repeat;
     background-position: 50% 9px;
+    opacity: 0;
+    transition: 1s;
+    cursor: pointer;
 }
+#topBtn.topActive{
+    opacity: 1;
+    bottom: 100px;
+}
+
+
+
+
+
+/*** 반응형 800px ***/
+@media(max-width: 800px){
+    #faq_searchCondition{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .faq_searchBox>div>div{
+        width: 100%;
+    }
+    .faq_searchBox>div>div>div{
+        width: 72%;
+    }
+    #faq_btn{
+        width: 25%;
+    }
+
+
+    .faq_tabList{
+        width: 100%;
+    }
+    .faq_tablink{
+        width: calc(50% - 1px);
+    }
+    .faq_tabList>li:first-child{
+        border-bottom: 1px solid #ddd;
+    }
+    .faq_tabList>li:last-child{
+        border-top: 1px solid #ddd;
+    }
+
+    .faqTop{
+        width: 100%;
+    }
+    .faq_totalP{
+        width: 50%;
+    }
+    .faq_order{
+        width: 100%;
+    }
+
+
+    .faq_bottomHelp ul>li{
+        padding-left: 15.75vw;
+    }
+
+  }
+  /*** 반응형 800px ***/
+
+
+/*** 반응형 700px ***/
+
+@media (max-width: 700px) {
+    .faq_bottomHelp ul>li{
+        padding-top: 70px;
+        padding-left: 7.75vw;
+        background-position: 45% 4px;
+
+    }
+
+}
+  
+  /*** 반응형 700px ***/

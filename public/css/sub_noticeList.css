@@ -9,8 +9,13 @@
 }
 .list_searchBox>div{
     display: flex;
+    justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    flex-wrap: wrap;
+}
+.list_searchBox>div>div{
+    width: 50%;
 }
 select.list_ST{
     background-image: url(../img/sub_noticeList/btn_select.png);
@@ -30,7 +35,7 @@ select.list_ST{
     font-size: 16px;
 }
 .list_searchKeyword{
-    width: 100%; height: 36px;
+    width: 100%; height: 40px;
     outline: none;
 }
 #list_btn{
@@ -48,6 +53,15 @@ select.list_ST{
     margin-left: 20px;
     cursor: pointer;
 }
+.list_searchBox_left{
+    display: flex;
+    justify-content: space-between;
+}
+.list_searchBox_right{
+    display: flex;
+    justify-content: space-between;
+}
+
 
 
 /* 리스트 정보확인 박스 */
@@ -55,6 +69,7 @@ select.list_ST{
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
+    flex-wrap: wrap;
 }
 .list_totalP{
     line-height: 40px;
@@ -111,6 +126,8 @@ select.list_ST{
     cursor: pointer;
     color: #fff;
 }
+
+
 
 /* 리스트 */
 .listTable{
@@ -207,3 +224,48 @@ table.listTable td{
 .list_paging>ol>li>a:hover{
     color: #FFCF00;
 }
+
+.writeBtn{
+    text-align: end;
+
+}
+.writeBtn_check{
+    background-color: #fbfbfb;
+    border: 1px solid #ddd;
+    border-radius: 10px;line-height: 30px;
+    margin: 10px 0;
+    padding-left: 6px !important;
+    cursor: pointer;
+}
+
+
+
+/*** 반응형 800px ***/
+@media(max-width: 800px) {
+    .list_searchBox_left{
+        width: 100%;
+    }
+    .list_searchBox>div>div{
+        width: 100%;
+    }
+    .list_searchBox_right{
+        width: 100%;
+    }
+    #list_searchCategory{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #list_searchCondition{
+        width: 100%;
+        margin-right: 0 ;
+    }
+    .list_searchBox_right>div{
+        width: 72%;
+    }
+    #list_btn{
+        width: 25%;
+    }
+
+
+  }
+  /*** 반응형 800px ***/
