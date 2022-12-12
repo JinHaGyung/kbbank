@@ -80,3 +80,20 @@ textarea:focus{
   padding-left: 10px;
   margin-left: 10px;
 }
+@media (max-width:700px) {
+  .write_title>span {
+    padding: 0 5px 0 5px;
+  }
+  .write_title {
+    width: 20%;
+  }
+  .write_passCk {
+    display: block;
+  }
+  .write_corr{
+    margin: 5px 0px 5px 30px;
+  }
+  .title_corr{
+    height: 65px;
+  }
+}
