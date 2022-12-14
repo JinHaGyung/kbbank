@@ -9,7 +9,7 @@
         <p>가입하신 정보는 회원님의 동의 없이 공개되지 않으며, 개인정보 취급방침에 의해 보호를 받습니다.</p>
         <p>등록하신 계좌는 간편서비스 대상계좌로 등록이 됩니다. 이후 간편조회 서비스를 통해 잔액 및 거래내역을 쉽게 조회할 수 있습니다.</p>
       </div>
-      <form class="joinform" name="joinform" method="post" action="">
+      <form class="joinform" name="joinform" method="post" action="" onsubmit="return validate()">
         <div class="input_wrap input_wrap1">
           <input type="text" name="user_name" id="user_name" placeholder="성명">
           <input type="text" name="user_birth" id="user_birth" placeholder="생년월일, 숫자만 입력"
@@ -53,3 +53,4 @@
     </div>
   </div>
 </div>
+<script src="js/join2Page.js"></script>
