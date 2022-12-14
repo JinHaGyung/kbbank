@@ -21,11 +21,18 @@ res.render('join2Page');
 });
 
 router.get('/sub_noticeList', (req, res)=>{ /* 공지사항 리스트 */
-res.render('sub_noticeList');
+db.getNoti((rows)=>{
+  res.render('sub_noticeList',{rows:rows});
+ })
 });
 
 router.get('/notiConPage', (req, res)=>{ /* 공지사항 뷰어페이지 */
-res.render('notiConPage');
+let id = req.query.id;
+console.log(id);
+
+db.getNotiByid(id, (row)=>{
+res.render('notiConPage', {row:row[0]});
+})
 });
 
 router.get('/notice_write', (req, res)=>{ /* 공지사항 작성 */
