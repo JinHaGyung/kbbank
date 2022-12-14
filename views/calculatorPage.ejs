@@ -9,3 +9,44 @@
     <h2 class="f_bold">금융계산기</h2>
   </div>
 </div>
+<div class="calcul_wrap">
+  <div class="calcul_inner w1200">
+    <ul class="tabs m_bottom30">
+      <li class="f_medium tab_link on" data-tab="tab-1">예금계산기</li>
+      <li class="f_medium tab_link" data-tab="tab-2">적금계산기</li>
+      <li class="f_medium tab_link" data-tab="tab-3">대출계산기</li>
+    </ul>
+    <ul class="calcul_info m_bottom30">
+      <li class="f_medium">상기금액은 실제 상품 적용시에 다소 차이가 있을 수 있으므로 참고용으로 확인하시기 바랍니다.</li>
+      <li class="f_medium">현재 전체 저축은행 평균 금리는 5.49%입니다. 참고 바랍니다.</li>
+    </ul>
+    <div class="calcul_info m_bottom30">
+      <p class="f_medium">목돈을 일정기간 예치 했을때 만기 지급액을 계산하여 드립니다.</p>
+    </div>
+    <div class="calcul_con">
+      <div class="depositAmount">
+        <label class="f_medium" for="">예치금액</label>
+        <input type="text" name="" id="depositAmount" placeholder="10조 미만으로 입력"
+          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+        <span class="f_medium">원</span>
+      </div>
+      <div class="depositPeriod">
+        <label class="f_medium" for="">예치기간</label>
+        <input type="text" name="" id="depositPeriod" placeholder="숫자만 입력"
+          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+        <span class="f_medium">개월</span>
+      </div>
+      <div class="depositRate">
+        <label class="f_medium" for="">예치금리</label>
+        <input type="text" name="" id="depositRate" placeholder="숫자만 입력"
+          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+        <span class="f_medium">%</span>
+        <input class="simpleInterest" type="button" value="단리">
+      </div>
+      <div class="btnWrap">
+        <input class="calculating" type="button" value="계산하기">
+        <input class="reset" type="button" value="초기화">
+      </div>
+    </div>
+  </div>
+</div>
