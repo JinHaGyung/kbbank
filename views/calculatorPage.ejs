@@ -26,26 +26,42 @@
     <div class="calcul_con">
       <div class="depositAmount">
         <label class="f_medium" for="">예치금액</label>
-        <input type="text" name="" id="depositAmount" placeholder="10조 미만으로 입력"
-          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
-        <span class="f_medium">원</span>
+        <div>
+          <input type="text" name="" id="depositAmount" placeholder="10조 미만으로 입력"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+          <span class="f_medium">원</span>
+        </div>
       </div>
       <div class="depositPeriod">
         <label class="f_medium" for="">예치기간</label>
-        <input type="text" name="" id="depositPeriod" placeholder="숫자만 입력"
-          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
-        <span class="f_medium">개월</span>
+        <div>
+          <input type="text" name="" id="depositPeriod" placeholder="숫자만 입력"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+          <span class="f_medium">개월</span>
+        </div>
       </div>
       <div class="depositRate">
         <label class="f_medium" for="">예치금리</label>
-        <input type="text" name="" id="depositRate" placeholder="숫자만 입력"
-          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
-        <span class="f_medium">%</span>
-        <input class="simpleInterest" type="button" value="단리">
+        <div>
+          <input type="text" name="" id="depositRate" placeholder="숫자만 입력"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+          <span class="f_medium">%</span>
+          <input class="simpleInterest" type="button" value="단리">
+        </div>
       </div>
       <div class="btnWrap">
         <input class="calculating" type="button" value="계산하기">
         <input class="reset" type="button" value="초기화">
+      </div>
+    </div>
+    <div class="calcul_result">
+      <h3 class="f_medium">계산결과</h3>
+      <div class="result_con">
+        <ul class="result_info">
+          <li class="f_medium">일반세율 (15.40 %) 가입 시 0원을 수령하시게 됩니다.</li>
+          <li class="f_medium">비과세율 (0 %) 가입 시 0원을 수령하시게 됩니다.</li>
+          <li class="f_medium">비과세 적용은 비과세종합저축 대상자만 해당됩니다.</li>
+        </ul>
       </div>
     </div>
   </div>
