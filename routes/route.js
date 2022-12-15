@@ -35,9 +35,37 @@ res.render('notiConPage', {row:row[0]});
 })
 });
 
-router.get('/notice_write', (req, res)=>{ /* 공지사항 작성 */
-  res.render('notice_write');
+router.get('/notice_write', (req, res)=>{ /* 공지사항 작성페이지 */
+    res.render('notice_write');
 });
+
+router.post('/noticeW', (req, res)=>{ /* 공지사항 작성 */
+  let param = JSON.parse(JSON.stringify(req.body));
+  let cate = param['radio'];
+  let writer = param['write'];
+  let title = param['title'];
+  let cont = param['write_cont'];
+  db.noticeWrite(cate,writer,title,cont,()=>{
+    res.redirect('/sub_noticeList')
+  })
+});
+router.get('/notUp', (req,res)=>{/*공지 수정(데이터추출)*/
+  let id = req.query.id;
+  db.getNoticebyid(id,(row) =>{
+    res.render('notice_correct',{row: row[0]})
+  })
+})
+
+router.post('/Not_corr',(req,res)=>{/*공지 수정(보내기) */
+  let param = JSON.parse(JSON.stringify(req.body));
+  let id = param['id'];
+  let cate = param['radio'];
+  let title = param['title'];
+  let cont = param['write_cont'];
+  db.NoticeCorr(id,cate,title,cont,()=>{
+    res.redirect('/sub_noticeList')
+  })
+})
 
 
 router.get('/notice_correct', (req, res)=>{ /* 공지사항 수정 */
