@@ -17,12 +17,22 @@ ul.tabs{
   justify-content: center;
   align-items: center;
   height: 70px;
+  cursor: pointer;
 }
 
 .tab_link.on{
   background-color: #755F48;
   color: #fff;
 }
+
+.calcul_inner>div{
+  display: none;
+}
+
+.calcul_inner>div.on{
+  display: block;
+}
+
 
 .calcul_info{
   display: flex;
