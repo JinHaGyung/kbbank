@@ -28,7 +28,7 @@
         <div class="depositAmount">
           <label class="f_medium" for="">예치금액</label>
           <div>
-            <input type="text" name="" id="depositAmount" placeholder="10조 미만으로 입력"
+            <input type="text" class="depositinput1" name="" id="depositAmount" placeholder="10조 미만으로 입력"
               oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
             <span class="f_medium">원</span>
           </div>
@@ -36,7 +36,7 @@
         <div class="depositPeriod">
           <label class="f_medium" for="">예치기간</label>
           <div>
-            <input type="text" name="" id="depositPeriod" placeholder="숫자만 입력"
+            <input type="text"  class="depositinput2" name="" id="depositPeriod" placeholder="숫자만 입력"
               oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
             <span class="f_medium">개월</span>
           </div>
@@ -44,7 +44,7 @@
         <div class="depositRate">
           <label class="f_medium" for="">예치금리</label>
           <div>
-            <input type="text" name="" id="depositRate" placeholder="숫자만 입력"
+            <input type="text"  class="depositinput3" name="" id="depositRate" placeholder="숫자만 입력"
               oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
             <span class="f_medium">%</span>
             <input class="simpleInterest" type="button" value="단리">
@@ -59,8 +59,8 @@
         <h3 class="f_medium">계산결과</h3>
         <div class="result_con">
           <ul class="result_info">
-            <li class="f_medium">일반세율 (15.40 %) 가입 시 0원을 수령하시게 됩니다.</li>
-            <li class="f_medium">비과세율 (0 %) 가입 시 0원을 수령하시게 됩니다.</li>
+            <li class="f_medium">일반세율 (15.40 %) 가입 시 <span class="resultdeposit1">0</span> 원을 수령하시게 됩니다.</li>
+            <li class="f_medium">비과세율 (0 %) 가입 시 <span class="resultdeposit2">0</span> 원을 수령하시게 됩니다.</li>
             <li class="f_medium">비과세 적용은 비과세종합저축 대상자만 해당됩니다.</li>
           </ul>
         </div>
@@ -78,7 +78,7 @@
         <div class="depositAmount">
           <label class="f_medium" for="">적금액</label>
           <div>
-            <input type="text" name="" id="depositAmount" placeholder="10조 미만으로 입력"
+            <input type="text" name=""  class="savinginput1" id="depositAmount" placeholder="10조 미만으로 입력"
               oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
             <span class="f_medium">원</span>
           </div>
@@ -86,7 +86,7 @@
         <div class="depositPeriod">
           <label class="f_medium" for="">납입개월</label>
           <div>
-            <input type="text" name="" id="depositPeriod" placeholder="숫자만 입력"
+            <input type="text" name=""  class="savinginput2" id="depositPeriod" placeholder="숫자만 입력"
               oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
             <span class="f_medium">개월</span>
           </div>
@@ -94,7 +94,7 @@
         <div class="depositRate">
           <label class="f_medium" for="">적금금리</label>
           <div>
-            <input type="text" name="" id="depositRate" placeholder="숫자만 입력"
+            <input type="text"  class="savinginput3" name="" id="depositRate" placeholder="숫자만 입력"
               oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
             <span class="f_medium">%</span>
           </div>
@@ -108,8 +108,8 @@
         <h3 class="f_medium">계산결과</h3>
         <div class="result_con">
           <ul class="result_info">
-            <li class="f_medium">원금 0원을 0개월 동안 3.69% 의 금리로 적금 시 원금 0원. 이자 0원을 수령하시게 됩니다.</li>
-            <li class="f_medium">일반세율 (15.40 %) 가입 시 0원을 수령하시게 됩니다.</li>
+            <li class="f_medium">원금 <span class="resultSaving1">0</span>원을 <span class="resultSaving2">0</span>개월 동안 <span class="resultSaving3">0</span>% 의 금리로 적금 시 원금 <span class="resultSaving4">0</span>원. 이자 <span class="resultSaving5">0</span>원을 수령하시게 됩니다.</li>
+            <li class="f_medium">일반세율 (15.40 %) 가입 시 <span class="resultSaving6">0</span>원을 수령하시게 됩니다.</li>
           </ul>
         </div>
       </div>
@@ -122,7 +122,7 @@
         <div class="depositAmount">
           <label class="f_medium" for="">대출금액</label>
           <div>
-            <input type="text" name="" id="depositAmount" placeholder="10조 미만으로 입력"
+            <input type="text"  class="loaninput1" name="" id="depositAmount" placeholder="10조 미만으로 입력"
               oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
             <span class="f_medium">원</span>
           </div>
@@ -130,7 +130,7 @@
         <div class="depositPeriod">
           <label class="f_medium" for="">대출기간</label>
           <div>
-            <input type="text" name="" id="depositPeriod" placeholder="숫자만 입력"
+            <input type="text" name=""  class="loaninput2" id="depositPeriod" placeholder="숫자만 입력"
               oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
             <span class="f_medium">개월</span>
           </div>
@@ -138,7 +138,7 @@
         <div class="depositRate">
           <label class="f_medium" for="">대출금리</label>
           <div>
-            <input type="text" name="" id="depositRate" placeholder="숫자만 입력"
+            <input type="text" name=""  class="loaninput3" id="depositRate" placeholder="숫자만 입력"
               oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
             <span class="f_medium">%</span>
             <input class="simpleInterest" type="button" value="단리">
@@ -153,9 +153,7 @@
         <h3 class="f_medium">계산결과</h3>
         <div class="result_con">
           <ul class="result_info">
-            <li class="f_medium">일반세율 (15.40 %) 가입 시 0원을 수령하시게 됩니다.</li>
-            <li class="f_medium">비과세율 (0 %) 가입 시 0원을 수령하시게 됩니다.</li>
-            <li class="f_medium">비과세 적용은 비과세종합저축 대상자만 해당됩니다.</li>
+            <li class="f_medium">월별 상환금 : <span class="resultLoan1">0</span>원 입니다.</li>
           </ul>
         </div>
       </div>
