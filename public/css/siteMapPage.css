@@ -47,6 +47,7 @@
     margin: 0 auto;
     text-align: center;
     position: relative;
+    width: 50%;
 }
 .siteMap_searchBox>h2{
     color: #fff;
