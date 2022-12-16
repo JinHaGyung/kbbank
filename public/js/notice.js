@@ -46,6 +46,7 @@ let date = today.getDate();
 uploadDate.setAttribute("min", `${year}-`+`${month}-`+`${date+1}`);
 uploadDate.setAttribute("max", `${year}-`+`${month}-`+`${date+3}`);
 
+//예약업로드 선택시 값 보내기
 
 
 
