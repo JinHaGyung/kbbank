@@ -197,9 +197,6 @@ select.faq_ST{
     vertical-align: middle;
     cursor: pointer;
     position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 }
 .faqTab_text{
     max-height: 0;

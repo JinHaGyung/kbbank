@@ -196,6 +196,7 @@ header .utilSearch input{
 }
 
 
+
 /* ## 마우스 호버 시 나오는 메뉴 ## */
 #gnb_bg{
     background-color: #fff;
@@ -253,6 +254,10 @@ header .utilSearch input{
     background-image: url(../../img/header/menu_hover.png);
     transition:all 0.2s ease-in-out;
 }
+
+
+/* 모바일 햄버거 */
+
 
 /*** 1130px ***/
 @media(max-width: 1130px){
