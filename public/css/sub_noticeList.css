@@ -226,11 +226,11 @@ table.listTable td{
     color: #FFCF00;
 }
 
-.writeBtn{
+.list_writeBtn{
     text-align: end;
 
 }
-.writeBtn_check{
+.list_writeBtn_check{
     background-color: #fbfbfb;
     border: 1px solid #ddd;
     border-radius: 10px;line-height: 30px;

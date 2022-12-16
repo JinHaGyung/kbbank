@@ -12,6 +12,20 @@ router.get('/login', (req, res)=>{ /* 로그인페이지 */
 res.render('loginPage');
 });
 
+/* 로그인 내용 */
+router.post('/logininfo', (req, res) => {
+  let param = JSON.parse(JSON.stringify(req.body));
+  let login_id = param['login_id'];
+  let login_pw = param['login_pw'];
+  db.loginCheck(login_id, login_pw, (results)=>{
+    if (results.length > 0){
+      res.send(`<script>alert("${login_id}님, 어서오세요."); document.location.href="/";</script>`)
+    } else {
+      res.send(`<script>alert("로그인 정보가 일치하지 않습니다."); document.location.href="/login";</script>`)
+    }
+  });
+})
+
 router.get('/join1', (req, res)=>{ /* 회원가입페이지1 */
 res.render('join1Page');
 });
@@ -19,6 +33,23 @@ res.render('join1Page');
 router.get('/join2', (req, res)=>{ /* 회원가입페이지2 */
 res.render('join2Page');
 });
+
+/* 회원가입 내용을 테이블에 넣기 */
+router.post('/joininfo', (req, res) => {
+  let param = JSON.parse(JSON.stringify(req.body));
+  let user_name = param['user_name'];
+  let user_birth = param['user_birth'];
+  let account_id = param['account_id'];
+  let account_pw = param['account_pw'];
+  let user_id = param['user_id'];
+  let user_pw = param['user_pw'];
+  let user_address = param['user_address'];
+  let user_phoneNum = param['user_phoneNum'];
+  let user_mail = param['user_mail'];
+  db.insertUserInfo(user_name, user_birth, account_id, account_pw, user_id, user_pw, user_address, user_phoneNum, user_mail, ()=>{
+    res.redirect('/login');
+  });
+})
 
 router.get('/sub_noticeList', (req, res)=>{ /* 공지사항 리스트 */
 db.getNoti((rows)=>{
@@ -86,4 +117,7 @@ router.get('/productKiwi', (req, res)=>{ /* kiwi신용대출 */
   res.render('productKiwi');
 })
 
+router.get('/siteMapPage', (req, res)=>{ /* 사이트맵 */
+  res.render('siteMapPage');
+})
 module.exports = router;

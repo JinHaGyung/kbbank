@@ -2,7 +2,7 @@ var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : '1234',
+  password : '95052910',
   database : 'kbbank',
   dateStrings : 'date'
 });
@@ -49,6 +49,22 @@ function NoticeCorr(id,cate,title,cont,callback){
   })
 }
 
+// userinfo를 수정할때 (생성할때)
+function insertUserInfo(user_name, user_birth, account_id, account_pw, user_id, user_pw, user_address, user_phoneNum, user_mail, callback){
+  connection.query(`INSERT INTO userinfo(user_name, user_birth, account_id, account_pw, user_id, user_pw, user_address, user_phoneNum, user_mail) VALUES('${user_name}', '${user_birth}', '${account_id}', '${account_pw}', '${user_id}', '${user_pw}', '${user_address}', '${user_phoneNum}', '${user_mail}')`, (err)=>{
+    if(err) throw err;
+    callback();
+  });
+};
+
+// 로그인정보와 테이블 정보를 비교하는 함수
+function loginCheck(login_id, login_pw, callback){
+  connection.query(`SELECT * FROM userinfo WHERE user_id='${login_id}' and user_pw='${login_pw}'`, (err, results)=>{
+    if(err) throw err;
+    callback(results);
+  })
+}
+
 module.exports = {
-  getNoti, getNotiByid,noticeWrite,getNoticebyid,NoticeCorr,
+  getNoti, getNotiByid,noticeWrite,getNoticebyid,NoticeCorr,insertUserInfo,loginCheck
 }
