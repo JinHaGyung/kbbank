@@ -63,11 +63,11 @@ function checkId(id) {
     if (!checkNull(id, '아이디를')) return false;
 
     // 정규표현식 사용
-    var idRegExp = /^[a-zA-z0-9]{4,12}$/;
+    var idRegExp = /^[a-zA-z0-9]{5,12}$/;
 
     // 아이디 유효성 검사
     if (!idRegExp.test(id)) {
-        alert("아이디는 영문 대소문자와 숫자 4~12자리로 입력하세요.");
+        alert("아이디는 영문 대소문자와 숫자 5~12자리로 입력하세요.");
         // 값을 초기화
         joinform.user_id.value = "";
         // 마우스 커서 초점을 맞춰줌
@@ -84,11 +84,11 @@ function checkPw(id, pw, pw2) {
     if (!checkNull(pw2, "비밀번호 확인을")) return false;
 
     // 정규표현식 사용
-    var pwRegExp = /^[a-zA-z0-9]{4,12}$/;
+    var pwRegExp = /^[a-zA-z0-9]{8,16}$/;
 
     // 비밀번호 유효성 검사
     if (!pwRegExp.test(pw)) {
-        alert("비밀번호는 영문 대소문자와 숫자 4~12자리로 입력하세요.");
+        alert("비밀번호는 영문 대소문자와 숫자 8~16자리로 입력하세요.");
         // 값을 초기화
         joinform.user_pw.value = "";
         // 마우스 커서 초점을 맞춰줌
