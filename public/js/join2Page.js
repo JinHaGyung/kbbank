@@ -4,7 +4,7 @@ function checkAll() {
         return false;
     }
     // 생년월일 체크 함수 호출
-    else if (!checkNull(joinform.user_birth.value, '생년월일를')) {
+    else if (!checkbirth(joinform.user_birth.value)) {
         return false;
     }
     // 계좌번호 체크 함수 호출
@@ -36,11 +36,11 @@ function checkAll() {
         return false;
     }
     // 휴대전화 체크 함수 호출
-    else if (!checkNull(joinform.user_phoneNum.value, '휴대전화를')) {
+    else if (!checkPhoneNum(joinform.user_phoneNum.value)) {
         return false;
     }
     // 이메일 체크 함수 호출
-    else if (!checkNull(joinform.user_mail.value, '이메일을')) {
+    else if (!checkMail(joinform.user_mail.value)) {
         return false;
     }
     // 회원가입 완료
@@ -56,6 +56,22 @@ function checkNull(value, data) {
     }
     return true;
 }
+
+// 생년월일 체크 함수
+function checkbirth(birth) {
+    // 공백 체크 함수 호출
+    if (!checkNull(birth, "생년월일을")) return false;
+
+    // 정규표현식 사용
+    var birthRegExp = /^(19[0-9][0-9]|20\d{2})(0[0-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])$/;
+    // 생년월일 유효성 검사
+    if (!birthRegExp.test(birth)) {
+        alert("잘못된 생년월일입니다. 다시 입력해 주십시오.");
+        return false;
+    }
+    return true;
+}
+
 
 // id 체크 함수
 function checkId(id) {
@@ -139,3 +155,39 @@ function checkName(name) {
     }
     return true;
 }
+
+// 휴대폰 체크 함수
+function checkPhoneNum(phoneNum) {
+    // 공백 체크 함수 호출
+    if (!checkNull(phoneNum, "휴대전화 번호를")) return false;
+
+    // 정규표현식 사용
+    var phoneRegExp = /^(01[016789]{1})-?[0-9]{3,4}-?[0-9]{4}$/;
+    // 휴대폰 번호 유효성 검사
+    if (!phoneRegExp.test(phoneNum)) {
+        alert("잘못된 번호입니다. 다시 입력해 주십시오.");
+        return false;
+    }
+    return true;
+}
+
+// 이메일 체크 함수
+function checkMail(mail) {
+    // 공백 체크 함수 호출
+    if (!checkNull(mail, "이메일을")) return false;
+
+    // 정규표현식 사용
+    var mailRegExp = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+    // 이메일 유효성 검사
+    if (!mailRegExp.test(mail)) {
+        alert("이메일형식이 올바르지 않습니다.");
+        return false;
+    }
+    return true;
+}
+
+const autoHyphen2 = (target) => {
+    target.value = target.value
+      .replace(/[^0-9]/g, '')
+     .replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, "$1-$2-$3").replace(/(\-{1,2})$/g, "");
+   }
