@@ -33,6 +33,7 @@ let uploadBtn = document.querySelectorAll('input[name="upload_radio"]');
 let uploadDate = document.getElementById('upload_date');// 예약업로드 일자
 uploadBtn[0].setAttribute('value',year+"-"+month+"-"+date);
 uploadDate.setAttribute("value", `${year}-`+`${month}-`+`${date}`);
+
 for(let i = 0; i<uploadBtn.length; i++){
   uploadBtn[i].addEventListener('click', ()=>{
     if(uploadBtn[i].value == "") {
