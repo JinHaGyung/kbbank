@@ -76,7 +76,7 @@ calculBtn.forEach(btn => {
       resultDeposit1.innerText = Number(depositMoney.value) + Number(depositMoney.value * (depositRate.value / 100) * depositPeriod.value) - Number((depositMoney.value * (depositRate.value / 100) * depositPeriod.value) * 0.154);
       resultDeposit2.innerText = Number(depositMoney.value) + Number(depositMoney.value * (depositRate.value / 100) * depositPeriod.value);
 
-      /* 적금계산기 */
+    /* 적금계산기 */
     } else if (tabBtn2.classList[3]) {
       resultSaving1.innerText = savingMoney.value;
       resultSaving2.innerText = savingPeriod.value;
@@ -85,7 +85,7 @@ calculBtn.forEach(btn => {
       resultSaving5.innerText = Number(savingMoney.value) * Number(savingRate.value / 100) * Number(savingPeriod.value);
       resultSaving6.innerText = Number(resultSaving4.innerText) + Number(resultSaving5.innerText) - Number(resultSaving5.innerText * 0.154);
 
-      /* 대출계산기 */
+    /* 대출계산기 */
     } else {
       resultLoan1.innerText = Number(loanMoney.value) + Number(loanMoney.value * (loanRate.value / 100));
 

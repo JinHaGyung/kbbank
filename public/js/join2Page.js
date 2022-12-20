@@ -166,6 +166,10 @@ function checkPhoneNum(phoneNum) {
     // 휴대폰 번호 유효성 검사
     if (!phoneRegExp.test(phoneNum)) {
         alert("잘못된 번호입니다. 다시 입력해 주십시오.");
+        // 값을 초기화
+        joinform.user_phoneNum.value = "";
+        // 마우스 커서 초점을 맞춰줌
+        joinform.user_phoneNum.focus();
         return false;
     }
     return true;
@@ -181,13 +185,17 @@ function checkMail(mail) {
     // 이메일 유효성 검사
     if (!mailRegExp.test(mail)) {
         alert("이메일형식이 올바르지 않습니다.");
+        // 값을 초기화
+        joinform.user_mail.value = "";
+        // 마우스 커서 초점을 맞춰줌
+        joinform.user_mail.focus();
         return false;
     }
     return true;
 }
 
-const autoHyphen2 = (target) => {
+const autoHyphen = (target) => {
     target.value = target.value
-      .replace(/[^0-9]/g, '')
-     .replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, "$1-$2-$3").replace(/(\-{1,2})$/g, "");
-   }
+        .replace(/[^0-9]/g, '')
+        .replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, "$1-$2-$3").replace(/(\-{1,2})$/g, "");
+}

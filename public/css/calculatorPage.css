@@ -11,7 +11,7 @@ ul.tabs{
 .tab_link{
   flex: 1;
   font-size: 24px;
-  border: 1px solid #000;
+  border: 1px solid #ddd;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -21,8 +21,7 @@ ul.tabs{
 }
 
 .tab_link.on{
-  background-color: #755F48;
-  color: #fff;
+  background-color: #FFCF00;
 }
 
 .calcul_inner>div{
@@ -41,21 +40,21 @@ ul.tabs{
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  background-color: #E0E0E0;
+  background-color: #EFECEC;
   padding: 5px 40px;
   box-sizing: border-box;
 }
 
 ul.calcul_info{
   list-style-type: disc;
-  font-size: 20px;
+  font-size: 18px;
 }
 div.calcul_info{
   padding: 20px 40px;
 }
 
 .calcul_info>p{
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .calcul_con>div{
@@ -127,7 +126,8 @@ div.calcul_info{
 }
 
 .reset{
-  background-color: #FFCF00;
+  background-color: #755F48;
+  color: #fff;
 }
 
 .calcul_result{
@@ -178,9 +178,15 @@ div.calcul_info{
 
 /*** 반응형 950px ***/
 @media (max-width: 950px) {
-  #depositAmount{
-    width: 93%;
+  .calcul_con div:first-child>div{
+    justify-content: space-between;
   }
+
+  #depositAmount{
+    width: 90%;
+    margin-right: 0;
+  }
+  
 }
 
 /*** 반응형 950px ***/
