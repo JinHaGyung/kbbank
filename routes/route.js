@@ -103,7 +103,14 @@ router.get('/notice_correct', (req, res)=>{ /* 공지사항 수정 */
   res.render('notice_correct');
 });
 
-router.get('/faqPage', (req, res)=>{ /* FAQ페이지 수정 */
+router.get('/deleteNoti', (req, res) => {
+  let id = req.query.id;
+  db.deleteNoti(id,() => {
+     res.redirect('/sub_noticeList')
+  })
+})
+
+router.get('/faqPage', (req, res)=>{ /* FAQ페이지 */
   res.render('faqPage');
 });
 
