@@ -155,6 +155,7 @@ table.listTable td{
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    cursor: pointer;
 }
 
 /* 페이지 버튼 */

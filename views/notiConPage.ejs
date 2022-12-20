@@ -17,11 +17,12 @@
             <span>조회수: 115</span>
         </div>
         <div class="notiContent_Box">
-           <p> <%= row.content %> </p>
+           <p> <%= row.cont %> </p>
         </div>
     </article>
     <div class="notiConBtn">
         <button class="notiCon_editB f_bold" type="button" name="notiCon_editB" onclick="javascript:location.href='/notUp?id=<%= row.id %>'">수정</button>
+        <button class="notiCon_editB f_bold" type="button" name="notiCon_editB" onclick="javascript:location.href='/sub_noticeList'">삭제</button>
         <button class="notiCon_listB f_bold" type="button" name="notiCon_listB" onclick="location.href='/sub_noticeList'">목록</button>
         
     </div>
