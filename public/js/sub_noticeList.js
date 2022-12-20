@@ -36,8 +36,3 @@ for(let num = 0; num < numArray.length; num++){
     listNum[num].innerHTML = `${numArray[num]}`
 }
 
-// 예약업로드 시간에 맞춰서 나타나기
-let today = new Date();
-let year = today.getFullYear(); 
-let month = today.getMonth() + 1
-let date = today.getDate();

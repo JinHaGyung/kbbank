@@ -2,7 +2,7 @@ var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : '1234',
+  password : '95052910',
   database : 'kbbank',
   dateStrings : 'date'
 });
@@ -57,6 +57,20 @@ function deleteNoti(id, callback) {
   })
 }
 
+//공지사항 최신순 정렬
+function getRecentNoti(callback) {
+  connection.query(`SELECT * from kbnotice order by date desc`, (err, rows) => {
+    if(err) throw err;
+    callback(rows);
+  })
+}
+//공지사항 과거순 정렬
+function getPastNoti(callback) {
+  connection.query(`SELECT * from kbnotice order by date asc`, (err, rows) => {
+    if(err) throw err;
+    callback(rows);
+  })
+}
 
 // userinfo를 수정할때 (생성할때)
 function insertUserInfo(user_name, user_birth, account_id, account_pw, user_id, user_pw, user_address, user_phoneNum, user_mail, callback){
@@ -75,5 +89,5 @@ function loginCheck(login_id, login_pw, callback){
 }
 
 module.exports = {
-  getNoti, getNotiByid,noticeWrite,getNoticebyid,NoticeCorr,insertUserInfo,loginCheck,deleteNoti
+  getNoti, getNotiByid,noticeWrite,getNoticebyid,NoticeCorr,insertUserInfo,loginCheck,deleteNoti, getPastNoti, getRecentNoti
 }

@@ -151,7 +151,7 @@ select.faq_ST{
 #faq_tab1{
     display: block;
 }
-.active{
+.faq_tablink.active{
     background-color: #FFCF00;
     color: #000;
 }

@@ -103,10 +103,22 @@ router.get('/notice_correct', (req, res)=>{ /* 공지사항 수정 */
   res.render('notice_correct');
 });
 
-router.get('/deleteNoti', (req, res) => {
+router.get('/deleteNoti', (req, res) => {  /* 공지사항 삭제 */
   let id = req.query.id;
   db.deleteNoti(id,() => {
      res.redirect('/sub_noticeList')
+  })
+})
+
+router.get('/getRecentNoti', (req, res) => {  /* 공지사항 최신순 */
+  db.getRecentNoti((rows) => {
+     res.render('sub_noticeList',{rows:rows})
+  })
+})
+
+router.get('/getPastNoti', (req, res) => {  /* 공지사항 과거순 */
+  db.getPastNoti((rows) => {
+     res.render('sub_noticeList',{rows:rows})
   })
 })
 
