@@ -93,8 +93,18 @@ select.list_ST{
 
 .list_order>ul>li{
     line-height: 40px;
-    padding: 0 10px;
+    padding: 0 5px;
     position: relative;
+}
+.notiTorder{
+    appearance: none;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.notiTorder_active{
+    font-weight: bold;
 }
 .list_order>ul>li:first-child:after{
     display: block;
