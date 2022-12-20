@@ -86,7 +86,6 @@ router.get('/notUp', (req,res)=>{/*공지 수정(데이터추출)*/
     res.render('notice_correct',{row: row[0]})
   })
 })
-
 router.post('/Not_corr',(req,res)=>{/*공지 수정(보내기) */
   let param = JSON.parse(JSON.stringify(req.body));
   let id = param['id'];

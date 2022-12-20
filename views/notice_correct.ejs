@@ -13,14 +13,12 @@
               <tr class="write_cell">
                 <td class="write_title"><span>*</span>카테고리</td>
                 <td class="write_select">
-                  <% if() %>
+                  <input type="hidden" name="" id="corr_cate" value="<%= row.cate %>">
                   <input class="write_radio" type='radio' name='radio' value='안내'/>안내
                   <input class="write_radio" type='radio' name='radio' value='신상품'/>신상품
                   <input class="write_radio" type='radio' name='radio' value='입찰공고'/>입찰공고
                   <input class="write_radio" type='radio' name='radio' value='약관개정'/>약관개정
                   <input class="write_radio" type='radio' name='radio' value='채용'/>채용
-
-                  <% }%>   
                 </td>
               </tr>
               <tr class="write_cell">
@@ -44,3 +42,4 @@
           </form>
     </div>
   </div>
+<script src="js/notice_corr.js"></script>
