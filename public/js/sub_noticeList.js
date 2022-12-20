@@ -36,3 +36,19 @@ for(let num = 0; num < numArray.length; num++){
     listNum[num].innerHTML = `${numArray[num]}`
 }
 
+
+// 예약업로드 보이기
+let today = new Date();
+let year = today.getFullYear(); 
+let month = today.getMonth() + 1
+let date = today.getDate();
+let listToday = year +"-" + month+"-"+date
+
+const listupdate = document.querySelectorAll(".updateDate")
+const noticeList = document.querySelectorAll(".displystyle");
+for(let i = 0; i<listupdate.length;i++){
+    if(listupdate[i].innerHTML == listToday){
+        noticeList[i].classList.remove("displystyle")
+    }
+
+}

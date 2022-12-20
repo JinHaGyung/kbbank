@@ -61,7 +61,10 @@ select.list_ST{
     display: flex;
     justify-content: space-between;
 }
-
+/* 날짜 확인용 */
+.displystyle{
+    display: none;
+}
 
 
 /* 리스트 정보확인 박스 */

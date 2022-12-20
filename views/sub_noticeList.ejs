@@ -70,13 +70,12 @@
             </thead>
             <tbody>
                 <% rows.forEach((row,index) =>{ %> 
-                    <tr>
-                <td class="ListNum"></td>
-                <td><%= row.cate %></td>
-                <td class="listTable_title"><a  onclick="javascript:location.href='/notiConPage?id=<%= row.id %>'"><%= row.title %></a></td>
-                <td><%= row.date %></td>
-
-            </tr>
+                <tr class="displystyle">
+                    <td class="ListNum"></td>
+                    <td><%= row.cate %></td>
+                    <td class="listTable_title"><a  onclick="javascript:location.href='/notiConPage?id=<%= row.id %>'"><%= row.title %></a></td>
+                    <td class="updateDate"><%= row.date %></td>
+                </tr>
             <% }); %>
             </tbody>
         </table>
