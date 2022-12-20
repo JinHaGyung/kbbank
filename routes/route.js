@@ -86,7 +86,6 @@ router.get('/notUp', (req,res)=>{/*공지 수정(데이터추출)*/
     res.render('notice_correct',{row: row[0]})
   })
 })
-
 router.post('/Not_corr',(req,res)=>{/*공지 수정(보내기) */
   let param = JSON.parse(JSON.stringify(req.body));
   let id = param['id'];
@@ -103,7 +102,14 @@ router.get('/notice_correct', (req, res)=>{ /* 공지사항 수정 */
   res.render('notice_correct');
 });
 
-router.get('/faqPage', (req, res)=>{ /* FAQ페이지 수정 */
+router.get('/deleteNoti', (req, res) => {
+  let id = req.query.id;
+  db.deleteNoti(id,() => {
+     res.redirect('/sub_noticeList')
+  })
+})
+
+router.get('/faqPage', (req, res)=>{ /* FAQ페이지 */
   res.render('faqPage');
 });
 

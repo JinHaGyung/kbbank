@@ -4,7 +4,7 @@ if (window.location.pathname == '/') {
   footer.style.display = 'none';
 }
 
-//사이트맵 헤더 삭제
+//사이트맵 header/footer 삭제
 let header = document.querySelector('#header')
 if (window.location.pathname == '/siteMapPage') {
   header.style.display = 'none';

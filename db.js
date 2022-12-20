@@ -49,6 +49,15 @@ function NoticeCorr(id,cate,title,cont,callback){
   })
 }
 
+//공지사항 삭제할 때
+function deleteNoti(id, callback) {
+  connection.query(`DELETE from kbnotice where id=${id}`, (err) => {
+    if(err) throw err;
+    callback();
+  })
+}
+
+
 // userinfo를 수정할때 (생성할때)
 function insertUserInfo(user_name, user_birth, account_id, account_pw, user_id, user_pw, user_address, user_phoneNum, user_mail, callback){
   connection.query(`INSERT INTO userinfo(user_name, user_birth, account_id, account_pw, user_id, user_pw, user_address, user_phoneNum, user_mail) VALUES('${user_name}', '${user_birth}', '${account_id}', '${account_pw}', '${user_id}', '${user_pw}', '${user_address}', '${user_phoneNum}', '${user_mail}')`, (err)=>{
@@ -66,5 +75,5 @@ function loginCheck(login_id, login_pw, callback){
 }
 
 module.exports = {
-  getNoti, getNotiByid,noticeWrite,getNoticebyid,NoticeCorr,insertUserInfo,loginCheck
+  getNoti, getNotiByid,noticeWrite,getNoticebyid,NoticeCorr,insertUserInfo,loginCheck,deleteNoti
 }
