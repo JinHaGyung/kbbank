@@ -36,13 +36,3 @@ for(let num = 0; num < numArray.length; num++){
     listNum[num].innerHTML = `${numArray[num]}`
 }
 
-
-
-//최신순 과거순 토글
-let notiTorder = document.getElementsByClassName('notiTorder');
-
-for(i=0; i<notiTorder.length; i++) {
-    notiTorder[i].addEventListener('click', function() {
-        this.classList.toggle('notiTorder_active');
-    });
-}

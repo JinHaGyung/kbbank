@@ -103,9 +103,6 @@ select.list_ST{
     cursor: pointer;
     font-size: 16px;
 }
-.notiTorder_active{
-    font-weight: bold;
-}
 .list_order>ul>li:first-child:after{
     display: block;
     content: '';
