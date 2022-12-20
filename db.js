@@ -27,13 +27,13 @@ function getNotiByid(id, callback) {
   })
 }
 // 공지사항 작성 후 DB로 보낼 때
-function noticeWrite(cate,writer,title,cont,callback){
-  connection.query(`insert into kbnotice(cate,writer,title,cont) values('${cate}','${writer}','${title}','${cont}')`, (err)=>{
+function noticeWrite(cate,writer,title,cont,update,callback){
+  connection.query(`insert into kbnotice(cate,writer,title,date,cont) values('${cate}','${writer}','${title}','${update}','${cont}')`, (err)=>{
     if (err) throw err;
     callback();
   })
 }
-  //공지 수정(데이터추출)
+  //공지 수정(데이터추출)noticeWrite
 function getNoticebyid(id,callback){ 
   connection.query(`Select * FROM kbnotice where id =${id}`, 
   (err,row)=>
