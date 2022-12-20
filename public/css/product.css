@@ -76,16 +76,37 @@
   gap: 20px;
   padding-top: 40px;
 }
-.product_right{
+.product_left{
   grid-column-start: 1;
   grid-column-end: 2;
   width: 100%;
 }
-.product_left{
+.product_right{
   grid-column-start: 2;
   grid-column-end: 5;
   width: 100%;
   height: auto
+}
+.product_left>p::before{
+  display: block;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #666666;
+  margin: 15px 0;
+}
+.product_left>p:first-child{
+  color: #846D54;
+}
+.product_left>ul{
+  padding-top: 10px;
+}
+.product_left>ul>li{
+  padding-left:20px;
+  background-image: url(../img/product/pdf.png);
+  background-repeat: no-repeat;
+  background-size: 14px auto;
+  background-position-y: center;
 }
 .product_btn{
   display: flex;
@@ -173,4 +194,89 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: right;
+}
+.prodect_confir{
+  display: flex;
+  padding-top: 10px;
+}
+.prodect_confir>p:first-child{
+  padding-right: 20px;
+}
+.productList_BTN{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 45px;
+  background-color: #FFCF00;
+  border-radius: 10px;
+  margin: 27px auto 190px;
+}
+
+@media (max-width:1200px) {
+  .product_main {
+    grid-template-columns: 0;
+    gap: 0;
+   }
+   .product_right {
+    grid-column-start: 1;
+  }
+   .productdesk{
+    display: none;
+   }
+}
+@media (max-width:800px) {
+  
+  .product_squar {
+    width: 70px;
+    height: 40px;
+    position: relative;
+    margin-right: 10px;
+  }
+  .product_squar:before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-bottom: 15px solid #fff;
+    margin-right: 20px;
+  }
+  .product_squar:after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-top: 15px solid #fff;
+  }
+  .prodect_confir{
+    flex-direction: column;
+}
+.product_protect{
+  flex-direction: column;
+  }
+  .protect_right {
+    width: 100%;
+  }
+  .protect_left {
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+  }
+}
+@media (max-width:700px) {
+  .product_squar{
+    display: none;
+  }
+  .squar_wrap {
+    margin-right: 24px;
+  }
+
 }

@@ -25,3 +25,13 @@ const listTbody = listTable.tBodies[0].rows.length;
 let list_tt = document.querySelector('#list_tt');
 
 list_tt.innerText += `총 ${listTbody}건, `;
+
+// 게시글 번호 매기기
+let listNum = document.querySelectorAll(".ListNum");
+let numArray = []
+for (let i = listNum.length; i>0; i--){
+    numArray.push(i)
+}
+for(let num = 0; num < numArray.length; num++){
+    listNum[num].innerHTML = `${numArray[num]}`
+}
