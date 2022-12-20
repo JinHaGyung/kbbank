@@ -76,7 +76,8 @@ router.post('/noticeW', (req, res)=>{ /* 공지사항 작성 */
   let writer = param['write'];
   let title = param['title'];
   let cont = param['write_cont'];
-  db.noticeWrite(cate,writer,title,cont,()=>{
+  let update = param['upload_radio'];
+  db.noticeWrite(cate,writer,title,cont,update,()=>{
     res.redirect('/sub_noticeList')
   })
 });
