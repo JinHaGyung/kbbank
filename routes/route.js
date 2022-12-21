@@ -5,20 +5,21 @@ const { title } = require('process');
 const db = require('./../db.js');
 
 router.get('/', (req, res)=>{ /* 메인페이지 */
-db.mainPageNoti((rows)=>{
+let today = new Date();
+let year = today.getFullYear(); 
+let month = today.getMonth() + 1
+let listdate = today.getDate();
+let listToday = year +"-" + month+"-"+listdate;
+db.mainPageNoti(listToday, (rows)=>{
   res.render('mainPage',{rows:rows});
  })
 });
-
-// router.get('/', (req, res)=>{ /* 메인페이지 */
-//   res.render('mainPage');
-// });
 
 router.get('/login', (req, res)=>{ /* 로그인페이지 */
 res.render('loginPage');
 });
 
-/* 로그인 내용 */
+/* 로그인 내용 */0
 router.post('/logininfo', (req, res) => {
   let param = JSON.parse(JSON.stringify(req.body));
   let login_id = param['login_id'];
