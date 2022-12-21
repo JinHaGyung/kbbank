@@ -399,34 +399,15 @@
           <h2 class="main_title">저축은행 공지사항</h2>
           <div class="mainNoti_list_wrap">
             <ul class="mainNoti_list">
+              <% rows.forEach((row,index) =>{ %> 
               <li>
                 <a href="/sub_noticeList">
-                  <p class="num f_gray2">1</p>
-                  <h3 class="content">수신상춤 금리 변경안내(2022.10.28)</h3>
-                  <p class="date f_gray2">2022.10.28</p>
+                  <p class="num f_gray2"></p>
+                  <h3 class="content" onclick="javascript:location.href='/notiConPage?id=<%= row.id %>'"><%= row.title %></h3>
+                  <p class="date f_gray2"><%= row.date %></p>
                 </a>
               </li>
-              <li>
-                <a href="">
-                  <p class="num f_gray2">2</p>
-                  <h3 class="content">자동이체통합관리서비스(페이인포) 시중단 안내</h3>
-                  <p class="date f_gray2">2022.10.21</p>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <p class="num f_gray2">3</p>
-                  <h3 class="content">금융결제원 재해복구훈련에 따른 CD공동망 개시 변경 안내</h3>
-                  <p class="date f_gray2">2022.10.14</p>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <p class="num f_gray2">4</p>
-                  <h3 class="content">통합금융정보시스템 시스템 작업에 따른 일부 서비스 일시 중단 안내</h3>
-                  <p class="date f_gray2">2022.10.10</p>
-                </a>
-              </li>
+              <% }); %>
             </ul>
             <a href="/sub_noticeList" class="mainList_btn"> 전체보기</a>
           </div>
