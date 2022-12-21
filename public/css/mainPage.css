@@ -533,7 +533,12 @@
   background-color: #fff;
   margin-right: 6px;
 }
+.solutionSwiper{
+  width: 100%;
+  height: auto;
+}
 .solution_event{
+  width: 100%;
   background-color: navy;
 }
 .solution_quick{
@@ -595,6 +600,12 @@
 }
 /* 이벤트 슬라이드 */
 .solution_e_one{
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/2.solution/kiwievent.png);
+  background-size: 100% 100%;
+}
+.solution_e_two{
   width: 100%;
   height: 100%;
   background-image: url(../img/2.solution/kiwievent.png);
