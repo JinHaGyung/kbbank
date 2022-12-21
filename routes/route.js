@@ -98,7 +98,6 @@ router.post('/Not_corr',(req,res)=>{/*공지 수정(보내기) */
   })
 })
 
-
 router.get('/notice_correct', (req, res)=>{ /* 공지사항 수정 */
   res.render('notice_correct');
 });
@@ -139,4 +138,11 @@ router.get('/productKiwi', (req, res)=>{ /* kiwi신용대출 */
 router.get('/siteMapPage', (req, res)=>{ /* 사이트맵 */
   res.render('siteMapPage');
 })
+
+router.get('/cardsub', (req, res)=>{ /* 카드 상품 신청하기 */
+  res.render('cardsub');
+})
+
+
+
 module.exports = router;
