@@ -2,7 +2,7 @@ var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : '1234',
+  password : '95052910',
   database : 'kbbank',
   dateStrings : 'date'
 });
@@ -14,8 +14,8 @@ connection.connect(function(err) {
 
 
   //메인페이지 공지사항을 추출할 때
-function mainPageNoti(listToday, callback) {
-  connection.query(`SELECT * FROM kbnotice where date <= DATE_FORMAT(NOW(),'%Y-%m-%d') LIMIT 4`, (err, rows) => {
+function mainPageNoti(callback) {
+  connection.query(`SELECT * FROM kbnotice where date <= DATE_FORMAT(NOW(),'%Y-%m-%d') ORDER BY date desc LIMIT 4`, (err, rows) => {
       if(err) throw err;
       callback(rows);
   })
