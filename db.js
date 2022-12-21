@@ -13,8 +13,8 @@ connection.connect(function(err) {
   });
 
   //메인페이지 공지사항을 추출할 때
-function mainPageNoti(listToday, callback) {
-  connection.query(`SELECT * FROM kbnotice where date <= ${listToday} LIMIT 4`, (err, rows) => {
+function mainPageNoti(callback) {
+  connection.query(`SELECT * FROM kbnotice ORDER BY date desc LIMIT 4`, (err, rows) => {
       if(err) throw err;
       callback(rows);
   })

@@ -5,12 +5,7 @@ const { title } = require('process');
 const db = require('./../db.js');
 
 router.get('/', (req, res)=>{ /* 메인페이지 */
-let today = new Date();
-let year = today.getFullYear(); 
-let month = today.getMonth() + 1
-let listdate = today.getDate();
-let listToday = year +"-" + month+"-"+listdate;
-db.mainPageNoti(listToday, (rows)=>{
+db.mainPageNoti((rows)=>{
   res.render('mainPage',{rows:rows});
  })
 });
