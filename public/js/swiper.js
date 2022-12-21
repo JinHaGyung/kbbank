@@ -58,12 +58,6 @@ window.addEventListener('resize', function () {
   // swiper0 = undefined;
 });
 /**************** 메인페이지 스크롤 스와이퍼 ****************/
-
-
-
-
-
-
 // 첫번째 섹션(mainSlide)의 swiper
 var swiper1 = new Swiper(".mySwiper1", {
   // spaceBetween: 30,
@@ -137,5 +131,18 @@ var swiper4 = new Swiper(".mySwiper4", {
   navigation: {
     nextEl: "#kbinfo3_rightArrow",
     prevEl: "#kbinfo3_leftArrow",
+  },
+});
+
+// 2번째 섹션 스와이퍼
+var swiper1 = new Swiper(".solutionSwiper", {
+  pagination: {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  },
+  loop: true,
+  autoplay: {
+    delay: 4000,
   },
 });
