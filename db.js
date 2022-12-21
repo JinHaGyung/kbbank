@@ -19,7 +19,7 @@ function mainPageNoti(callback) {
       callback(rows);
   })
 }
-  //공지사항을 추출할 때
+  //리스트페이지 공지사항을 추출할 때
 function getNoti(callback) {
   connection.query('SELECT * FROM kbnotice ORDER BY date desc', (err, rows, fields) => {
       if(err) throw err;

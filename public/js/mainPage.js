@@ -36,7 +36,7 @@ leftNav.addEventListener('click',()=>{
   footer.style.top = 0;
 })
 
-// 게시글 번호 매기기
+// 공지사항 번호 매기기
 let num = document.querySelectorAll(".num");
 let numArray = []
 
