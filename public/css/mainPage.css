@@ -945,13 +945,6 @@
   box-sizing: border-box;
 }
 
-/* .mainNoti_list{
-  background-color: #ffffff66;
-  opacity: 6;
-  margin-bottom: 40px;
-  padding: 25px 20px;
-  box-sizing: border-box;
-} */
 .mainNoti_list>li {
   border-bottom: 1px solid #dddddd;
   padding: 20px 0;
@@ -986,6 +979,7 @@
 }
 
 .mainNoti_list .date {
+  width: 10%;
   padding-right: 80px;
   position: relative;
   line-height: 36px;

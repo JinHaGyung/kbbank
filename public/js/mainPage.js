@@ -36,3 +36,14 @@ leftNav.addEventListener('click',()=>{
   footer.style.top = 0;
 })
 
+// 게시글 번호 매기기
+let num = document.querySelectorAll(".num");
+let numArray = []
+
+for (let i = 0; i<num.length; i++){
+    numArray.push(i)
+}
+
+for(let j = 0; j < numArray.length; j++){
+    num[j].innerHTML = `${numArray[j]+1}`
+}
