@@ -4,3 +4,36 @@
 .cardlimit{
   display: block;
 }
+.card_Limit{
+  height: 185px;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+}
+.card_notice{
+  padding: 0 5px 0 26px; 
+}
+.cardadd{
+  margin-bottom: 10px;
+}
+.cardadd:first-child{
+  margin-top: 10px;
+}
+.write_select>.addnum{
+  width: 150px;
+}
+.write_select>.addsearch{
+  width: 100px;
+  padding-left:0
+}
+.write_select>.address{
+  width: 250px;
+}
+.cardaddress{
+  height: 150px;
+}
+
+@media (max-width:450px) {
+  .write_title{width: 35%;}
+  
+}
