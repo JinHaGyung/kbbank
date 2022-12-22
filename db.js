@@ -34,6 +34,13 @@ function getNotiByid(id, callback) {
       callback(row);
   })
 }
+//공지사항 다음글 정보를 가져올 떄
+function getNextNoti(id, callback) {
+  connection.query(`SELECT * FROM kbnotice WHERE id=${id}`, (err,row) => {
+      if(err) throw err;
+      callback(row);
+  })
+}
 // 공지사항 작성 후 DB로 보낼 때
 function noticeWrite(cate,writer,title,cont,update,callback){
   connection.query(`insert into kbnotice(cate,writer,title,date,cont) values('${cate}','${writer}','${title}','${update}','${cont}')`, (err)=>{
@@ -97,5 +104,5 @@ function loginCheck(login_id, login_pw, callback){
 }
 
 module.exports = {
-  getNoti, getNotiByid,noticeWrite,getNoticebyid,NoticeCorr,insertUserInfo,loginCheck,deleteNoti, getPastNoti, getRecentNoti, mainPageNoti
+  getNoti, getNotiByid,noticeWrite,getNoticebyid,NoticeCorr,insertUserInfo,loginCheck,deleteNoti, getPastNoti, getRecentNoti, mainPageNoti, getNextNoti
 }

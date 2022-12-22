@@ -40,7 +40,8 @@
             </tr>
             <tr>
                 <td class="notiCon_label notiCon_label2"><p>다음글</p></td>
-                <td class="notiCon_label2">수신상품 금리 변경안내(2022.11.8)</td>
+                <% let rTitle = row.title+1 %>
+                <td class="notiCon_label2" onclick="javascript:location.href='/getNextNoti?id=<%= row.id+1 %>'"><%= rTitle %></td>
             </tr>
         </tbody>
     </table>
