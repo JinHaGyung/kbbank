@@ -51,16 +51,21 @@
 
 .input_wrap>input[type=button] {
   position: absolute;
-  right: 1px;
-  top: 1px;
+  right: 0;
+  top: 0;
+  height: 100%;
   border: 0;
   cursor: pointer;
   background-color: #E0E0E0;
   font-size: 16px;
   font-weight: 400;
   color: #333;
-  padding: 10.5px 20px;
+  padding: 0 20px;
   box-sizing: border-box;
+}
+
+.input_wrap2>input[type=button]{
+  height: 50%;
 }
 
 .input_wrap1,
@@ -106,10 +111,17 @@
   background-color: #FFCF00;
 }
 
-@media (max-width:650px) {
+@media (max-width: 650px) {
   .join2_con {
     width: 100%;
     padding: 0 10px;
     box-sizing: border-box;
+  }
+}
+
+@media (max-width: 450px) {
+  .input_wrap>input[type=button]{
+    position: static;
+    border: 1px solid;
   }
 }
