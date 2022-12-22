@@ -1,5 +1,5 @@
 // 작성 공란 검사
-function notice_ck(){ 
+function notice_ck(e){ 
   var writeWriter= document.getElementById('write_writer'); 
   var writeTitle = document.getElementById('write_title'); 
   var writeCont = document.getElementById('write_cont'); 
@@ -7,20 +7,22 @@ function notice_ck(){
   if (writeWriter.value==''){
     alert("작성자 이름은 비워둘 수 없습니다.");
     writeWriter.focus();
-    return false;
+    e.preventDefault()
   }
   if (writeTitle.value==''){
     alert("제목을 비워둘 수 없습니다.");
     writeTitle.focus();
-    return false;
+    e.preventDefault()
   }
   if (writeCont.value==''){
     alert("내용을 비워둘 수 없습니다.");
     writeCont.focus();
-    return false;
+    e.preventDefault()
   }
 } 
 
+const submit = document.querySelector("input[type=submit]");
+submit.addEventListener("click",notice_ck)
 // 예약업로드 선택시 date 활성화
 
 //예약업로드 일자 제어하기

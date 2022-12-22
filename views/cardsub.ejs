@@ -1,4 +1,3 @@
-
     <div class="titleArea">
       <div class="w1200">
           <ul class="pageUtil">
@@ -7,7 +6,7 @@
               <li><a href=""></a></li>
           </ul>
           <h2 class="f_bold">상품신청</h2>
-          <form action="noticeW" method="post">
+          <form action="/" method="post">
             <h3>KB e-plus정기예금</h3>
             <p class="f_gray2 cardinfo">일정기간 여유자금을 예금하시면 확정 금리로 높은 수익을 드리는 온라인 가입 전용상품입니다.</p>
             <table class="write">
@@ -19,29 +18,69 @@
               </tr>
               <tr class="write_cell">
                 <td class="write_title"><span>*</span>전화번호</td>
-                <td class="write_select"><input type="text" name="write" id="write_writer" maxlength="30"></td>
+                <td class="write_select"><input type="text" name="write" id="write_writer" maxlength="50"></td>
               </tr>
               <tr class="write_cell">
-                <td class="write_title"><span>*</span>제목</td>
-                <td class="write_select"><input type="text" name="title" id="write_title"></td>
+                <td class="write_title"><span>*</span>결제정보</td>
+                <td class="write_select"><input type="text" name="title" id="write_title" placeholder=""></td>
               </tr>
               <tr class="write_cell">
-                <td class="write_title"><span>*</span>업로드 일자</td>
+                <td class="write_title"><span>*</span>결제일</td>
                 <td class="write_select">
-                  <input class="write_radio" type='radio' name='upload_radio' value="today" checked/>즉시 업로드
-                  <input class="write_radio" type='radio' name='upload_radio' value=''/>예약업로드
+                  매 월
+                  <input class="write_radio" type='radio' name='account_day' value="1일" checked/>1일
+                  <input class="write_radio" type='radio' name='account_day' value='5일'/>5일
+                  <input class="write_radio" type='radio' name='account_day' value='10일'/>10일
+                  <input class="write_radio" type='radio' name='account_day' value='15일'/>15일
+                  <input class="write_radio" type='radio' name='account_day' value=''/>지정 선택
                   <input type="date" id="upload_date" name="reserv_up" max="" min="" value="" disabled="disabled">
                 </td>
               </tr>
-              <tr class="write_cell write_cont">
-                <td class="write_title write_cont_td"><span>*</span>내용</td>
-                <td class="write_select write_cont_td"><textarea name="write_cont" id="write_cont" cols="30" rows="10"></textarea></td>
+              <tr class="write_cell">
+                <td class="write_title cardaddress"><span>*</span>카드 수령 주소</td>
+                <td class="write_select">
+                  <input type="text" class="cardadd addnum" id="sample6_postcode" placeholder="우편번호">
+                  <input type="button" class="addsearch"  onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
+                  <input type="text" class="cardadd address"  id="sample6_address" placeholder="주소"><br>
+                  <input type="text" class="cardadd address"  id="sample6_detailAddress" placeholder="상세주소">
+                  <input type="hidden" class="addsearch adddetails"  id="sample6_extraAddress" placeholder="참고항목">
+                </td>
+              </tr>
+              <tr class="write_cell">
+                <td class="write_title"><span>*</span>교통카드 신청 여부</td>
+                <td class="write_select">
+                <input class="write_radio" type='radio' name='transportationCard' value="신청" checked/>신청
+                <input class="write_radio" type='radio' name='transportationCard' value="미신청" />미신청
+              </td>
+              </tr>
+              <tr class="write_cell">
+                <td class="write_title card_Limit"><span>* 이용한도</span>
+                  <h4 class="f_gray2 f_regular card_notice">신청자의 신용등급에 따라서 <br>
+                  한도가 제한 될 수 있습니다.</h4>
+                </td>
+                <div></div>
+                <td class="write_select">
+                  1 회 <input type="text" name="limit" class="cardlimit">
+                  일 일 <input type="text" name="limit" class="cardlimit">
+                  월간 <input type="text" name="limit" class="cardlimit">
+                </td>
+              </tr>
+              <tr class="write_cell">
+                <td class="write_title"><span></span>자동납부</td>
+                <td class="write_select">
+                  <label><input type="checkbox" name="autoPay" value="통신요금"> 통신요금</label>
+                  <label><input type="checkbox" name="autoPay" value="도시가스"> 도시가스</label>
+                  <label><input type="checkbox" name="autoPay" value="전기요금"> 전기요금</label>
+                  <label><input type="checkbox" name="autoPay" value="아파트관리비"> 아파트 관리비</label>
+              </td>
               </tr>
             </table>
             <div class="write_btn_wrap">
-              <a href="notiConPage"><button class="write_btn f_bold write_cancle">취소</button></a>
-              <input class="write_btn f_bold" type="submit" name="upload" id="" value="등록">
+              <a href="/"><button class="write_btn f_bold write_cancle">취소</button></a>
+              <input class="write_btn f_bold" type="submit" name="upload" id="" value="신청">
             </div>
           </form>
     </div>
   </div>
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <script src="js/address.js"></script>
