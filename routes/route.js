@@ -33,7 +33,11 @@ res.render('join1Page');
 });
 
 router.get('/join2', (req, res)=>{ /* 회원가입페이지2 */
-res.render('join2Page');
+db.userinfoData((rows)=>{
+  res.render('join2Page', {
+    rows: rows
+  });
+})
 });
 
 /* 회원가입 내용을 테이블에 넣기 */
