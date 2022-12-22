@@ -2,7 +2,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: '1234',
+  password: '95052910',
   database: 'kbbank',
   dateStrings: 'date'
 });
@@ -32,6 +32,13 @@ function getNotiByid(id, callback) {
   connection.query(`SELECT * FROM kbnotice WHERE id=${id}`, (err, row) => {
     if (err) throw err;
     callback(row);
+  })
+}
+//공지사항 다음글 정보를 가져올 떄
+function getNextNoti(id, callback) {
+  connection.query(`SELECT * FROM kbnotice WHERE id=${id}`, (err,row) => {
+      if(err) throw err;
+      callback(row);
   })
 }
 // 공지사항 작성 후 DB로 보낼 때
@@ -117,4 +124,5 @@ module.exports = {
   getRecentNoti,
   mainPageNoti,
   userinfoData
+
 }

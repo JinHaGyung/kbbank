@@ -72,6 +72,13 @@ res.render('notiConPage', {row:row[0]});
 })
 });
 
+router.get('/getNextNoti', (req, res) => {  /* 공지사항  다음글 */
+let id = req.query.id;
+db.getNextNoti(id, (row) => {
+   res.render('notiConPage', {row:row[0]})
+})
+})
+
 router.get('/notice_write', (req, res)=>{ /* 공지사항 작성페이지 */
     res.render('notice_write');
 });
