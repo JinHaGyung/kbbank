@@ -33,7 +33,11 @@ res.render('join1Page');
 });
 
 router.get('/join2', (req, res)=>{ /* 회원가입페이지2 */
-res.render('join2Page');
+db.userinfoData((rows)=>{
+  res.render('join2Page', {
+    rows: rows
+  });
+})
 });
 
 /* 회원가입 내용을 테이블에 넣기 */
@@ -67,6 +71,13 @@ db.getNotiByid(id, (row)=>{
 res.render('notiConPage', {row:row[0]});
 })
 });
+
+router.get('/getNextNoti', (req, res) => {  /* 공지사항  다음글 */
+let id = req.query.id;
+db.getNextNoti(id, (row) => {
+   res.render('notiConPage', {row:row[0]})
+})
+})
 
 router.get('/notice_write', (req, res)=>{ /* 공지사항 작성페이지 */
     res.render('notice_write');
