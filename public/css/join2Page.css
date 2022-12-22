@@ -52,7 +52,7 @@
 .input_wrap>input[type=button] {
   position: absolute;
   right: 1px;
-  bottom: 1px;
+  top: 1px;
   border: 0;
   cursor: pointer;
   background-color: #E0E0E0;
