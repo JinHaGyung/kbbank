@@ -161,4 +161,19 @@ router.get('/accountInquiry', (req, res)=>{ /* 계좌조회 페이지 */
   res.render('accountInquiry');
 })
 
+router.get('/productThum_List', (req, res)=>{ /* 상품 리스트 페이지 */
+  res.render('productThum_List');
+})
+
+router.get('/productThum_Con', (req, res)=>{ /* 상품 뷰어 페이지 */
+  res.render('productThum_Con');
+})
+
+router.get('/productThum_write', (req, res)=>{ /* 상품 작성 페이지 */
+  res.render('productThum_write');
+})
+
+router.get('/productThum_upDate', (req, res)=>{ /* 상품 수정 페이지 */
+  res.render('productThum_upDate');
+})
 module.exports = router;
