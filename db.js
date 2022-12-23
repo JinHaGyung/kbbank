@@ -123,6 +123,6 @@ module.exports = {
   getPastNoti,
   getRecentNoti,
   mainPageNoti,
-  userinfoData
-
+  userinfoData,
+  getNextNoti
 }

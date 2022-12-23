@@ -161,4 +161,19 @@ router.get('/accountInquiry', (req, res)=>{ /* 계좌조회 페이지 */
   res.render('accountInquiry');
 })
 
+router.get('/cardThum_List', (req, res)=>{ /* 카드 상품 리스트 페이지 */
+  res.render('cardThum_List');
+})
+
+router.get('/cardThum_Con', (req, res)=>{ /* 카드 상품 뷰어 페이지 */
+  res.render('cardThum_Con');
+})
+
+router.get('/cardThum_write', (req, res)=>{ /* 카드 상품 작성 페이지 */
+  res.render('cardThum_write');
+})
+
+router.get('/cardThum_upDate', (req, res)=>{ /* 카드 상품 수정 페이지 */
+  res.render('cardThum_upDate');
+})
 module.exports = router;
