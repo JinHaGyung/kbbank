@@ -1,0 +1,30 @@
+.cardThumCon_wrap{
+    background-color: #EFECEC;
+    padding-bottom: 85px;
+}
+.cardThumCon_btn{
+    border-top:none;
+    margin-bottom: 160px;
+}
+.cardThumCon_topWrap{
+    display: flex;
+}
+.cardThumCon_topWrap>div:first-child{
+    width: 80%;
+}
+.cardThumCon_topWrap>div:last-child{
+    width: 20%;
+}
+.cardThumCon_topWrap img{
+    width: 320px;
+    height: 200px;
+    position: absolute;
+    top: 104px;
+    right: 0;
+}
+.card_title{
+    padding: 25px 0 10px;
+}
+.product_join{
+    cursor: pointer;
+}
