@@ -89,8 +89,8 @@ function getPastNoti(callback) {
 }
 
 // userinfo를 수정할때 (생성할때)
-function insertUserInfo(user_name, user_birth, account_id, account_pw, user_id, user_pw, user_address, user_phoneNum, user_mail, callback) {
-  connection.query(`INSERT INTO userinfo(user_name, user_birth, account_id, account_pw, user_id, user_pw, user_address, user_phoneNum, user_mail) VALUES('${user_name}', '${user_birth}', '${account_id}', '${account_pw}', '${user_id}', '${user_pw}', '${user_address}', '${user_phoneNum}', '${user_mail}')`, (err) => {
+function insertUserInfo(user_name, user_birth, account_type, account_id, account_pw, user_id, user_pw, user_address, user_phoneNum, user_mail, callback) {
+  connection.query(`INSERT INTO userinfo(user_name, user_birth, account_type, account_id, account_pw, user_id, user_pw, user_address, user_phoneNum, user_mail) VALUES('${user_name}', '${user_birth}', '${account_type}', '${account_id}', '${account_pw}', '${user_id}', '${user_pw}', '${user_address}', '${user_phoneNum}', '${user_mail}')`, (err) => {
     if (err) throw err;
     callback();
   });

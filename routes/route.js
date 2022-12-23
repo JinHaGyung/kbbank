@@ -45,6 +45,7 @@ router.post('/joininfo', (req, res) => {
   let param = JSON.parse(JSON.stringify(req.body));
   let user_name = param['user_name'];
   let user_birth = param['user_birth'];
+  let account_type = param['gener'];
   let account_id = param['account_id'];
   let account_pw = param['account_pw'];
   let user_id = param['user_id'];
@@ -52,7 +53,7 @@ router.post('/joininfo', (req, res) => {
   let user_address = param['user_address'];
   let user_phoneNum = param['user_phoneNum'];
   let user_mail = param['user_mail'];
-  db.insertUserInfo(user_name, user_birth, account_id, account_pw, user_id, user_pw, user_address, user_phoneNum, user_mail, ()=>{
+  db.insertUserInfo(user_name, user_birth, account_type, account_id, account_pw, user_id, user_pw, user_address, user_phoneNum, user_mail, ()=>{
     res.redirect('/login');
   });
 })

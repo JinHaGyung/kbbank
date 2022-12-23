@@ -123,5 +123,7 @@
   .input_wrap>input[type=button]{
     position: static;
     border: 1px solid;
+    height: 40px;
+    margin-bottom: 16px;
   }
 }
