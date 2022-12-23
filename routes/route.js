@@ -157,6 +157,49 @@ router.get('/cardsub', (req, res)=>{ /* 카드 상품 신청하기 */
   res.render('cardsub');
 })
 
+router.post('/cardapplication',(req,res)=>{/*카드 상품 신청(보내기) */
+  let param = JSON.parse(JSON.stringify(req.body));
+  let name = param['cardname'];
+  let cardproduct = param['cardproduct'];
+  let tellnum = param['tellnum'];
+  let payinfo = param['pay'];
+  let bankaccount = param['bankAccount'];
+  let accountDay = param['account_day'];
+  let postcode = param['postcode'];
+  let address = param['address'];
+  let detailAddress = param['detailAddress'];
+  let transcard = param['transportationCard'];
+  let oncelimit = param['oncelimit'];
+  let daylimit = param['daylimit'];
+  let monthlimit = param['monthlimit'];
+  let tellPay = param['tellPay'];
+  let gusPay = param['gusPay'];
+  let elPay = param['elPay'];
+  let aptPay = param['aptPay'];
+
+  console.log(name);
+  console.log(cardproduct);
+  console.log(tellnum);
+  console.log(payinfo);
+  console.log(bankaccount);
+  console.log(accountDay);
+  console.log(postcode);
+  console.log(detailAddress);
+  console.log(transcard);
+  console.log(oncelimit);
+  console.log(daylimit);
+  console.log(monthlimit);
+  console.log(tellPay);
+  console.log(gusPay);
+  console.log(elPay);
+  console.log(aptPay);
+
+  db.cardapp(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcode,address,detailAddress,transcard,oncelimit,daylimit,monthlimit,tellPay,gusPay,elPay,aptPay,()=>{
+    res.redirect('/')
+  })
+})
+
+
 router.get('/accountInquiry', (req, res)=>{ /* 계좌조회 페이지 */
   res.render('accountInquiry');
 })

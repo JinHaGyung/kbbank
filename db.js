@@ -111,6 +111,19 @@ function userinfoData(callback) {
   });
 };
 
+// 카드 상품 신청(보내기)
+function cardapp(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcode,address,detailAddress,transcard,oncelimit,daylimit,monthlimit,autopay,callback) {
+  connection.query(`insert into cardsub(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcode,address,detailAddress,transcard,oncelimit,daylimit,monthlimit,autopay,present,create_time) 
+  values('${name}','${cardproduct}','${tellnum}','${payinfo}','${bankaccount}','${accountDay}','${postcode}','${address}','${detailAddress}','${transcard}','${oncelimit}','${daylimit}','${monthlimit}','${autopay}','미발급',NOW())`,
+    (err) => {
+      if (err) throw err;
+      callback()
+    })
+}
+// 카드 상품 조회(리스트)
+// 카드 상품 조회(상세)
+
+
 module.exports = {
   getNoti,
   getNotiByid,
@@ -124,5 +137,6 @@ module.exports = {
   getRecentNoti,
   mainPageNoti,
   userinfoData,
-  getNextNoti
+  getNextNoti,
+  cardapp
 }
