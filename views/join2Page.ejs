@@ -16,6 +16,14 @@
           <input type="text" name="user_birth" id="user_birth" placeholder="생년월일, 숫자만 입력" maxlength="8"
             oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
         </div>
+        <div class="radioboxs">
+          <input type="radio" name="gener" id="normalAccount" value="보통예금계좌" checked>
+          <label for="normalAccount">보통예금계좌</label>
+          <input type="radio" name="gener" id="limitAccount" value="한도제한계좌">
+          <label for="limitAccount">한도제한계좌</label>
+          <input type="radio" name="gener" id="savingAccount" value="저축계좌">
+          <label for="savingAccount">저축계좌</label>
+        </div>
         <div class="input_wrap input_wrap2">
           <input type="text" name="account_id" id="account_id" placeholder="계좌 번호 입력, 숫자만 12자리 입력" maxlength="12"
             oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
@@ -46,13 +54,14 @@
           <input type="password" name="user_pwCheck" id="user_pwCheck" placeholder="비밀번호 확인">
         </div>
         <div class="input_wrap">
-          <input type="text" name="zipCode" id="zipCode" placeholder="우편번호" maxlength="5"
+          <input type="text" name="zipCode" id="sample6_postcode" placeholder="우편번호" maxlength="5"
             oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
-          <input type="button" value="우편번호 찾기">
+          <input type="button" value="우편번호 찾기" onclick="sample6_execDaumPostcode()">
         </div>
         <div class="input_wrap input_wrap6">
-          <input type="text" name="user_address" id="user_address" placeholder="기본주소 입력">
-          <input type="text" name="user_addressMore" id="user_addressMore" placeholder="상세주소 입력">
+          <input type="text" name="user_address" id="sample6_address" placeholder="기본주소 입력">
+          <input type="text" name="user_addressMore" id="sample6_detailAddress" placeholder="상세주소 입력">
+          <input type="hidden" id="sample6_extraAddress" placeholder="참고항목">
         </div>
         <div class="input_wrap input_wrap7">
           <input type="text" name="user_phoneNum" id="user_phoneNum" placeholder="휴대전화 번호, 숫자만 입력" maxlength="13"
@@ -67,4 +76,6 @@
     </div>
   </div>
 </div>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script src="js/address.js"></script>
 <script src="js/join2Page.js"></script>

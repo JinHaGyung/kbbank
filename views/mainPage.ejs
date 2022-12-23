@@ -23,7 +23,7 @@
               <nav class="bottomBtn">
                 <ul class="Btn_inner">
                   <li><a href="/calculator" class="f_medium calculator">금융계산기</a></li>
-                  <li><a href="" class="f_medium accountCheck">계좌조회</a></li>
+                  <li><a href="/accountInquiry" class="f_medium accountCheck">계좌조회</a></li>
                   <li><a href="" class="f_medium transfer">이체</a></li>
                   <li><a href="" class="f_medium newDeposit">예금신규</a></li>
                   <li><a href="" class="f_medium registration">타행인증서등록</a></li>
@@ -69,7 +69,7 @@
               <nav class="bottomBtn">
                 <ul class="Btn_inner">
                   <li><a href="/calculator" class="f_medium calculator">금융계산기</a></li>
-                  <li><a href="" class="f_medium accountCheck">계좌조회</a></li>
+                  <li><a href="/accountInquiry" class="f_medium accountCheck">계좌조회</a></li>
                   <li><a href="" class="f_medium transfer">이체</a></li>
                   <li><a href="" class="f_medium newDeposit">예금신규</a></li>
                   <li><a href="" class="f_medium registration">타행인증서등록</a></li>
@@ -164,7 +164,7 @@
               <nav class="bottomBtn">
                 <ul class="Btn_inner">
                   <li><a href="/calculator" class="f_medium calculator">금융계산기</a></li>
-                  <li><a href="" class="f_medium accountCheck">계좌조회</a></li>
+                  <li><a href="/accountInquiry" class="f_medium accountCheck">계좌조회</a></li>
                   <li><a href="" class="f_medium transfer">이체</a></li>
                   <li><a href="" class="f_medium newDeposit">예금신규</a></li>
                   <li><a href="" class="f_medium registration">타행인증서등록</a></li>
@@ -258,7 +258,7 @@
               <div class="swiper-slide solution_e_one"></div>
               <div class="swiper-slide solution_e_two"></div>
             </span>
-         </span>
+          </span>
           <span class="solution_quick">
             <div>
               <div class="solution_quick_barWrap">
@@ -372,7 +372,7 @@
                     <a href="" class="quickSearch">빠른조회</a>
                   </li>
                   <li class="swiper-slide">
-                    <a href="" class="accountSearch">계좌조회</a>
+                    <a href="/accountInquiry" class="accountSearch">계좌조회</a>
                   </li>
                   <li class="swiper-slide">
                     <a href="" class="accountTransfer">계좌이체</a>
@@ -405,7 +405,8 @@
               <li>
                 <a href="/sub_noticeList">
                   <p class="num f_gray2"></p>
-                  <h3 class="content" onclick="javascript:location.href='/notiConPage?id=<%= row.id %>'"><%= row.title %></h3>
+                  <h3 class="content" onclick="javascript:location.href='/notiConPage?id=<%= row.id %>'">
+                    <%= row.title %></h3>
                   <p class="date f_gray2"><%= row.date %></p>
                 </a>
               </li>
@@ -481,7 +482,7 @@
             <div class="footer_icon_facebook">
             </div>
             <div class="footer_icon_ytub">
-            </div>      
+            </div>
             <select name="KB_selectBox" id="KB_selectBox">
               <option value="KB그룹 금융 네트워크">KB그룹 금융 네트워크</option>
               <option value="푸르덴셜생명">푸르덴셜생명</option>
@@ -550,37 +551,37 @@
               불법개인정보를 이용한 금융사기관련 유의사항 안내<br>
               금융사기 피해예방홍보동영상 보러가기</p>
           </div>
-      </article>
-      <article class="footer_wrap_bottom">
-        <div class="footer_logo">
-          <img src="img/footer/KB_logo.png" alt="">
-        </div>
-        <div class="footer_icon">
-          <div class="footer_icon_blog desk">
+        </article>
+        <article class="footer_wrap_bottom">
+          <div class="footer_logo">
+            <img src="img/footer/KB_logo.png" alt="">
           </div>
-          <div class="footer_icon_facebook desk">
+          <div class="footer_icon">
+            <div class="footer_icon_blog desk">
+            </div>
+            <div class="footer_icon_facebook desk">
+            </div>
+            <div class="footer_icon_ytub desk">
+            </div>
+            <select name="KB_selectBox" id="KB_selectBox" class="desk">
+              <option value="KB그룹 금융 네트워크">KB그룹 금융 네트워크</option>
+              <option value="푸르덴셜생명">푸르덴셜생명</option>
+              <option value="KB경영연구소">KB경영연구소</option>
+              <option value="KB데이타시스템">KB데이타시스템</option>
+              <option value="KB신용정보">KB신용정보</option>
+              <option value="KB인베스트먼트">KB인베스트먼트</option>
+              <option value="KB부동산신탁">KB부동산신탁</option>
+              <option value="KB캐피탈">KB캐피탈</option>
+              <option value="KB자산운용">KB자산운용</option>
+              <option value="KB생명보험">KB생명보험</option>
+              <option value="KB증권">KB증권</option>
+              <option value="KB손해보험">KB손해보험</option>
+              <option value="KB국민카드">KB국민카드</option>
+              <option value="KB국민은행">KB국민은행</option>
+              <option value="KB금융그룹">KB금융그룹</option>
+            </select>
           </div>
-          <div class="footer_icon_ytub desk">
-          </div>      
-          <select name="KB_selectBox" id="KB_selectBox" class="desk">
-            <option value="KB그룹 금융 네트워크">KB그룹 금융 네트워크</option>
-            <option value="푸르덴셜생명">푸르덴셜생명</option>
-            <option value="KB경영연구소">KB경영연구소</option>
-            <option value="KB데이타시스템">KB데이타시스템</option>
-            <option value="KB신용정보">KB신용정보</option>
-            <option value="KB인베스트먼트">KB인베스트먼트</option>
-            <option value="KB부동산신탁">KB부동산신탁</option>
-            <option value="KB캐피탈">KB캐피탈</option>
-            <option value="KB자산운용">KB자산운용</option>
-            <option value="KB생명보험">KB생명보험</option>
-            <option value="KB증권">KB증권</option>
-            <option value="KB손해보험">KB손해보험</option>
-            <option value="KB국민카드">KB국민카드</option>
-            <option value="KB국민은행">KB국민은행</option>
-            <option value="KB금융그룹">KB금융그룹</option>
-          </select>
-        </div>
-      </article>
+        </article>
       </section>
     </footer>
   </div>
