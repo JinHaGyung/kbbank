@@ -157,6 +157,8 @@ router.get('/cardsub', (req, res)=>{ /* 카드 상품 신청하기 */
   res.render('cardsub');
 })
 
-
+router.get('/accountInquiry', (req, res)=>{ /* 계좌조회 페이지 */
+  res.render('accountInquiry');
+})
 
 module.exports = router;
