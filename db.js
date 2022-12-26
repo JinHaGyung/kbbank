@@ -74,14 +74,14 @@ function deleteNoti(id, callback) {
 
 //공지사항 최신순 정렬
 function getRecentNoti(callback) {
-  connection.query(`SELECT * from kbnotice order by date desc`, (err, rows) => {
+  connection.query(`SELECT * from kbnotice where date <= NOW() order by id desc`, (err, rows) => {
     if (err) throw err;
     callback(rows);
   })
 }
 //공지사항 과거순 정렬
 function getPastNoti(callback) {
-  connection.query(`SELECT * from kbnotice order by date asc`, (err, rows) => {
+  connection.query(`SELECT * from kbnotice where date <= NOW() order by id asc`, (err, rows) => {
     if (err) throw err;
     callback(rows);
   })

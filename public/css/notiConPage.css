@@ -54,6 +54,13 @@ table.notiCon_table td{
     border-top: 1px solid #333;
     border-bottom: 1px solid #ddd;
 }
+
+.notiCon_label1>a,
+.notiCon_label2>a{
+  color: #000;
+  text-decoration: none;
+}
+
 .notiCon_label2{
     border-bottom: 1px solid #333;
     overflow: hidden;
