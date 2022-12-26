@@ -34,11 +34,11 @@ res.render('join1Page');
 });
 
 router.get('/join2', (req, res)=>{ /* 회원가입페이지2 */
-db.userinfoData((rows)=>{
-  res.render('join2Page', {
-    rows: rows
+  db.userinfoData((rows)=>{
+    res.render('join2Page', {
+      rows: rows
+    });
   });
-})
 });
 
 /* 회원가입 내용을 테이블에 넣기 */
@@ -158,6 +158,39 @@ router.get('/cardsub', (req, res)=>{ /* 카드 상품 신청하기 */
   res.render('cardsub');
 })
 
+router.post('/cardapplication',(req,res)=>{/*카드 상품 신청(보내기) */
+  let param = JSON.parse(JSON.stringify(req.body));
+  let name = param['cardname'];
+  let cardproduct = param['cardproduct'];
+  let tellnum = param['tellnum'];
+  let payinfo = param['pay'];
+  let bankaccount = param['bankAccount'];
+  let accountDay = param['account_day'];
+  let postcode = param['postcode'];
+  let address = param['address'];
+  let detailAddress = param['detailAddress'];
+  let transcard = param['transportationCard'];
+  let oncelimit = param['oncelimit'];
+  let daylimit = param['daylimit'];
+  let monthlimit = param['monthlimit'];
+  let tellPay = param['tellPay'];
+  let gasPay = param['gasPay'];
+  let elPay = param['elPay'];
+  let aptPay = param['aptPay'];
+
+  db.cardapp(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcode,address,detailAddress,transcard,oncelimit,daylimit,monthlimit,tellPay,gasPay,elPay,aptPay,()=>{
+    res.redirect('/')
+  })
+})
+
+
+router.get('/cardsub_List', (req, res)=>{ /* 카드신청 조회 */
+  db.getcardsub((rows)=>{
+  res.render('cardsub_List',{rows:rows});
+ })
+})
+
+
 router.get('/accountInquiry', (req, res)=>{ /* 계좌조회 페이지 */
   res.render('accountInquiry');
 })
@@ -173,6 +206,14 @@ const upload = multer({
       done(null, path.basename(file.originalname, ext)+ Date.now() + ext)
     }
   })
+})
+
+router.post('/accountInquiryinfo', (req, res)=>{ /* 계좌조회 페이지 */
+  let param = JSON.parse(JSON.stringify(req.body));
+  let user_name = param['user_name'];
+  let user_birth = param['user_birth'];
+  let account_pw = param['account_pw'];
+  
 })
 
 router.get('/cardThum_List', (req, res)=>{ /* 카드 상품 리스트 페이지 */

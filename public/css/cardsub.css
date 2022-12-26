@@ -32,7 +32,19 @@
 .cardaddress{
   height: 150px;
 }
-
+.pay_select{
+  width: none;
+}
+.pay{
+  border-radius: 4px;
+  width: 150px;
+  height: 34px;
+  border: 1px solid #7F7F7F;
+  margin-right: 10px;
+}
+#accountSelect{
+  width: 100px;
+}
 @media (max-width:450px) {
   .write_title{width: 35%;}
   

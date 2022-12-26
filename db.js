@@ -114,6 +114,19 @@ function userinfoData(callback) {
 //카드정보 추출할 때
 function getCard(callback) {
   connection.query('SELECT * FROM card_table ORDER BY id desc',(err,rows) => {
+
+// 카드 상품 신청(보내기)
+function cardapp(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcode,address,detailAddress,transcard,oncelimit,daylimit,monthlimit,tellPay,gasPay,elPay,aptPay,callback) {
+  connection.query(`insert into cardsub(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcode,address,detailAddress,transcard,oncelimit,daylimit,monthlimit,tellpay,gaspay,elpay,aptpay,present,create_time) 
+  values('${name}','${cardproduct}','${tellnum}','${payinfo}','${bankaccount}','${accountDay}','${postcode}','${address}','${detailAddress}','${transcard}','${oncelimit}','${daylimit}','${monthlimit}','${tellPay}','${gasPay}','${elPay}','${aptPay}','미발급',NOW())`,
+    (err) => {
+      if (err) throw err;
+      callback()
+    })
+}
+// 카드 상품 조회(리스트)
+function getcardsub(callback) {
+  connection.query(`SELECT * FROM cardsub where ORDER BY id`, (err, rows, fields) => {
     if (err) throw err;
     callback(rows);
   })
@@ -138,6 +151,21 @@ function getCardByid(id, callback) {
 //카드상품 삭제할 때
 
 
+
+
+
+
+
+
+
+
+
+
+
+// 카드 상품 조회(상세)
+
+
+
 module.exports = {
   getNoti,
   getNotiByid,
@@ -155,4 +183,6 @@ module.exports = {
   getCard,
   insertCard,
   getCardByid
+  cardapp,
+  getcardsub
 }

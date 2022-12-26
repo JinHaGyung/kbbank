@@ -24,7 +24,7 @@ function initSwiper() {
         },
       },
     });
-    
+
     // 왼쪽 내비에 텍스트 넣기
     let swiperBtn0 = document.querySelector('#swiper-pagination-bullet0>.navTxt');
     let swiperBtn1 = document.querySelector('#swiper-pagination-bullet1>.navTxt');
@@ -58,6 +58,9 @@ window.addEventListener('resize', function () {
   // swiper0 = undefined;
 });
 /**************** 메인페이지 스크롤 스와이퍼 ****************/
+
+
+
 // 첫번째 섹션(mainSlide)의 swiper
 var swiper1 = new Swiper(".mySwiper1", {
   // spaceBetween: 30,
@@ -117,9 +120,15 @@ var swiper3 = new Swiper(".mySwiper3", {
 
 var swiper4 = new Swiper(".mySwiper4", {
   breakpoints: {
-    599: {slidesPerView: 2},
-    699: {slidesPerView: 3},
-    819: {slidesPerView: 4},
+    599: {
+      slidesPerView: 2
+    },
+    699: {
+      slidesPerView: 3
+    },
+    819: {
+      slidesPerView: 4
+    },
   },
   spaceBetween: 0,
   // slidesPerGroup: 1,
