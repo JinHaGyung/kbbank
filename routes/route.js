@@ -204,12 +204,25 @@ router.get('/accountInquiry', (req, res)=>{ /* 계좌조회 페이지 */
   res.render('accountInquiry');
 })
 
-router.post('/accountInquiryinfo', (req, res)=>{ /* 계좌조회 페이지 */
+router.get('/accountInquiryResult', (req, res)=>{ /* 계좌조회결과 페이지 */
+  res.render('accountInquiry2');
+})
+
+router.post('/accountInquiryinfo', (req, res)=>{ /* 계좌조회 정보 */
   let param = JSON.parse(JSON.stringify(req.body));
   let user_name = param['user_name'];
   let user_birth = param['user_birth'];
   let account_pw = param['account_pw'];
-  
+  db.accountCheck(user_name, user_birth, account_pw, (results)=>{
+    if (results.length > 0){
+      res.render('accountInquiry2',{
+        results: results[0], /* results의 key값을 받기위해서 */
+        result: results /* length를 받기위해서 */
+      })
+    } else {
+      res.send(`<script>alert("입력한 정보와 일치하는 계좌가 없습니다. 다시 입력해주세요."); document.location="/accountInquiry";</script>`)
+    }
+  })
 })
 
 
