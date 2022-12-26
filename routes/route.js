@@ -250,6 +250,28 @@ router.get('/cardThum_upDate', (req, res)=>{ /* 카드 상품 수정 페이지 *
   res.render('cardThum_upDate');
 })
 
+router.get('/updateC', (req,res) => {
+  let id = req.query.id;
+  db.getCardByid(id,(row)=>{
+    res.render('cardThum_upDate',{row:row[0]})
+  })
+})
+
+router.post('/updateCard',upload.single("card_img"), (req,res)=>{
+  let param = JSON.parse(JSON.stringify(req.body));
+  let id = param['id'];
+  let name = param['card_name'];
+  let cate = param['card_cate'];
+  let img = 'img/cardImg/'+ req.file.filename;
+  let info = param['card_info'];
+  let benefit = param['card_benefit'];
+  let content = param['card_cont'];
+
+  db.updateCard(id, name,cate,img,info,benefit,content, () => {
+    res.redirect('/cardThum_List')
+  })
+})
+
 router.get('/deleteC', (req,res) => {
   let id = req.query.id;
   db.deleteCard(id,()=>{

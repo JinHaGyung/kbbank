@@ -1,3 +1,4 @@
+const { query } = require('express');
 var mysql = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
@@ -114,6 +115,11 @@ function userinfoData(callback) {
 //카드정보 추출할 때
 function getCard(callback) {
   connection.query('SELECT * FROM card_table ORDER BY id desc',(err,rows) => {
+    if (err) throw err;
+    callback(rows);
+  })
+}
+
 
 // 카드 상품 신청(보내기)
 function cardapp(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcode,address,detailAddress,transcard,oncelimit,daylimit,monthlimit,tellPay,gasPay,elPay,aptPay,callback) {
@@ -149,17 +155,20 @@ function getCardByid(id, callback) {
 }
 
 //카드상품 삭제할 때
+function deleteCard(id, callback) {
+  connection.query(`DELETE from card_table where id=${id}`,(err) => {
+    if (err) throw err;
+    callback();
+  })
+}
 
-
-
-
-
-
-
-
-
-
-
+//카드상품 수정할 때
+function updateCard(id, name,cate,img,info,benefit,content, callback) {
+  connection.query(`UPDATE card_table SET card_name="${name}",card_category="${cate}",card_img="${img}", card_info="${info}",card_benefit="${benefit}",card_content="${content}" where id=${id}`, (err) => {
+    if (err) throw err;
+    callback();
+  })
+}
 
 
 // 카드 상품 조회(상세)
@@ -182,7 +191,9 @@ module.exports = {
   getNextNoti,
   getCard,
   insertCard,
-  getCardByid
+  getCardByid,
   cardapp,
-  getcardsub
+  getcardsub,
+  deleteCard,
+  updateCard
 }
