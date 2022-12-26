@@ -6,6 +6,10 @@ function card_ck(e){
   let bankAccount = document.getElementById('bankAccount'); 
   let address = document.getElementById('sample6_address'); 
   let pay = document.querySelector(".pay");
+  let cardlimit = document.querySelectorAll(".cardlimit");
+
+  // 숫자만 입력
+  let num_partten = /[0-9]/;
 
   if (name.value==''){
     alert("이름은 비워둘 수 없습니다.");
@@ -37,6 +41,16 @@ function card_ck(e){
     e.preventDefault()
     return false
   }
+
+
+    //pattern_OOO.test(str) => true면 해당 문자 있음, false면 해당 문자 없음!
+  if( (pattern_num.test(str)) && !(pattern_eng.test(str)) && !(pattern_spc.test(str)) && !(pattern_kor.test(str)) ){
+    return true;
+  }else{
+    alert("숫자만 입력 가능합니다.");
+    return false;
+  }
+
 } 
 const submit = document.querySelector("input[type=submit]");
 submit.addEventListener("click",card_ck)

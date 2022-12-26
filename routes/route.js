@@ -173,7 +173,7 @@ router.post('/cardapplication',(req,res)=>{/*카드 상품 신청(보내기) */
   let daylimit = param['daylimit'];
   let monthlimit = param['monthlimit'];
   let tellPay = param['tellPay'];
-  let gusPay = param['gusPay'];
+  let gasPay = param['gasPay'];
   let elPay = param['elPay'];
   let aptPay = param['aptPay'];
 
@@ -190,11 +190,11 @@ router.post('/cardapplication',(req,res)=>{/*카드 상품 신청(보내기) */
   console.log(daylimit);
   console.log(monthlimit);
   console.log(tellPay);
-  console.log(gusPay);
+  console.log(gasPay);
   console.log(elPay);
   console.log(aptPay);
 
-  db.cardapp(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcode,address,detailAddress,transcard,oncelimit,daylimit,monthlimit,tellPay,gusPay,elPay,aptPay,()=>{
+  db.cardapp(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcode,address,detailAddress,transcard,oncelimit,daylimit,monthlimit,tellPay,gasPay,elPay,aptPay,()=>{
     res.redirect('/')
   })
 })
