@@ -30,18 +30,16 @@ function getNoti(callback) {
 }
 //공지사항을 입력값을 뷰어페이지에 출력할 때
 function getNotiByid(id, callback) {
-  connection.query(`SELECT * FROM kbnotice WHERE id=${id}`, (err, row) => {
+  connection.query(`SELECT * FROM kbnotice WHERE id=${id};` + `SELECT * FROM kbnotice WHERE id < ${id} ORDER BY id ASC, date <= NOW() LIMIT 1;` + `SELECT * FROM kbnotice WHERE id > ${id} ORDER BY id DESC, date <= NOW() LIMIT 1;` + `UPDATE kbnotice SET view = view + 1 WHERE id = ${id};`, (err, rows) => {
     if (err) throw err;
-    callback(row);
+    let row_prev = rows[0];
+    let row_next = rows[1];
+    let rowid = rows[2];
+    let viewCntPlus = rows[3]
+    callback(row_prev, row_next, rowid, viewCntPlus);
   })
 }
-//공지사항 다음글 정보를 가져올 떄
-function getNextNoti(id, callback) {
-  connection.query(`SELECT * FROM kbnotice WHERE id=${id}`, (err,row) => {
-      if(err) throw err;
-      callback(row);
-  })
-}
+
 // 공지사항 작성 후 DB로 보낼 때
 function noticeWrite(cate, writer, title, cont, update, callback) {
   connection.query(`insert into kbnotice(cate,writer,title,date,cont) values('${cate}','${writer}','${title}','${update}','${cont}')`, (err) => {
@@ -195,7 +193,6 @@ module.exports = {
   getRecentNoti,
   mainPageNoti,
   userinfoData,
-  getNextNoti,
   getCard,
   insertCard,
   getCardByid,

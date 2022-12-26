@@ -66,20 +66,17 @@ db.getNoti((rows)=>{
 });
 
 router.get('/notiConPage', (req, res)=>{ /* 공지사항 뷰어페이지 */
-let id = req.query.id;
-console.log(id);
-
-db.getNotiByid(id, (row)=>{
-res.render('notiConPage', {row:row[0]});
-})
+  let id = req.query.id;
+  db.getNotiByid(id, (rows, row_prev, row_next, rowid, viewCntPlus) => {
+    res.render('notiConPage', {
+      row: rows[0],
+      row1: row_prev[0],
+      row2: row_next[0],
+      viewCntPlus: viewCntPlus
+    })
+  });
 });
 
-router.get('/getNextNoti', (req, res) => {  /* 공지사항  다음글 */
-let id = req.query.id;
-db.getNextNoti(id, (row) => {
-   res.render('notiConPage', {row:row[0]})
-})
-})
 
 router.get('/notice_write', (req, res)=>{ /* 공지사항 작성페이지 */
     res.render('notice_write');
