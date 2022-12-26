@@ -37,7 +37,7 @@ leftNav.addEventListener('click',()=>{
 })
 
 // 공지사항 번호 매기기
-let num = document.querySelectorAll(".num");
+let num = document.querySelectorAll(".main_listNum");
 let numArray = []
 
 for (let i = 0; i<num.length; i++){

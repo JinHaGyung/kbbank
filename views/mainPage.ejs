@@ -404,7 +404,9 @@
               <% rows.forEach((row,index) =>{ %>
               <li>
                 <a href="/sub_noticeList">
-                  <p class="num f_gray2"></p>
+                  <p class="main_listNum f_gray2"></p>
+                  <h3 class="cate" onclick="javascript:location.href='/notiConPage?id=<%= row.id %>'">
+                    [<%= row.cate %>]</h3>
                   <h3 class="content" onclick="javascript:location.href='/notiConPage?id=<%= row.id %>'">
                     <%= row.title %></h3>
                   <p class="date f_gray2"><%= row.date %></p>
