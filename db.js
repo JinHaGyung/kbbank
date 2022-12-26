@@ -90,7 +90,7 @@ function getPastNoti(callback) {
 
 // userinfo를 수정할때 (생성할때)
 function insertUserInfo(user_name, user_birth, account_type, account_id, account_pw, user_id, user_pw, user_address, user_phoneNum, user_mail, callback) {
-  connection.query(`INSERT INTO userinfo(user_name, user_birth, account_type, account_id, account_pw, user_id, user_pw, user_address, user_phoneNum, user_mail) VALUES('${user_name}', '${user_birth}', '${account_type}', '${account_id}', '${account_pw}', '${user_id}', '${user_pw}', '${user_address}', '${user_phoneNum}', '${user_mail}')`, (err) => {
+  connection.query(`INSERT INTO userinfo(user_name, user_birth, account_type, account_id, account_pw, user_id, user_pw, user_address, user_phoneNum, user_mail, create_time) VALUES('${user_name}', '${user_birth}', '${account_type}', '${account_id}', '${account_pw}', '${user_id}', '${user_pw}', '${user_address}', '${user_phoneNum}', '${user_mail}', NOW())`, (err) => {
     if (err) throw err;
     callback();
   });
@@ -104,6 +104,7 @@ function loginCheck(login_id, login_pw, callback) {
   })
 }
 
+// 아이디와 계좌 중복체크를 위해
 function userinfoData(callback) {
   connection.query('SELECT * FROM userinfo ORDER BY user_id, account_id DESC', (err, rows, fields) => {
     if (err) throw err;
@@ -111,6 +112,13 @@ function userinfoData(callback) {
   });
 };
 
+// 계좌조회 정보와 테이블 정보를 비교하는 함수
+function accountCheck(user_name, user_birth, account_pw, callback) {
+  connection.query(`SELECT * FROM userinfo WHERE user_name='${user_name}' and user_birth='${user_birth}' and account_pw='${account_pw}'`, (err, results) => {
+    if (err) throw err;
+    callback(results);
+  })
+}
 //카드정보 추출할 때
 function getCard(callback) {
   connection.query('SELECT * FROM card_table ORDER BY id desc',(err,rows) => {

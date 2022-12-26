@@ -11,7 +11,8 @@
 </div>
 <div class="inquiry_sec w1200">
   <div class="inquiryWrap">
-    <form class="inquiryCon" name="inquiryform" method="post" action="/accountInquiryinfo" onsubmit="return checkInquriy()">
+    <form class="inquiryCon" name="inquiryform" method="post" action="/accountInquiryinfo"
+      onsubmit="return checkInquriy()">
       <div class="inqInputWrap">
         <input type="text" name="user_name" id="user_name" placeholder="성명">
         <input type="text" name="user_birth" id="user_birth" placeholder="생년월일, 숫자만 입력" maxlength="10">
@@ -27,8 +28,8 @@
         <h3>입/출금계좌</h3>
       </div>
       <div class="result_info1">
-        <p>조회건수 ㅣ 총 0건</p>
-        <p>기준일시 : 현재시각</p>
+        <p>조회건수 ㅣ 총 <%= result.length %>건</p>
+        <p class="nowTime">기준일시 : 현재시각</p>
       </div>
       <div class="result_info2">
         <table>
@@ -41,7 +42,20 @@
             </tr>
           </thead>
           <tbody>
-            조회된 계좌가 없습니다.
+            <tr>
+              <td><%= results.user_name %></td>
+              <% if(results.account_type == '보통예금계좌'){ %>
+              <td>[보통예금계좌]KB저축은행보통예금</td>
+              <% } %>
+              <% if(results.account_type == '한도제한계좌'){ %>
+              <td>[한도제한]KB저축은행입출금계좌</td>
+              <% } %>
+              <% if(results.account_type == '저축계좌') { %>
+              <td>[저축계좌]KB저축은행정기적금</td>
+              <% } %>
+              <td><%= results.account_id %></td>
+              <td><%= results.create_time %></td>
+            </tr>
           </tbody>
         </table>
       </div>
