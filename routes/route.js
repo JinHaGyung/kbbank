@@ -33,11 +33,11 @@ res.render('join1Page');
 });
 
 router.get('/join2', (req, res)=>{ /* 회원가입페이지2 */
-db.userinfoData((rows)=>{
-  res.render('join2Page', {
-    rows: rows
+  db.userinfoData((rows)=>{
+    res.render('join2Page', {
+      rows: rows
+    });
   });
-})
 });
 
 /* 회원가입 내용을 테이블에 넣기 */
@@ -193,6 +193,15 @@ router.get('/cardsub_List', (req, res)=>{ /* 카드신청 조회 */
 router.get('/accountInquiry', (req, res)=>{ /* 계좌조회 페이지 */
   res.render('accountInquiry');
 })
+
+router.post('/accountInquiryinfo', (req, res)=>{ /* 계좌조회 페이지 */
+  let param = JSON.parse(JSON.stringify(req.body));
+  let user_name = param['user_name'];
+  let user_birth = param['user_birth'];
+  let account_pw = param['account_pw'];
+  
+})
+
 
 router.get('/cardThum_List', (req, res)=>{ /* 카드 상품 리스트 페이지 */
   res.render('cardThum_List');
