@@ -38,16 +38,11 @@
   height: 40px;
   border-radius: 10px;
   background-color: #ffcf00;
-}
-
-.inquiryBtn>a{
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  color: #000;
   text-align: center;
   line-height: 40px;
+  padding: 0;
+  cursor: pointer;
+  border: 1px solid #ddd;
 }
 
 .resultWrap{
@@ -183,9 +178,6 @@
   .inquiryBtn{
     width: 70px;
     height: 30px;
-  }
-
-  .inquiryBtn>a{
     font-size: 12px;
     line-height: 30px;
   }

@@ -11,7 +11,7 @@
 </div>
 <div class="inquiry_sec w1200">
   <div class="inquiryWrap">
-    <div class="inquiryCon">
+    <form class="inquiryCon" method="post" action="/accountInquiryinfo">
       <div class="inqInputWrap">
         <input type="text" name="user_name" id="user_name" placeholder="성명">
         <input type="text" name="user_birth" id="user_birth" placeholder="생년월일, 숫자만 입력" maxlength="8"
@@ -19,10 +19,8 @@
         <input type="password" name="account_pw" id="account_pw" placeholder="계좌 비밀번호, 숫자만 입력" maxlength="4"
           oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
       </div>
-      <div class="inquiryBtn">
-        <a href="">검색</a>
-      </div>
-    </div>
+      <input class="inquiryBtn" type="submit" value="검색">
+    </form>
   </div>
   <div class="resultWrap">
     <div class="resultCon">
