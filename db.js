@@ -2,7 +2,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : '1234',
+  password : '95052910',
   database : 'kbbank',
   dateStrings : 'date'
 });
@@ -111,6 +111,33 @@ function userinfoData(callback) {
   });
 };
 
+//카드정보 추출할 때
+function getCard(callback) {
+  connection.query('SELECT * FROM card_table ORDER BY id desc',(err,rows) => {
+    if (err) throw err;
+    callback(rows);
+  })
+}
+
+//카드정보를 작성할 때
+function insertCard(name,cate,img,info,benefit,content, callback) {
+  connection.query(`INSERT INTO card_table(card_name, card_category, card_img, card_info, card_benefit, card_content) VALUES('${name}','${cate}','${img}','${info}','${benefit}','${content}')`,(err)=>{
+    if (err) throw err;
+    callback();
+  })
+}
+
+//카드 정보를 가져올 때
+function getCardByid(id, callback) {
+  connection.query(`SELECT * FROM card_table WHERE id=${id}`,(err,row) => {
+    if (err) throw err;
+    callback(row);
+  })
+}
+
+//카드상품 삭제할 때
+
+
 module.exports = {
   getNoti,
   getNotiByid,
@@ -124,5 +151,8 @@ module.exports = {
   getRecentNoti,
   mainPageNoti,
   userinfoData,
-  getNextNoti
+  getNextNoti,
+  getCard,
+  insertCard,
+  getCardByid
 }

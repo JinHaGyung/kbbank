@@ -32,24 +32,24 @@
             </div>
             <div class="cardThumList_right">
                 <p class="f_regular">총 <span class="f_bold">8</span>건</p>
+                <% rows.forEach((row,index) =>{ %> 
                 <ul>
                     <li>
                         <div class="cardImg">
-                            <img src="/img/cardThum_List/bg_cardimg01.png">
+                            <img src="<%= row.card_img %>">
                         </div>
                         <div class="cardInfo">
-                            <div><h3 class="f_medium">SB 팝&nbsp</h3><h3 class="f_medium">체크카드</h3></div>
-                            <p class="f_regular">저축은행 & GS리테일 제휴로 팝팝 튀는 혜택!</p>
-                            <h4 class="f_regular">편의점, 커피, 쇼핑몰, 마트 이용시 할인 <br>
-                                GS25, GS fresh 행사 상품 할인 및 GS &POINT 자동 적립<br>
-                                GS리테일 가맹점에서 GS&POINT 적립 및 사용</h4>
+                            <div><h3 class="f_medium"><%= row.card_name %></h3><h3 class="f_medium"><%= row.card_category %></h3></div>
+                            <p class="f_regular"><%= row.card_info %></p>
+                            <h4 class="f_regular"><%= row.card_benefit %></h4>
                         </div>
                         <div class="cardList_Btn">
                             <button type="button" class="cardReq_Btn" onclick="javascript:location.href='/cardsub'">카드신청</button>
-                            <button type="button" class="cardDet_Btn" onclick="javascript:location.href='/cardThum_Con'">자세히보기</button>
+                            <button type="button" class="cardDet_Btn" onclick="javascript:location.href='/cardThum_Con?id=<%= row.id %>'">자세히보기</button>
                         </div>
                     </li>
                 </ul>
+                <% }); %>
             </div>
         </div>
         <div class="list_writeBtn w1200">
