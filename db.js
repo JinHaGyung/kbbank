@@ -2,7 +2,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : '95052910',
+  password : '1234',
   database : 'kbbank',
   dateStrings : 'date'
 });
@@ -11,7 +11,6 @@ connection.connect(function (err) {
   if (err) throw err;
   console.log("Connected!");
 });
-
 
 //메인페이지 공지사항을 추출할 때
 function mainPageNoti(callback) {
@@ -113,7 +112,7 @@ function userinfoData(callback) {
 
 //카드정보 추출할 때
 function getCard(callback) {
-  connection.query('SELECT * FROM card_table ORDER BY id desc',(err,rows) => {
+  connection.query('SELECT * FROM card_table ORDER BY id desc',(err,rows) => {})}
 
 // 카드 상품 신청(보내기)
 function cardapp(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcode,address,detailAddress,transcard,oncelimit,daylimit,monthlimit,tellPay,gasPay,elPay,aptPay,callback) {
@@ -182,7 +181,7 @@ module.exports = {
   getNextNoti,
   getCard,
   insertCard,
-  getCardByid
+  getCardByid,
   cardapp,
   getcardsub
 }
