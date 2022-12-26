@@ -1,3 +1,4 @@
+const { query } = require('express');
 var mysql = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
@@ -11,7 +12,6 @@ connection.connect(function (err) {
   if (err) throw err;
   console.log("Connected!");
 });
-
 
 //메인페이지 공지사항을 추출할 때
 function mainPageNoti(callback) {
@@ -119,6 +119,13 @@ function accountCheck(user_name, user_birth, account_pw, callback) {
     callback(results);
   })
 }
+//카드정보 추출할 때
+function getCard(callback) {
+  connection.query('SELECT * FROM card_table ORDER BY id desc',(err,rows) => {
+    if (err) throw err;
+    callback(rows);
+  })
+}
 
 // 카드 상품 신청(보내기)
 function cardapp(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcode,address,detailAddress,transcard,oncelimit,daylimit,monthlimit,tellPay,gasPay,elPay,aptPay,callback) {
@@ -130,7 +137,48 @@ function cardapp(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcod
     })
 }
 // 카드 상품 조회(리스트)
+function getcardsub(callback) {
+  connection.query(`SELECT * FROM cardsub order by id desc`, (err, rows, fields) => {
+    if (err) throw err;
+    callback(rows);
+  })
+}
+
+//카드정보를 작성할 때
+function insertCard(name,cate,img,info,benefit,content, callback) {
+  connection.query(`INSERT INTO card_table(card_name, card_category, card_img, card_info, card_benefit, card_content) VALUES('${name}','${cate}','${img}','${info}','${benefit}','${content}')`,(err)=>{
+    if (err) throw err;
+    callback();
+  })
+}
+
+//카드 정보를 가져올 때
+function getCardByid(id, callback) {
+  connection.query(`SELECT * FROM card_table WHERE id=${id}`,(err,row) => {
+    if (err) throw err;
+    callback(row);
+  })
+}
+
+//카드상품 삭제할 때
+function deleteCard(id, callback) {
+  connection.query(`DELETE from card_table where id=${id}`,(err) => {
+    if (err) throw err;
+    callback();
+  })
+}
+
+//카드상품 수정할 때
+function updateCard(id, name,cate,img,info,benefit,content, callback) {
+  connection.query(`UPDATE card_table SET card_name="${name}",card_category="${cate}",card_img="${img}", card_info="${info}",card_benefit="${benefit}",card_content="${content}" where id=${id}`, (err) => {
+    if (err) throw err;
+    callback();
+  })
+}
+
+
 // 카드 상품 조회(상세)
+
 
 
 module.exports = {
@@ -147,6 +195,11 @@ module.exports = {
   mainPageNoti,
   userinfoData,
   getNextNoti,
+  getCard,
+  insertCard,
+  getCardByid,
   cardapp,
-  accountCheck
+  getcardsub,
+  deleteCard,
+  updateCard
 }

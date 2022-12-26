@@ -3,6 +3,7 @@ const router = express.Router();
 const path = require('path');
 const { title } = require('process');
 const db = require('./../db.js');
+const multer = require('multer');
 
 router.get('/', (req, res)=>{ /* 메인페이지 */
 db.mainPageNoti((rows)=>{
@@ -177,26 +178,16 @@ router.post('/cardapplication',(req,res)=>{/*카드 상품 신청(보내기) */
   let elPay = param['elPay'];
   let aptPay = param['aptPay'];
 
-  console.log(name);
-  console.log(cardproduct);
-  console.log(tellnum);
-  console.log(payinfo);
-  console.log(bankaccount);
-  console.log(accountDay);
-  console.log(postcode);
-  console.log(detailAddress);
-  console.log(transcard);
-  console.log(oncelimit);
-  console.log(daylimit);
-  console.log(monthlimit);
-  console.log(tellPay);
-  console.log(gasPay);
-  console.log(elPay);
-  console.log(aptPay);
-
   db.cardapp(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcode,address,detailAddress,transcard,oncelimit,daylimit,monthlimit,tellPay,gasPay,elPay,aptPay,()=>{
     res.redirect('/')
   })
+})
+
+
+router.get('/cardsub_List', (req, res)=>{ /* 카드신청 조회 */
+  db.getcardsub((rows)=>{
+  res.render('cardsub_List',{rows:rows});
+ })
 })
 
 
@@ -204,13 +195,10 @@ router.get('/accountInquiry', (req, res)=>{ /* 계좌조회 페이지 */
   res.render('accountInquiry');
 })
 
-router.get('/accountInquiryResult', (req, res)=>{ /* 계좌조회결과 페이지 */
-  res.render('accountInquiry2');
-})
 
-router.post('/accountInquiryinfo', (req, res)=>{ /* 계좌조회 정보 */
-  let param = JSON.parse(JSON.stringify(req.body));
-  let user_name = param['user_name'];
+router.post('/accountInquiryinfo', (req, res)=>{ /* 계좌조회 페이지 */
+let param = JSON.parse(JSON.stringify(req.body));
+let user_name = param['user_name'];
   let user_birth = param['user_birth'];
   let account_pw = param['account_pw'];
   db.accountCheck(user_name, user_birth, account_pw, (results)=>{
@@ -225,20 +213,78 @@ router.post('/accountInquiryinfo', (req, res)=>{ /* 계좌조회 정보 */
   })
 })
 
+const upload = multer({
+  storage: multer.diskStorage({
+    destination(req, file, done) {
+      done(null, '../public/img/cardImg/');
+    },
+    filename(req, file, done) {
+      const ext = path.extname(file.originalname);
+      done(null, path.basename(file.originalname, ext)+ Date.now() + ext)
+    }
+  })
+})
 
 router.get('/cardThum_List', (req, res)=>{ /* 카드 상품 리스트 페이지 */
-  res.render('cardThum_List');
+db.getCard((rows)=>{
+  res.render('cardThum_List',{rows:rows});
+})
 })
 
 router.get('/cardThum_Con', (req, res)=>{ /* 카드 상품 뷰어 페이지 */
-  res.render('cardThum_Con');
+let id = req.query.id;
+
+db.getCardByid(id,(row)=>{
+  res.render('cardThum_Con',{row:row[0]});
+})
 })
 
 router.get('/cardThum_write', (req, res)=>{ /* 카드 상품 작성 페이지 */
   res.render('cardThum_write');
 })
+router.post('/cardeW',upload.single('card_img'),(req, res) => {
+  let param = JSON.parse(JSON.stringify(req.body));
+  let name = param['card_name'];
+  let cate = param['card_cate'];
+  let img = 'img/cardImg/'+ req.file.filename;
+  let info = param['card_info'];
+  let benefit = param['card_benefit'];
+  let content = param['card_cont'];
+  db.insertCard(name,cate,img,info,benefit,content, ()=>{
+    res.redirect('/cardThum_List')
+  })
+})
 
 router.get('/cardThum_upDate', (req, res)=>{ /* 카드 상품 수정 페이지 */
   res.render('cardThum_upDate');
+})
+
+router.get('/updateC', (req,res) => {
+  let id = req.query.id;
+  db.getCardByid(id,(row)=>{
+    res.render('cardThum_upDate',{row:row[0]})
+  })
+})
+
+router.post('/updateCard',upload.single("card_img"), (req,res)=>{
+  let param = JSON.parse(JSON.stringify(req.body));
+  let id = param['id'];
+  let name = param['card_name'];
+  let cate = param['card_cate'];
+  let img = 'img/cardImg/'+ req.file.filename;
+  let info = param['card_info'];
+  let benefit = param['card_benefit'];
+  let content = param['card_cont'];
+
+  db.updateCard(id, name,cate,img,info,benefit,content, () => {
+    res.redirect('/cardThum_List')
+  })
+})
+
+router.get('/deleteC', (req,res) => {
+  let id = req.query.id;
+  db.deleteCard(id,()=>{
+    res.redirect('/cardThum_List')
+  })
 })
 module.exports = router;
