@@ -112,9 +112,9 @@ function userinfoData(callback) {
 };
 
 // 카드 상품 신청(보내기)
-function cardapp(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcode,address,detailAddress,transcard,oncelimit,daylimit,monthlimit,autopay,callback) {
-  connection.query(`insert into cardsub(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcode,address,detailAddress,transcard,oncelimit,daylimit,monthlimit,autopay,present,create_time) 
-  values('${name}','${cardproduct}','${tellnum}','${payinfo}','${bankaccount}','${accountDay}','${postcode}','${address}','${detailAddress}','${transcard}','${oncelimit}','${daylimit}','${monthlimit}','${autopay}','미발급',NOW())`,
+function cardapp(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcode,address,detailAddress,transcard,oncelimit,daylimit,monthlimit,tellPay,gasPay,elPay,aptPay,callback) {
+  connection.query(`insert into cardsub(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcode,address,detailAddress,transcard,oncelimit,daylimit,monthlimit,tellpay,gaspay,elpay,aptpay,present,create_time) 
+  values('${name}','${cardproduct}','${tellnum}','${payinfo}','${bankaccount}','${accountDay}','${postcode}','${address}','${detailAddress}','${transcard}','${oncelimit}','${daylimit}','${monthlimit}','${tellPay}','${gasPay}','${elPay}','${aptPay}','미발급',NOW())`,
     (err) => {
       if (err) throw err;
       callback()
