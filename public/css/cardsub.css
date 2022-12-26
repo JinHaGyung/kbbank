@@ -45,6 +45,12 @@
 #accountSelect{
   width: 100px;
 }
+table.listTable .present{
+  padding: 12px 28px;
+  border-radius: 10px;
+  background-color: #755F48;
+  color: #fff;
+}
 @media (max-width:450px) {
   .write_title{width: 35%;}
   

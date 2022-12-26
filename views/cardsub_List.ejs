@@ -14,13 +14,12 @@
                 <p class="f_gray2" id="list_tt"> </p><p><strong class="f_bold">&nbsp;1</strong>/56페이지</p>
             </div>
         </div>
-
         <!-- 리스트 테이블 -->
         <table class="listTable">
             <colgroup>
-                <col style="width:10%">
                 <col style="width:15%">
                 <col style="width:auto">
+                <col style="width:15%">
                 <col style="width:20%">
             </colgroup>
             <thead>
@@ -30,12 +29,14 @@
                 <th scope="col">발급여부</th>
             </thead>
             <tbody>
+                <% rows.forEach((row,index) =>{ %> 
                 <tr>
-                    <td class="num"></td>
-                    <td class="listTable_title"></td>
-                    <td></td>
-                    <td class="updateDate"></td>
+                    <td class="num"><%= row.cardproduct %></td>
+                    <td class="listTable_title">신청자: <%= row.name %>　　　전화번호:<%= row.tellnum %></td>
+                    <td><%= row.create_time %></td>
+                    <td><span class="present"><%= row.present%></span></td>
                 </tr>
+                <% }); %>
             </tbody>
         </table>
         <div class="list_writeBtn">
