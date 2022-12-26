@@ -68,8 +68,8 @@
     <p><span class="f_bold f_gray1">ISO37001인증기관</span> <span class="f_gray2">(취득일:2018.10.23)</span></p>
   </article>
   <div class="notiConBtn cardThumCon_btn">
-    <button class="notiCon_editB f_bold" type="button" name="notiCon_editB" onclick="location.href='/cardThum_upDate'">수정</button>
-    <button class="notiCon_editB f_bold" type="button" name="notiCon_editB" >삭제</button>
+    <button class="notiCon_editB f_bold" type="button" name="notiCon_editB" onclick="location.href='/updateC?id=<%= row.id %>'">수정</button>
+    <button class="notiCon_editB f_bold" type="button" name="notiCon_editB" onclick="location.href='/deleteC?id=<%= row.id %>'">삭제</button>
     <button class="notiCon_listB f_bold" type="button" name="notiCon_listB" onclick="location.href='/cardThum_List'">목록</button>
     
 </div>
