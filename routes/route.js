@@ -177,26 +177,16 @@ router.post('/cardapplication',(req,res)=>{/*카드 상품 신청(보내기) */
   let elPay = param['elPay'];
   let aptPay = param['aptPay'];
 
-  console.log(name);
-  console.log(cardproduct);
-  console.log(tellnum);
-  console.log(payinfo);
-  console.log(bankaccount);
-  console.log(accountDay);
-  console.log(postcode);
-  console.log(detailAddress);
-  console.log(transcard);
-  console.log(oncelimit);
-  console.log(daylimit);
-  console.log(monthlimit);
-  console.log(tellPay);
-  console.log(gasPay);
-  console.log(elPay);
-  console.log(aptPay);
-
   db.cardapp(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcode,address,detailAddress,transcard,oncelimit,daylimit,monthlimit,tellPay,gasPay,elPay,aptPay,()=>{
     res.redirect('/')
   })
+})
+
+
+router.get('/cardsub_List', (req, res)=>{ /* 카드신청 조회 */
+  db.getcardsub((rows)=>{
+  res.render('cardsub_List',{rows:rows});
+ })
 })
 
 

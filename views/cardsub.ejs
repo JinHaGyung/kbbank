@@ -6,7 +6,7 @@
               <li><a href=""></a></li>
           </ul>
           <h2 class="f_bold">상품신청</h2>
-          <form action="cardapplication" method="post">
+          <form action="cardapplication" method="post" onsubmit="card_ck()">
             <h3>KB e-plus정기예금</h3>
             <p class="f_gray2 cardinfo">일정기간 여유자금을 예금하시면 확정 금리로 높은 수익을 드리는 온라인 가입 전용상품입니다.</p>
             <table class="write">
@@ -78,18 +78,18 @@
                 </td>
                 <div></div>
                 <td class="write_select">
-                  1 회 <input type="text" name="oncelimit" class="cardlimit">
-                  일 일 <input type="text" name="daylimit" class="cardlimit">
-                  월간 <input type="text" name="monthlimit" class="cardlimit">
+                  1 회 <input type="number" name="oncelimit" class="cardlimit">
+                  일 일 <input type="number" name="daylimit" class="cardlimit">
+                  월간 <input type="number" name="monthlimit" class="cardlimit">
                 </td>
               </tr>
               <tr class="write_cell">
                 <td class="write_title"><span></span>자동납부</td>
                 <td class="write_select">
-                  <label><input type="checkbox" class="paycheck" name="tellPay" value="check"> 통신요금</label>
-                  <label><input type="checkbox" class="paycheck" name="gasPay" value="check"> 도시가스</label>
-                  <label><input type="checkbox" class="paycheck" name="elPay" value="check"> 전기요금</label>
-                  <label><input type="checkbox" class="paycheck" name="aptPay" value="check"> 아파트 관리비</label>
+                  <label><input type="checkbox" class="paycheck" name="tellPay" value="checked"> 통신요금</label>
+                  <label><input type="checkbox" class="paycheck" name="gasPay" value="checked"> 도시가스</label>
+                  <label><input type="checkbox" class="paycheck" name="elPay" value="checked"> 전기요금</label>
+                  <label><input type="checkbox" class="paycheck" name="aptPay" value="checked"> 아파트 관리비</label>
               </td>
               </tr>
             </table>

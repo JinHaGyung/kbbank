@@ -121,6 +121,13 @@ function cardapp(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcod
     })
 }
 // 카드 상품 조회(리스트)
+function getcardsub(callback) {
+  connection.query(`SELECT * FROM cardsub where ORDER BY id`, (err, rows, fields) => {
+    if (err) throw err;
+    callback(rows);
+  })
+}
+
 // 카드 상품 조회(상세)
 
 
@@ -138,5 +145,6 @@ module.exports = {
   mainPageNoti,
   userinfoData,
   getNextNoti,
-  cardapp
+  cardapp,
+  getcardsub
 }
