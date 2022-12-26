@@ -201,5 +201,6 @@ module.exports = {
   cardapp,
   getcardsub,
   deleteCard,
-  updateCard
+  updateCard,
+  accountCheck
 }
