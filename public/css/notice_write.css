@@ -69,6 +69,7 @@ textarea:focus{
   border: 0px;
   border-radius: 10px;
   background-color: #FFCF00;
+  cursor: pointer;
 }
 .write_cancle{
   background-color: #E0E0E0;

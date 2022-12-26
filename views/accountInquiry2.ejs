@@ -42,20 +42,22 @@
             </tr>
           </thead>
           <tbody>
+            <% for(i = 0; i < result.length; i++){ %>
             <tr>
-              <td><%= results.user_name %></td>
-              <% if(results.account_type == '보통예금계좌'){ %>
+              <td><%= result[i].user_name %></td>
+              <% if(result[i].account_type == '보통예금계좌'){ %>
               <td>[보통예금계좌]KB저축은행보통예금</td>
               <% } %>
-              <% if(results.account_type == '한도제한계좌'){ %>
+              <% if(result[i].account_type == '한도제한계좌'){ %>
               <td>[한도제한]KB저축은행입출금계좌</td>
               <% } %>
-              <% if(results.account_type == '저축계좌') { %>
+              <% if(result[i].account_type == '저축계좌') { %>
               <td>[저축계좌]KB저축은행정기적금</td>
-              <% } %>
-              <td><%= results.account_id %></td>
-              <td><%= results.create_time %></td>
+              <% }; %>
+              <td><%= result[i].account_id %></td>
+              <td><%= result[i].create_time %></td>
             </tr>
+            <% }; %>
           </tbody>
         </table>
       </div>
