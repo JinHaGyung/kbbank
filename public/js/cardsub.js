@@ -83,3 +83,4 @@ for(let i = 0; i<transcardapp.length; i++){
     transcardapp[i].setAttribute('checked',true);
   }
 }
+

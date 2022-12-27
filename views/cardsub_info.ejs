@@ -80,11 +80,12 @@
               </td>
               </tr>
             </table>
-            <div class="write_btn_wrap">
-            </div>
           </form>
-          <button class="write_btn f_bold write_cancle" onclick="javascript:location.href='/notapproval?id=<%= row.id %>'">발급불가</button>
-             <button class="write_btn f_bold write_cancle" onclick="javascript:location.href='/approval?id=<%= row.id %>'">발급승인</button>
+          <div class="write_btn_wrap">
+            <button class="write_btn f_bold write_cancle notapproval" onclick="javascript:location.href='/notapproval?id=<%= row.id %>'">발급불가</button>
+            <button class="write_btn f_bold write_cancle approval" onclick="javascript:location.href='/approval?id=<%= row.id %>'">발급승인</button>
+          </div>
+          
     </div>
   </div>
   <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
