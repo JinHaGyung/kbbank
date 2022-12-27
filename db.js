@@ -23,20 +23,20 @@ function mainPageNoti(callback) {
 }
 //리스트페이지 공지사항을 추출할 때
 function getNoti(callback) {
-  connection.query(`SELECT * FROM kbnotice where date <= DATE_FORMAT(NOW(),'%Y-%m-%d') ORDER BY date desc`, (err, rows, fields) => {
+  connection.query(`SELECT * FROM kbnotice where date <= DATE_FORMAT(NOW(),'%Y-%m-%d') ORDER BY id desc`, (err, rows, fields) => {
     if (err) throw err;
     callback(rows);
   })
 }
 //공지사항을 입력값을 뷰어페이지에 출력할 때
 function getNotiByid(id, callback) {
-  connection.query(`SELECT * FROM kbnotice WHERE id=${id};` + `SELECT * FROM kbnotice WHERE id < ${id} ORDER BY id ASC, date <= NOW() LIMIT 1;` + `SELECT * FROM kbnotice WHERE id > ${id} ORDER BY id DESC, date <= NOW() LIMIT 1;` + `UPDATE kbnotice SET view = view + 1 WHERE id = ${id};`, (err, rows) => {
+  connection.query(`SELECT * FROM kbnotice WHERE id=${id};` + `SELECT * FROM kbnotice WHERE id < ${id} AND date <= NOW() ORDER BY id DESC LIMIT 1;` + `SELECT * FROM kbnotice WHERE id > ${id} AND date <= NOW() ORDER BY id ASC LIMIT 1;` + `UPDATE kbnotice SET view = view + 1 WHERE id = ${id};`, (err, rows) => {
     if (err) throw err;
-    let row_prev = rows[0];
-    let row_next = rows[1];
-    let rowid = rows[2];
-    let viewCntPlus = rows[3]
-    callback(row_prev, row_next, rowid, viewCntPlus);
+    let rowid = rows[0];
+    let row_prev = rows[1];
+    let row_next = rows[2];
+    let viewCntPlus = rows[3];
+    callback(rowid, row_prev, row_next, viewCntPlus);
   })
 }
 
@@ -74,14 +74,14 @@ function deleteNoti(id, callback) {
 
 //공지사항 최신순 정렬
 function getRecentNoti(callback) {
-  connection.query(`SELECT * from kbnotice order by date desc`, (err, rows) => {
+  connection.query(`SELECT * from kbnotice where date <= NOW() order by id desc`, (err, rows) => {
     if (err) throw err;
     callback(rows);
   })
 }
 //공지사항 과거순 정렬
 function getPastNoti(callback) {
-  connection.query(`SELECT * from kbnotice order by date asc`, (err, rows) => {
+  connection.query(`SELECT * from kbnotice where date <= NOW() order by id asc`, (err, rows) => {
     if (err) throw err;
     callback(rows);
   })
