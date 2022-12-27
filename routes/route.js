@@ -184,7 +184,7 @@ db.cardapp(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcode,addr
 router.get('/cardsub_List', (req, res)=>{ /* 카드신청 조회 */
   db.getcardsub((rows)=>{
   res.render('cardsub_List',{rows:rows});
- })
+  })
 })
 
 

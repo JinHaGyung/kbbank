@@ -23,7 +23,7 @@ function mainPageNoti(callback) {
 }
 //리스트페이지 공지사항을 추출할 때
 function getNoti(callback) {
-  connection.query(`SELECT * FROM kbnotice where date <= DATE_FORMAT(NOW(),'%Y-%m-%d') ORDER BY date desc`, (err, rows, fields) => {
+  connection.query(`SELECT * FROM kbnotice where date <= DATE_FORMAT(NOW(),'%Y-%m-%d') ORDER BY id desc`, (err, rows, fields) => {
     if (err) throw err;
     callback(rows);
   })
