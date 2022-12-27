@@ -65,8 +65,6 @@ for(let i = 0; i<accountDay.length; i++){
     }
   });
 }
-
-
 // 결제일 보여주기(승인페이지)
 let accountView = document.querySelector("#accountday");
 for(let i = 0; i<accountDay.length; i++){
