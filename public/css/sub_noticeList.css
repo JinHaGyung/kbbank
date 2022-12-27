@@ -249,8 +249,9 @@ table.listTable td{
     padding-left: 6px !important;
     cursor: pointer;
 }
-
-
+.list_paddingb{
+    padding-bottom: 150px;
+}
 
 /*** 반응형 800px ***/
 @media(max-width: 800px) {
