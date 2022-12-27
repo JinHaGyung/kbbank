@@ -16,11 +16,11 @@
                     <p class="f_medium">카드유형</p>
                     <ul>
                         <li>
-                            <input type="radio" class="card_cate" name="card_cate" value="전체">
+                            <input type="radio" class="card_cate" name="card_cate" value="전체" onclick="javascript:location.href='/totalCard'">
                             <label for="card_cate">전체</label>
                         </li>
                         <li>
-                            <input type="radio" class="card_cate" value="신용" name="card_cate" >
+                            <input type="radio" class="card_cate" value="신용" name="card_cate" onclick="javascript:location.href='/creditCard'">
                             <label for="card_cate">신용</label>
                         </li>
                         <li>
@@ -34,12 +34,12 @@
                 <p class="f_regular">총 <span class="f_bold" id="cardThum_tol"></span>건</p>
                 <% rows.forEach((row,index) =>{ %> 
                 <ul>
-                    <li class="card_li">
+                    <li class="card_li cardItem">
                         <div class="cardImg">
                             <img src="<%= row.card_img %>">
                         </div>
                         <div class="cardInfo">
-                            <div class="item"><h3 class="f_medium cardName"><%= row.card_name %></h3><h3 class="f_medium"><%= row.card_category %></h3></div>
+                            <div><h3 class="f_medium cardName"><%= row.card_name %>&nbsp;<%= row.card_category %></h3></div>
                             <p class="f_regular"><%= row.card_info %></p>
                             <h4 class="f_regular"><%= row.card_benefit %></h4>
                         </div>

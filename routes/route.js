@@ -310,6 +310,18 @@ router.get('/deleteC', (req,res) => {
 })
 
 //카드썸네일 페이지 카테고리
+router.get('/totalCard',(req,res)=>{
+
+  db.gettotalCard((rows)=>{
+    res.render('cardThum_List',{rows:rows});
+  })
+});
+router.get('/creditCard',(req,res)=>{
+
+  db.getcreditCard((rows)=>{
+    res.render('cardThum_List',{rows:rows});
+  })
+});
 router.get('/checkCard',(req,res)=>{
 
   db.getCheckCard((rows)=>{

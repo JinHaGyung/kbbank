@@ -1,9 +1,10 @@
+//검색 구현
 function filter(){
 
     var value, name, item, i;
 
     value = document.getElementById("value").value.toUpperCase();
-    item = document.getElementsByClassName("item");
+    item = document.getElementsByClassName("cardItem");
 
     for(i=0;i<item.length;i++){
       name = item[i].getElementsByClassName("cardName");
