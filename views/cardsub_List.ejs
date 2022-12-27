@@ -32,7 +32,7 @@
                 <% rows.forEach((row,index) =>{ %> 
                 <tr>
                     <td class="num"><%= row.cardproduct %></td>
-                    <td class="listTable_title">신청자: <%= row.name %>　　　전화번호:<%= row.tellnum %></td>
+                    <td class="listTable_title" onclick="javascript:location.href='/cardsub_info?id=<%= row.id %>'">신청자: <%= row.name %>　　　전화번호:<%= row.tellnum %></td>
                     <td><%= row.create_time %></td>
                     <td><span class="present"><%= row.present%></span></td>
                 </tr>

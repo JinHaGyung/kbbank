@@ -77,7 +77,6 @@ router.get('/notiConPage', (req, res)=>{ /* 공지사항 뷰어페이지 */
   });
 });
 
-
 router.get('/notice_write', (req, res)=>{ /* 공지사항 작성페이지 */
     res.render('notice_write');
 });
@@ -151,9 +150,6 @@ router.get('/siteMapPage', (req, res)=>{ /* 사이트맵 */
   res.render('siteMapPage');
 })
 
-// router.get('/cardsub', (req, res)=>{ /* 카드 상품 신청하기 */
-//   res.render('cardsub');
-// })
 
 router.post('/cardapplication',(req,res)=>{/*카드 상품 신청(보내기) */
   let param = JSON.parse(JSON.stringify(req.body));
@@ -252,11 +248,18 @@ router.get('/cardThum_upDate', (req, res)=>{ /* 카드 상품 수정 페이지 *
   res.render('cardThum_upDate');
 })
 
-// 카드신청시 신청 페이지로 이동
-router.get('/cardsub', (req, res)=>{
+
+router.get('/cardsub', (req, res)=>{// 카드신청시 신청 페이지로 이동
 let id = req.query.id;
 db.getcardinfo(id,(row)=>{
   res.render('cardsub',{row:row[0]});
+})
+})
+
+router.get('/cardsub_info', (req, res)=>{ /* 카드 신청 승인 페이지 */
+let id = req.query.id;
+db.cardsubpresent(id,(row)=>{
+  res.render('cardsub_info',{row:row[0]});
 })
 })
 
