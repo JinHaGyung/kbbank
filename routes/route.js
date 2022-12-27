@@ -151,9 +151,9 @@ router.get('/siteMapPage', (req, res)=>{ /* 사이트맵 */
   res.render('siteMapPage');
 })
 
-router.get('/cardsub', (req, res)=>{ /* 카드 상품 신청하기 */
-  res.render('cardsub');
-})
+// router.get('/cardsub', (req, res)=>{ /* 카드 상품 신청하기 */
+//   res.render('cardsub');
+// })
 
 router.post('/cardapplication',(req,res)=>{/*카드 상품 신청(보내기) */
   let param = JSON.parse(JSON.stringify(req.body));
@@ -180,18 +180,15 @@ db.cardapp(name,cardproduct,tellnum,payinfo,bankaccount,accountDay,postcode,addr
   })
 })
 
-
 router.get('/cardsub_List', (req, res)=>{ /* 카드신청 조회 */
   db.getcardsub((rows)=>{
   res.render('cardsub_List',{rows:rows});
  })
 })
 
-
 router.get('/accountInquiry', (req, res)=>{ /* 계좌조회 페이지 */
   res.render('accountInquiry');
 })
-
 
 router.post('/accountInquiryinfo', (req, res)=>{ /* 계좌조회 페이지 */
 let param = JSON.parse(JSON.stringify(req.body));
@@ -230,7 +227,6 @@ db.getCard((rows)=>{
 
 router.get('/cardThum_Con', (req, res)=>{ /* 카드 상품 뷰어 페이지 */
 let id = req.query.id;
-
 db.getCardByid(id,(row)=>{
   res.render('cardThum_Con',{row:row[0]});
 })
@@ -254,6 +250,14 @@ router.post('/cardeW',upload.single('card_img'),(req, res) => {
 
 router.get('/cardThum_upDate', (req, res)=>{ /* 카드 상품 수정 페이지 */
   res.render('cardThum_upDate');
+})
+
+// 카드신청시 신청 페이지로 이동
+router.get('/cardsub', (req, res)=>{
+let id = req.query.id;
+db.getcardinfo(id,(row)=>{
+  res.render('cardsub',{row:row[0]});
+})
 })
 
 router.get('/updateC', (req,res) => {

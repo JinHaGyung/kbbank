@@ -7,8 +7,9 @@
           </ul>
           <h2 class="f_bold">상품신청</h2>
           <form action="cardapplication" method="post" onsubmit="card_ck()">
-            <h3>KB e-plus정기예금</h3>
-            <p class="f_gray2 cardinfo">일정기간 여유자금을 예금하시면 확정 금리로 높은 수익을 드리는 온라인 가입 전용상품입니다.</p>
+            <h3><%= row.card_name %><%= row.card_category %></h3>
+            <p class="f_gray2 cardinfo"><%= row.card_benefit%></p>
+            <input type="hidden" value="<%= row.card_name %><%= row.card_category %>" name="cardproduct">
             <table class="write">
               <tr class="write_cell">
                 <td class="write_title"><span>*</span>성명</td>

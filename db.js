@@ -71,7 +71,6 @@ function deleteNoti(id, callback) {
     callback();
   })
 }
-
 //공지사항 최신순 정렬
 function getRecentNoti(callback) {
   connection.query(`SELECT * from kbnotice where date <= NOW() order by id desc`, (err, rows) => {
@@ -174,11 +173,15 @@ function updateCard(id, name,cate,img,info,benefit,content, callback) {
     callback();
   })
 }
+// 카드 신청시 신청 페이지로 이동
+function getcardinfo(id, callback) {
+  connection.query(`SELECT * FROM card_table WHERE id=${id}`, (err, row) => {
+    if (err) throw err;
+    callback(row);
+  })
+}
 
-
-// 카드 상품 조회(상세)
-
-
+// 카드 신청 후 발급 여부 조회
 
 module.exports = {
   getNoti,
@@ -200,5 +203,6 @@ module.exports = {
   getcardsub,
   deleteCard,
   updateCard,
-  accountCheck
+  accountCheck,
+  getcardinfo
 }
