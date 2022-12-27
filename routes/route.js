@@ -291,4 +291,13 @@ router.get('/deleteC', (req,res) => {
     res.redirect('/cardThum_List')
   })
 })
+
+//카드썸네일 페이지 카테고리
+router.get('/checkCard',(req,res)=>{
+
+  db.getCheckCard((rows)=>{
+    res.render('cardThum_List',{rows:rows});
+  })
+});
+
 module.exports = router;

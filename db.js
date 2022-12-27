@@ -188,7 +188,13 @@ function cardsubpresent(id, callback) {
       callback(row);
     })
 }
-
+//카드썸네일 페이지 카테고리
+function getCheckCard(callback){
+  connection.query(`SELECT * FROM card_table WHERE card_category like '체크%' order by id`,(err,rows) => {
+    if (err) throw err
+    callback(rows);
+  })
+}
 
 module.exports = {
   getNoti,
@@ -212,5 +218,6 @@ module.exports = {
   updateCard,
   accountCheck,
   getcardinfo,
-  cardsubpresent
+  cardsubpresent,
+  getCheckCard
 }
