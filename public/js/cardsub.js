@@ -65,3 +65,23 @@ for(let i = 0; i<accountDay.length; i++){
     }
   });
 }
+
+
+// 결제일 보여주기(승인페이지)
+let accountView = document.querySelector("#accountday");
+for(let i = 0; i<accountDay.length; i++){
+  if(accountView.value == accountDay[i].value){
+    accountDay[i].setAttribute('checked',true);
+  }
+  else{
+    accountSelect.value == accountView.value
+  }
+}
+// 교통카드 신청 여부(승인페이지)
+let transcard = document.querySelector("#transcard");
+let transcardapp = document.querySelectorAll('input[name="transportationCard"]');
+for(let i = 0; i<transcardapp.length; i++){
+  if(transcard.value == transcardapp[i].value){
+    transcardapp[i].setAttribute('checked',true);
+  }
+}

@@ -180,8 +180,15 @@ function getcardinfo(id, callback) {
     callback(row);
   })
 }
+// 카드 신청 후 발급 페이지 이동
+function cardsubpresent(id, callback) {
+  connection.query(`Select * FROM cardsub where id =${id}`,
+    (err, row) => {
+      if (err) throw err
+      callback(row);
+    })
+}
 
-// 카드 신청 후 발급 여부 조회
 
 module.exports = {
   getNoti,
@@ -204,5 +211,6 @@ module.exports = {
   deleteCard,
   updateCard,
   accountCheck,
-  getcardinfo
+  getcardinfo,
+  cardsubpresent
 }
