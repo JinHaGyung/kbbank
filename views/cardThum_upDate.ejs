@@ -12,7 +12,7 @@
               <table class="write">
                 <tr class="write_cell">
                   <td class="write_title"><span>*</span>제품명</td>
-                  <td class="write_select"><input type="text" name="card_name" id="write_title" value="<%= row.card_name %>"></td>
+                  <td class="write_select"><input type="text" name="card_name" id="card_name" value="<%= row.card_name %>"></td>
                 </tr>
                 <tr class="write_cell">
                     <td class="write_title"><span>*</span>카드종류</td>
@@ -27,15 +27,15 @@
                   </tr>
                 <tr class="write_cell">
                   <td class="write_title"><span>*</span>카드소개</td>
-                  <td class="write_select"><input type="text" name="card_info" id="write_title" class="cardIfo" value="<%= row.card_info %>"></td>
+                  <td class="write_select"><input type="text" name="card_info" id="card_info" class="cardIfo" value="<%= row.card_info %>"></td>
                 </tr>
                 <tr class="write_cell">
                   <td class="write_title"><span>*</span>제품혜택</td>
-                  <td class="write_select"><input type="text" name="card_benefit" id="write_title" class="cardIfo" value="<%= row.card_benefit %>"></td>
+                  <td class="write_select"><input type="text" name="card_benefit" id="card_benefit" class="cardIfo" value="<%= row.card_benefit %>"></td>
                 </tr>
                 <tr class="write_cell write_cont">
                   <td class="write_title write_cont_td"><span>*</span>내용</td>
-                  <td class="write_select write_cont_td"><textarea name="card_cont" id="write_cont" cols="30" rows="10"><%= row.card_content %></textarea></td>
+                  <td class="write_select write_cont_td"><textarea name="card_cont" id="card_cont" cols="30" rows="10"><%= row.card_content %></textarea></td>
                 </tr>
               </table>
               <div class="write_btn_wrap">
@@ -45,4 +45,4 @@
             </form>
       </div>
     </div>
-    <script src="js/notice.js"></script>
+    <script src="js/cardThum_write.js"></script>

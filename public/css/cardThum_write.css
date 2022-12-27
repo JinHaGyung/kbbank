@@ -10,3 +10,10 @@ input[class="cardIfo"]{
 .write_select>input[type="file"]{
     line-height: 33px;
 }
+
+textarea#card_cont{
+    width: 80%;
+    height: 48vh;
+    margin-top: 8px;
+    resize: none;
+}
