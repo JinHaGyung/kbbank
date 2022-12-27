@@ -44,7 +44,7 @@
                             <h4 class="f_regular"><%= row.card_benefit %></h4>
                         </div>
                         <div class="cardList_Btn">
-                            <button type="button" class="cardReq_Btn" onclick="javascript:location.href='/cardsub'">카드신청</button>
+                            <button type="button" class="cardReq_Btn" onclick="javascript:location.href='/cardsub?id=<%= row.id %>'">카드신청</button>
                             <button type="button" class="cardDet_Btn" onclick="javascript:location.href='/cardThum_Con?id=<%= row.id %>'">자세히보기</button>
                         </div>
                     </li>
