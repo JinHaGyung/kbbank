@@ -11,7 +11,7 @@
  <div class="cardThumList_wrap">
         <div class="inner_cardThumList w1200">
             <div class="cardThumList_left">
-                <input class="cardSearch" type="text" placeholder="상품명을 입력하세요.">
+                <input onkeyup="filter()" class="cardSearch" id="value" type="text" placeholder="상품명을 입력하세요.">
                 <div class="cardcate_wrap">
                     <p class="f_medium">카드유형</p>
                     <ul>
@@ -31,15 +31,15 @@
                 </div>
             </div>
             <div class="cardThumList_right">
-                <p class="f_regular">총 <span class="f_bold">8</span>건</p>
+                <p class="f_regular">총 <span class="f_bold" id="cardThum_tol"></span>건</p>
                 <% rows.forEach((row,index) =>{ %> 
                 <ul>
-                    <li>
+                    <li class="card_li">
                         <div class="cardImg">
                             <img src="<%= row.card_img %>">
                         </div>
                         <div class="cardInfo">
-                            <div><h3 class="f_medium"><%= row.card_name %></h3><h3 class="f_medium"><%= row.card_category %></h3></div>
+                            <div class="item"><h3 class="f_medium cardName"><%= row.card_name %></h3><h3 class="f_medium"><%= row.card_category %></h3></div>
                             <p class="f_regular"><%= row.card_info %></p>
                             <h4 class="f_regular"><%= row.card_benefit %></h4>
                         </div>
@@ -56,3 +56,6 @@
             <input type="button" value="상품 등록" class="list_writeBtn_check" onclick="javascript:location.href='/cardThum_write'">
             </div>
     </div>
+
+
+    <script src="js/cardThum_List.js"></script>
