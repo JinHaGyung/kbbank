@@ -263,6 +263,23 @@ db.cardsubpresent(id,(row)=>{
 })
 })
 
+/*카드 발급 불가*/
+router.get('/notapproval',(req,res)=>{
+  // let param = JSON.parse(JSON.stringify(req.body));
+  let id = req.query.id;
+  // console.log(id);
+  db.notapproval(id,()=>{
+    res.redirect('/cardsub_List')
+  })
+})
+/*카드 발급 가능*/
+router.get('/approval',(req,res)=>{
+  let id = req.query.id;
+  db.approval(id,()=>{
+    res.redirect('/cardsub_List')
+  })
+})
+
 router.get('/updateC', (req,res) => {
   let id = req.query.id;
   db.getCardByid(id,(row)=>{

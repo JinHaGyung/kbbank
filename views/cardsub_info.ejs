@@ -6,7 +6,8 @@
               <li><a href=""></a></li>
           </ul>
           <h2 class="f_bold">고객상품신청</h2>
-          <form action="cardapplication" method="post">
+          <form method="get">
+            <input type="hidden" name="id" value="<%= row.id %>">
             <h3><%= row.card_name %><%= row.card_category %></h3>
             <p class="f_gray2 cardinfo"><%= row.card_benefit%></p>
             <table class="write">
@@ -80,11 +81,10 @@
               </tr>
             </table>
             <div class="write_btn_wrap">
-              <a href="/"><button class="write_btn f_bold write_cancle">발급승인</button></a>
-              <a href="/"><button class="write_btn f_bold write_cancle">발급거절</button></a>
-
             </div>
           </form>
+          <button class="write_btn f_bold write_cancle" onclick="javascript:location.href='/notapproval?id=<%= row.id %>'">발급불가</button>
+             <button class="write_btn f_bold write_cancle" onclick="javascript:location.href='/approval?id=<%= row.id %>'">발급승인</button>
     </div>
   </div>
   <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
