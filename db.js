@@ -3,7 +3,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : '95052910',
+  password : '1234',
   database : 'kbbank',
   dateStrings : 'date',
   multipleStatements: true
@@ -188,6 +188,24 @@ function cardsubpresent(id, callback) {
       callback(row);
     })
 }
+// 발급 승인
+function approval(id, callback) {
+  connection.query(`UPDATE cardsub set present='발급승인' where id = ${id}`,
+    (err) => {
+      if (err) throw err;
+      callback()
+    })
+}
+
+// 발급 거절
+function notapproval(id, callback) {
+  connection.query(`UPDATE cardsub set present='발급불가' where id = ${id}`,
+    (err) => {
+      if (err) throw err;
+      callback()
+    })
+}
+
 //카드썸네일 페이지 카테고리
 function getCheckCard(callback){
   connection.query(`SELECT * FROM card_table WHERE card_category like '체크%' order by id`,(err,rows) => {
@@ -219,5 +237,8 @@ module.exports = {
   accountCheck,
   getcardinfo,
   cardsubpresent,
-  getCheckCard
+  getCheckCard,
+  approval,
+  notapproval
+
 }
