@@ -75,9 +75,8 @@
         <% rows.forEach((row,index) =>{ %>
         <tr>
           <td class="num"><%= index + 1 %></td>
-          <td><%= row.cate %></td>
-          <td class="listTable_title"><a
-              onclick="javascript:location.href='/notiConPage?id=<%= row.id %>'"><%= row.title %></a></td>
+          <td><a onclick="javascript:location.href='/notiConPage?id=<%= row.id %>'"><%= row.cate %></a></td>
+          <td class="listTable_title"><a onclick="javascript:location.href='/notiConPage?id=<%= row.id %>'"><%= row.title %></a></td>
           <td class="updateDate"><%= row.date %></td>
         </tr>
         <% }); %>
@@ -93,8 +92,6 @@
       <ol>
         <li></li>
         <li><a href="">1</a></li>
-        <li><a href="">2</a></li>
-        <li><a href="">3</a></li>
         <li></li>
       </ol>
       <button class="pageBtn page_next"></button>

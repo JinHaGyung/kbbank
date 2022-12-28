@@ -16,15 +16,15 @@
                     <p class="f_medium">카드유형</p>
                     <ul>
                         <li>
-                            <input type="radio" class="card_cate" name="card_cate" value="전체" onclick="javascript:location.href='/totalCard'">
+                            <input type="radio" class="card_cate" name="card_cate" value="전체" id="card_cate_1" onclick="javascript:location.href='/totalCard'" >
                             <label for="card_cate">전체</label>
                         </li>
                         <li>
-                            <input type="radio" class="card_cate" value="신용" name="card_cate" onclick="javascript:location.href='/creditCard'">
+                            <input type="radio" class="card_cate" value="신용" name="card_cate" id="card_cate_2" onclick="javascript:location.href='/creditCard'">
                             <label for="card_cate">신용</label>
                         </li>
                         <li>
-                            <input type="radio" class="card_cate" value="체크" name="card_cate" onclick="javascript:location.href='/checkCard'">
+                            <input type="radio" class="card_cate" value="체크" name="card_cate" id="card_cate_3" onclick="javascript:location.href='/checkCard'">
                             <label for="card_cate">체크</label>
                         </li>
                     </ul>
@@ -53,9 +53,10 @@
             </div>
         </div>
         <div class="list_writeBtn w1200">
-            <input type="button" value="상품 등록" class="list_writeBtn_check" onclick="javascript:location.href='/cardThum_write'">
+            <input type="button" value="상품 등록" class="list_writeBtn_check" id="card_ap" onclick="javascript:location.href='/cardThum_write'">
             </div>
     </div>
+    <div id="topBtn" class="f_gray2"><h4>TOP</h4></div>
 
 
     <script src="js/cardThum_List.js"></script>

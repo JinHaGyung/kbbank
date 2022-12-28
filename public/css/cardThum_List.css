@@ -87,6 +87,7 @@ width: 74%;
 }
 .cardThumList_right ul li{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 30px 0;
     box-sizing: border-box;
@@ -97,13 +98,21 @@ width: 74%;
     height: 100px;
 }
 .cardInfo{
-    width: 58%;
+    width: 53%;
 }
 .cardInfo>div{
     display: flex;
 }
 .cardInfo p{
     margin: 5px 0 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.cardInfo h4{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .cardList_Btn{
     width: 20%;
@@ -130,3 +139,34 @@ width: 74%;
     font-weight: 500;
     cursor: pointer;
 }
+#card_ap{
+    margin-bottom: 160px;
+}
+
+/*** 반응형 900px ***/
+@media (max-width: 900px) {
+    .cardInfo{
+        width: 70%;
+    }
+    .cardList_Btn{
+        width: 30%;
+        text-align: left;
+    }
+    .cardcate_wrap ul li{
+        width: 100%;
+    }
+  }
+  
+  /*** 반응형 900px ***/
+
+/*** 반응형 760px ***/
+@media (max-width: 760px) {
+    .cardInfo{
+        width: 100%;
+    }
+    .cardList_Btn{
+        width: 60%;
+    }
+  }
+  
+  /*** 반응형 760px ***/
