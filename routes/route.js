@@ -15,7 +15,7 @@ router.get('/login', (req, res)=>{ /* 로그인페이지 */
 res.render('loginPage');
 });
 
-/* 로그인 내용 */0
+/* 로그인 내용 */
 router.post('/logininfo', (req, res) => {
   let param = JSON.parse(JSON.stringify(req.body));
   let login_id = param['login_id'];
@@ -206,7 +206,7 @@ let user_name = param['user_name'];
 const upload = multer({
   storage: multer.diskStorage({
     destination(req, file, done) {
-      done(null, '../public/img/cardImg/');
+      done(null, 'public/img/cardImg/');
     },
     filename(req, file, done) {
       const ext = path.extname(file.originalname);
