@@ -251,19 +251,19 @@
 }
 
 .mainSlide_directMenu .Btn_inner>li>.calculator:hover::after {
-  width: 40%;
+  width: 50%;
 }
 
 .mainSlide_directMenu .Btn_inner>li>.transfer:hover::after {
-  width: 20%;
+  width: 30%;
 }
 
 .mainSlide_directMenu .Btn_inner>li>.registration:hover::after {
-  width: 60%;
+  width: 30%;
 }
 
 .mainSlide_directMenu .Btn_inner>li>a:hover::after {
-  width: 35%;
+  width: 45%;
 }
 
 .mainSlide_directMenu .Btn_inner .loginBtn {
@@ -311,7 +311,7 @@
 }
 
 .mainSlide_directMenu .bottomBtn .Btn_inner>li>.transfer {
-  background-image: url(../img/1.mainSlide/transfer.png);
+  background-image: url(../img/1.mainSlide/notice.png);
 }
 
 .mainSlide_directMenu .bottomBtn .Btn_inner>li>.newDeposit {
@@ -319,7 +319,7 @@
 }
 
 .mainSlide_directMenu .bottomBtn .Btn_inner>li>.registration {
-  background-image: url(../img/1.mainSlide/document_w.png);
+  background-image: url(../img/1.mainSlide/bank.png);
 }
 
 .mainSlide_directMenu .bottomBtn .Btn_inner>li>.quickInquiry {

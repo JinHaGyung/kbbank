@@ -41,3 +41,12 @@ topBtn.addEventListener('click',() => {
     window.scrollTo({top : 0, behavior: 'smooth'});
 })
 
+
+// radio check 새로고침 막기
+let cardCate = document.querySelectorAll(".card_cate");
+for(let i = 0; i < cardCate.length ;i++){
+  cardCate[i].addEventListener("click",function(e){
+    cardCate[i].setAttribute("checked",true);
+    e.preventDefault();
+  })
+}

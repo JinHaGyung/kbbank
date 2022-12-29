@@ -317,7 +317,6 @@ router.get('/totalCard',(req,res)=>{
   })
 });
 router.get('/creditCard',(req,res)=>{
-
   db.getcreditCard((rows)=>{
     res.render('cardThum_List',{rows:rows});
   })
