@@ -22,7 +22,16 @@ header{
     position: relative;
     line-height: 24px;
 }
-.topArea_right>ul>li::after{
+.topArea_right>ul>li:first-child::after{
+    display: block;
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 6px;
+    width: 1px; height: 15px;
+    background-color: #E5E5E155;
+}
+.topArea_right>ul>li:nth-child(2):after{
     display: block;
     content: '';
     position: absolute;
@@ -34,7 +43,8 @@ header{
     display: block;
     content: '';
     position: absolute;
-     left: 34px;
+    left: 34px;
+    top: 6px;
     width: 1px; height: 15px;
     background-color: #E5E5E155;
 }
