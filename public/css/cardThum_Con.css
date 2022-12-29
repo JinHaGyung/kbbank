@@ -8,6 +8,7 @@
 }
 .cardThumCon_topWrap{
     display: flex;
+    flex-wrap: wrap;
 }
 .cardThumCon_topWrap>div:first-child{
     width: 80%;
@@ -28,3 +29,28 @@
 .product_join{
     cursor: pointer;
 }
+
+/*** 반응형 1000px ***/
+
+@media (max-width: 1000px) {
+    .cardThumCon_topWrap img{
+        top: 250px;
+        left: 20px;
+    }
+    .cardThumCon_wrap{
+        padding-bottom: 270px;
+    }
+}
+  
+  /*** 반응형 1000px ***/
+
+/*** 반응형 450px ***/
+
+@media (max-width: 450px) {
+    .cardThumCon_topWrap img{
+        width: 71.111vw;
+        height: 44.444vw;
+    }
+}
+  
+  /*** 반응형 450px ***/

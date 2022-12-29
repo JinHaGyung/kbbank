@@ -61,6 +61,11 @@ input{
   font-family: 'Noto Sans KR', sans-serif;
 }
 
+pre{
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow: auto;
+}
 
 /*** 반응형 1200px ***/
 @media(max-width: 1200px){
