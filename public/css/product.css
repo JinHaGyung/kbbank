@@ -108,6 +108,10 @@
   background-size: 14px auto;
   background-position-y: center;
 }
+.product_left>ul>li>a{
+  text-decoration: none;
+  color: #000;
+}
 .product_btn{
   display: flex;
   padding-bottom: 51px;
