@@ -6,7 +6,7 @@
               <li><a href=""></a></li>
           </ul>
           <h2 class="f_bold">상품신청</h2>
-          <form action="/cardapplication" method="post" onsubmit="card_ck()">
+          <form action="/cardapplication" method="post" onsubmit="return card_ck()">
             <h3><%= row.card_name %><%= row.card_category %></h3>
             <p class="f_gray2 cardinfo"><%= row.card_info%></p>
             <input type="hidden" value="<%= row.card_name %><%= row.card_category %>" name="cardproduct">
@@ -95,7 +95,7 @@
               </tr>
             </table>
             <div class="write_btn_wrap">
-              <button class="write_btn f_bold write_cancle" onclick="javascript:location.href='/cardThum_List'">취소</button>
+              <button class="write_btn f_bold write_cancle" onclick="javascript:location.href='/'">취소</button>
               <input class="write_btn f_bold" type="submit" name="upload" id="" value="신청">
             </div>
           </form>
