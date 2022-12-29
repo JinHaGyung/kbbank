@@ -15,8 +15,17 @@ function card_ck(){
     name.focus();
     return false
   }
+
+// 전화번호 입력
+  var phoneRegExp = /^(01[016789]{1})-?[0-9]{3,4}-?[0-9]{4}$/;
+
   if (tellnum.value==''){
     alert("연락처를 비워둘 수 없습니다.");
+    tellnum.focus();
+    return false
+  }
+  if(!phoneRegExp.test(tellnum)){
+    alert("잘못된 번호입니다.");
     tellnum.focus();
     return false
   }
@@ -72,7 +81,8 @@ for(let i = 0; i<accountDay.length; i++){
     accountDay[i].setAttribute('checked',true);
   }
   else{
-    accountSelect.value == accountView.value
+    accountDay[4].setAttribute('checked',true);
+    accountSelect.setAttribute("value", `${accountView.value}`)
   }
 }
 // 교통카드 신청 여부(승인페이지)
@@ -84,3 +94,9 @@ for(let i = 0; i<transcardapp.length; i++){
   }
 }
 
+const autoHyphen = (target) => {
+  target.value = target.value
+    .replace(/[^0-9]/g, '')
+    .replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, "$1-$2-$3")
+    .replace(/(\-{1,2})$/g, "");
+}
