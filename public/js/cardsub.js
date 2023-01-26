@@ -17,7 +17,7 @@ function card_ck(){
   }
 
 // 전화번호 입력
-  var phoneRegExp = /^(01[016789]{1})-?[0-9]{3,4}-?[0-9]{4}$/;
+  var phoneRegExp = /^(01[016789]{1})-?[0-9]{4}-?[0-9]{4}$/;
 
   if (tellnum.value==''){
     alert("연락처를 비워둘 수 없습니다.");
