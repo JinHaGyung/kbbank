@@ -61,7 +61,6 @@ const autoHyphen = (target) => {
   target.value = target.value
     .replace(/[^0-9]/g, '')
     .replace(/^(\d{2,3})(\d{3,4})(\d{4})$/, `$1-$2-$3`)
-    .replace(/(\-{1,2})$/g, "");
  }
  
 // 결제일 지정 선택시 활성화
